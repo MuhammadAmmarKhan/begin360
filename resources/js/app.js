@@ -3,6 +3,9 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import * as THREE from 'three';
+import 'bootstrap'; // This usually handles the window.bootstrap assignment
+import { Modal } from 'bootstrap';
+window.bootstrap = { Modal }; // Explicitly attach it to the window object
 
 // Register Plugins
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
@@ -58,15 +61,43 @@ function initNavigation() {
 
 function initThemeToggle() {
     const themeBtn = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // 1. Function to get preferred theme
+    const getStoredTheme = () => localStorage.getItem('theme');
+    
+    // 2. Function to get system preference
+    const getSystemTheme = () => {
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    };
+
+    // 3. Initialize Theme
+    const activeTheme = getStoredTheme() || getSystemTheme();
+    html.setAttribute('data-bs-theme', activeTheme);
+
+    // 4. Toggle Logic
     if (themeBtn) {
         themeBtn.addEventListener('click', () => {
-            const html = document.documentElement;
             const current = html.getAttribute('data-bs-theme');
             const newTheme = current === 'dark' ? 'light' : 'dark';
+            
             html.setAttribute('data-bs-theme', newTheme);
+            
+            // Save to LocalStorage (Standard Practice)
             localStorage.setItem('theme', newTheme);
+            
+            // Save to Cookie (For Server-Side awareness / Odoo sync)
+            document.cookie = `theme=${newTheme}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
         });
     }
+
+    // 5. Listen for System changes in real-time
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!getStoredTheme()) {
+            const systemTheme = e.matches ? 'dark' : 'light';
+            html.setAttribute('data-bs-theme', systemTheme);
+        }
+    });
 }
 
 /* --- 2. Three.js Particle System --- */

@@ -82,20 +82,48 @@
             </div>
         </div>
     </section>
+@php
+    // These would typically be passed from a View Composer or the Controller
+    $industries = $industries ?? [
+        ['name' => 'Consumer Goods', 'icon' => 'fa-basket-shopping', 'slug' => 'consumer-goods'],
+        ['name' => 'Food & Beverage', 'icon' => 'fa-utensils', 'slug' => 'food-beverage'],
+        ['name' => 'Health & Beauty', 'icon' => 'fa-capsules', 'slug' => 'health-beauty'],
+        ['name' => 'Manufacturing', 'icon' => 'fa-industry', 'slug' => 'manufacturing'],
+        ['name' => 'Distribution', 'icon' => 'fa-truck-fast', 'slug' => 'distribution']
+    ];
+
+    $modules = $modules ?? [
+        ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
+        ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
+        ['name' => 'Order Management', 'icon' => 'fa-cart-flatbed', 'slug' => 'orders'],
+        ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
+        ['name' => 'Freight & Fulfillment', 'icon' => 'fa-truck-ramp-box', 'slug' => 'fulfillment'],
+        ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse'],
+        ['name' => 'Demand Planning', 'icon' => 'fa-chart-line', 'slug' => 'planning']
+    ];
+
+    $companyName = 'BEGIN360 PTY LTD';
+    $email = 'info@begin360.com.au';
+    $phone = '(02) 1234 5678';
+    $abn = '00 000 000 000'; // Replace with actual ABN
+@endphp
+
+<x-ui.announcement-ticker />
+<x-ui.backtotop />
 <footer class="bg-body-tertiary text-body pt-5 pb-3 overflow-hidden">
-    <!-- Massive Background Text (Brutalist Style) -->
+    <!-- Massive Background Text -->
     <div class="container-fluid px-0 select-none pointer-events-none" style="margin-bottom: -4rem; opacity: 0.05;">
-        <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 22.7vw; line-height: 0.7;letter-spacing: -2vw;">
-            BEGIN360
+        <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 22.7vw; line-height: 0.7; letter-spacing: -2vw;">
+            {{ explode(' ', $companyName)[0] }}
         </h2>
     </div>
 
     <div class="container position-relative" style="z-index: 2;">
-        <!-- Top Section: CTA & Branding -->
+        <!-- Top Section -->
         <div class="row g-5 align-items-end mb-5">
             <div class="col-lg-6">
                 <div class="d-flex align-items-center mb-4">
-                    <img src="assets/images/logo-light.png" alt="Logo" width="250"/>
+                    <img src="{{ asset('assets/images/logo-light.png') }}" alt="Logo" width="250"/>
                 </div>
                 <p class="text-secondary fw-bold text-uppercase small w-75">
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.
@@ -108,9 +136,8 @@
             </div>
             
             <div class="col-lg-6">
-                <!-- Schedule Call Card (Merged Style) -->
                 <div class="bg-black text-white rounded-4 p-5 d-flex justify-content-between align-items-center transition-all border border-secondary border-opacity-25" 
-                     style=" cursor: pointer;"
+                     style="cursor: pointer;"
                      onmouseover="this.style.borderColor='var(--accent)'" 
                      onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
                     <h2 class="display-6 fw-black text-uppercase mb-0">Schedule <br>A Call</h2>
@@ -124,53 +151,70 @@
 
         <hr class="border-secondary opacity-10 my-5">
 
-        <!-- Middle Section: Detailed Links -->
+        <!-- Middle Section: Dynamic Arrays -->
         <div class="row g-4 mb-5">
             <div class="col-6 col-md-3">
-                <h6 class="fw-black text-accent text-uppercase mb-4">Solutions</h6>
+                <h6 class="fw-black text-accent text-uppercase mb-4">Modules</h6>
                 <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">ERP Implementation</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">ERP Systems</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Business Automation</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Reporting & Analytics</a></li>
+                    @foreach($modules as $module)
+                        <li>
+                            <a href="{{ url('modules/' . $module['slug']) }}" class="text-secondary text-decoration-none hover-white">
+                                {{ $module['name'] }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Industries</h6>
                 <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Food & Beverage</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Construction & Trades</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Retail</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">eCommerce</a></li>
+                    @foreach($industries as $industry)
+                        <li>
+                            <a href="{{ url('industries/' . $industry['slug']) }}" class="text-secondary text-decoration-none hover-white">
+                                {{ $industry['name'] }}
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Company</h6>
                 <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">About Us</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Our Approach</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Careers</a></li>
-                    <li><a href="#" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
+                    <li><a href="{{ route('about') }}" class="text-secondary text-decoration-none hover-white">About Us</a></li>
+                    <li><a href="{{ route('contact') }}" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Contact Us</h6>
                 <div class="text-secondary fw-bold text-uppercase small lh-lg">
-                    <p class="mb-2"><i class="fa-solid fa-envelope text-accent me-2"></i> info@begin360.com.au</p>
-                    <p class="mb-2"><i class="fa-solid fa-phone text-accent me-2"></i> (02) 1234 5678</p>
-                    <p class="mb-0"><i class="fa-solid fa-location-dot text-accent me-2"></i> Sydney, Australia</p>
+                    <p class="mb-2">
+                        <a href="mailto:{{ $email }}" class="text-decoration-none text-secondary hover-white">
+                            <i class="fa-solid fa-envelope text-accent me-2"></i> {{ $email }}
+                        </a>
+                    </p>
+                    <p class="mb-2">
+                        <a href="tel:{{ preg_replace('/[^0-9+]/', '', $phone) }}" class="text-decoration-none text-secondary hover-white">
+                            <i class="fa-solid fa-phone text-accent me-2"></i> {{ $phone }}
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <a href="https://abr.business.gov.au/ABN/View?abn={{ str_replace(' ', '', $abn) }}" target="_blank" class="text-decoration-none text-secondary hover-white">
+                            <i class="fa-solid fa-file-invoice text-accent me-2"></i> ABN {{ $abn }}
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
 
-        <!-- Bottom Section: Legal -->
+        <!-- Bottom Section -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10">
-            <p class="small text-secondary fw-bold mb-md-0">© <?=date('Y')?> BEGIN360 PTY LTD. ALL RIGHTS RESERVED.</p>
+            <p class="small text-secondary fw-bold mb-md-0">© {{ now()->year }} {{ $companyName }}. ALL RIGHTS RESERVED.</p>
             <div class="d-flex gap-4 small fw-bold text-uppercase">
-                <a href="#" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
-                <a href="#" class="text-secondary text-decoration-none hover-white">Terms of Service</a>
-                <a href="#" class="text-secondary text-decoration-none hover-white">Refund Policy</a>
+                <a href="{{ route('privacy') }}" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
+                <a href="{{ route('terms') }}" class="text-secondary text-decoration-none hover-white">Terms of Service</a>
+                <a href="{{ route('refunds') }}" class="text-secondary text-decoration-none hover-white">Refund Policy</a>
             </div>
         </div>
     </div>
 </footer>
+<x-ui.entry-modal/>

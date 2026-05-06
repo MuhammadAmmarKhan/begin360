@@ -11,7 +11,7 @@
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>                
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle {{ Request::is('about*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         About Us
                     </a>
@@ -22,12 +22,15 @@
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ url('/careers') }}">Careers</a></li>
                     </ul>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link {{ Request::is('about-us*') ? 'active' : '' }}" href="{{ url('/about-us') }}">About Us</a>
                 </li>
                 <li class="nav-item dropdown has-mega">
                     <a class="nav-link dropdown-toggle {{ Request::is('solutions*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                         Solutions
                     </a>
-                    <div class="dropdown-menu mega-menu-container bg-body">
+                    <div class="dropdown-menu mega-menu-container bg-body  ">
                         <div class="container p-0">
                             <!-- Main Content Row -->
                             <div class="row g-0 align-items-stretch">
@@ -61,7 +64,7 @@
                                         @endphp
 
                                         @foreach($modules as $module)
-                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/solutions/'.$module['slug']) }}">
+                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/modules/'.$module['slug']) }}">
                                                 <div class="icon-box-sm border rounded-2 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
                                                     <i class="fa-solid {{ $module['icon'] }}"></i>
                                                 </div>
@@ -70,7 +73,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ url('/solutions') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body fw-bold">
+                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body fw-bold">
                                             Explore all modules <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>
@@ -91,7 +94,7 @@
                                         @endphp
 
                                         @foreach($industries as $industry)
-                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/industry/'.$industry['slug']) }}">
+                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/industries/'.$industry['slug']) }}">
                                                 <div class="icon-box-sm border rounded-2 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
                                                     <i class="fa-solid {{ $industry['icon'] }}"></i>
                                                 </div>
@@ -100,7 +103,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ url('/industries') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body small fw-bold">
+                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body small fw-bold">
                                             Explore all industries <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>
@@ -133,7 +136,7 @@
 
                             <!-- Footer Row: Book a Demo CTA -->
                             <div class="py-3 px-4 px-lg-5 border-top d-flex justify-content-between align-items-center">
-                                <a href="{{ url('/contact') }}" class="text-decoration-none text-accent fw-bold small text-uppercase tracking-wider">
+                                <a href="{{ route('contact') }}" class="text-decoration-none text-accent fw-bold small text-uppercase tracking-wider">
                                     Book a demo <i class="fa fa-arrow-right ms-2 text-accent"></i>
                                 </a>
                                 <div class="d-none d-md-block opacity-50 small">
@@ -145,9 +148,6 @@
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('resources*') ? 'active' : '' }}" href="{{ url('/resources') }}">Resources</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a>
                 </li>
             </ul>
@@ -155,7 +155,7 @@
                 <button class="theme-switch" id="themeToggle" aria-label="Toggle Theme">
                     <div class="switch-knob"></div>
                 </button>                
-                <a href="{{ url('/book-a-demo') }}" class="btn-cta-group">
+                <a href="{{ route('contact') }}" class="btn-cta-group">
                     <span class="btn-cta-main">Book a Demo</span>
                     <div class="btn-cta-arrow">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
