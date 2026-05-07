@@ -7,7 +7,7 @@ use Illuminate\View\Component;
 class EntryModal extends Component
 {
     // Must be public to be accessible in Blade
-    public $data;
+    public array $data;
 
     public function __construct($data = [])
     {

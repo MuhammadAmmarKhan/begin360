@@ -856,7 +856,7 @@
     }
 
 </style>
-    <x-customFaqs 
+    <x-custom-faqs 
         title="Still Have<br>Questions?" 
         :faqs="$faqs" 
         class="my-custom-margin-class" 
