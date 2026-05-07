@@ -4,14 +4,14 @@
     <div class="container py-lg-5">
         <div class="row g-5">
             
-           <div class="col-lg-4">
+           <div class="col-lg-4 d-none d-md-flex">
                
                 <div class="card border-0 bg-body p-4 p-xl-5 border border-light-subtle position-sticky align-self-start" 
                     style="top: 6rem; z-index: 10;">
                     
                     <div class="d-flex justify-content-between align-items-start mb-4">
-                        <h2 class="display-5 fw-black text-body text-uppercase mb-0" style="line-height: 1;">
-                            STILL HAVE<br>QUESTIONS?
+                        <h2 class="display-5 fw-normal text-body mb-0" style="line-height: 1;">
+                            Still Have<br>Questions?
                         </h2>
                         
                         <!-- PERFECT CIRCLE ELEMENT -->
@@ -28,7 +28,7 @@
                     
                     <!-- Optional: Added a quick contact button for better utility in a long list -->
                     <hr class="my-4 opacity-10">
-                    <a href="#" class="btn btn-outline-dark fw-black text-uppercase w-100 rounded-pill py-2 small">
+                    <a href="#contact-form" class="btn btn-outline-dark fw-black text-uppercase w-100 rounded-pill py-2 small">
                         Contact Support
                     </a>
                 </div>
@@ -41,7 +41,7 @@
                     @foreach($faqs as $index => $faq)
                         <div class="accordion-item mb-3 border-0 rounded-4 overflow-hidden shadow-sm">
                             <h2 class="accordion-header">
-                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }} fw-black text-uppercase py-4 px-4" 
+                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }} fw-black py-4 px-4" 
                                         type="button" 
                                         data-bs-toggle="collapse" 
                                         data-bs-target="#faq-{{ $index }}">
@@ -51,7 +51,7 @@
                             <div id="faq-{{ $index }}" 
                                  class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" 
                                  data-bs-parent="#faqAccordion">
-                                <div class="accordion-body fw-bold pb-4 px-4 pt-0">
+                                <div class="accordion-body fw-light pb-4 px-4 pt-0">
                                     {{ $faq['answer'] }}
                                 </div>
                             </div>

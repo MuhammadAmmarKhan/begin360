@@ -15,8 +15,8 @@
                 <div class="col-lg-7">
                     <div class="card h-100 border-0 rounded-5 p-4 p-md-5 d-flex flex-column bg-body-tertiary" >
                         
-                        <h2 class="display-3 fw-black text-body text-uppercase mb-5" style="line-height: 0.9; letter-spacing: -1px;">
-                            Start a <br>Project
+                        <h2 class="display-3 fw-normal text-body mb-5" style="line-height: 0.9; letter-spacing: -1px;">
+                            Lets Get <br/>Connected
                         </h2>
 
                         <form action="#" class="corporate-form">

@@ -1,5 +1,5 @@
 <div class="modal fade" id="entryModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content rounded-5 bg-body bg-opacity-75 border-light-subtle overflow-hidden" style="backdrop-filter:blur(25px)">
             <div class="modal-body p-0">
                 <div class="row g-0">
@@ -15,10 +15,10 @@
                         <button type="button" class="btn-close btn-close-body text-accent position-absolute top-0 end-0 m-4" data-bs-dismiss="modal"></button>
                         
                         <span class="text-accent fw-bold text-uppercase ls-2 mb-2 small">{{ $data['sub_heading'] }}</span>
-                        <h2 class="display-5 fw-black text-uppercase text-body tracking-tighter mb-4">
+                        <h2 class="display-6 fw-black text-uppercase text-body tracking-tighter mb-4">
                             {!! $data['heading'] !!}
                         </h2>
-                        <p class="text-secondary lh-lg mb-4">{{ $data['paragraph'] }}</p>
+                        <p class="text-secondary lh-sm mb-4">{{ $data['paragraph'] }}</p>
                         
                         <div class="mt-2">
                             <a href="{{ $data['button_url'] }}" class="btn rounded-pill btn-accent px-5 py-3 fw-bold text-uppercase tracking-widest rounded-0">

@@ -1,13 +1,13 @@
 <div class="ticker-wrapper bg-accent text-white overflow-hidden py-3 shadow-sm border-bottom border-light-subtle">
     <div class="ticker-content d-flex align-items-center" id="announcementTicker">
         @foreach($messages as $message)
-            <div class="ticker-item px-5 fw-light tracking-widest display-4 white-space-nowrap">
+            <div class="ticker-item px-5 fw-light tracking-widest display-6 white-space-nowrap">
                 <i class="bi bi-rocket-takeoff-fill me-2"></i> {{ $message }}
             </div>
         @endforeach
         {{-- Duplicate for seamless loop --}}
         @foreach($messages as $message)
-            <div class="ticker-item px-5 fw-light tracking-widest display-4 white-space-nowrap d-none d-md-block">
+            <div class="ticker-item px-5 fw-light tracking-widest display-6 white-space-nowrap d-none d-md-block">
                 <i class="bi bi-rocket-takeoff-fill me-2"></i> {{ $message }}
             </div>
         @endforeach

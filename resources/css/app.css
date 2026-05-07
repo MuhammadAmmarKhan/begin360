@@ -59,7 +59,6 @@ body{
 /* Ensure navbar links stay above the cursor glow if needed */
 .nav-link, .navbar-brand, .btn {
     position: relative;
-    z-index: 10002; 
 }
 /* --- Navigation Base --- */
 #mainNav {
@@ -441,7 +440,7 @@ body{
         width: 100%;
         height: 100vh; /* Must be full height */
         overflow: hidden;
-        background-color: #fff;
+        /* background-color: #fff; */
     }
 
     #master-horizontal-content {
@@ -473,6 +472,24 @@ body{
     min-width: 350px;
     min-height: 500px;
     transition: all 0.4s ease;
+    
+    /* This prevents any child element from rendering outside the div */
+    overflow: hidden; 
+    position: relative; /* Useful if images are absolute positioned */
+}
+.problem-card img {
+    /* Ensures the image never exceeds the card's width */
+    max-width: 100%; 
+    
+    /* Maintains aspect ratio so the image doesn't look stretched */
+    height: auto; 
+    
+    /* If you want the image to fill the 500px height without distorting: */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Crops the image to fill the area perfectly */
+    
+    display: block; /* Removes bottom whitespace common with inline elements */
 }
 
 .problem-cards-container {
@@ -497,8 +514,8 @@ body{
 
 .problem-card:hover {
     transform: translateY(-15px);
-    background: #56D964 !important;
-    border-color: #56D964 !important;
+    background: var(--bs-danger-bg-subtle) !important;
+    border-color: var(--bs-danger-bg-subtle) !important;
     box-shadow: 0 20px 40px rgba(1, 212, 9, 0.15);
 }
 
@@ -1350,4 +1367,27 @@ body{
     }
     .hero-content h1 {
         word-wrap: break-word;
+    }
+
+    #about-canvas {
+        z-index: 1;
+        transition: opacity 0.5s ease;  
+        /* Blur interaction: Center is sharp, edges are blurred */
+        mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+        -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
+    }
+
+    /* Edge Blur Overlay */
+    .blur-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        backdrop-filter: blur(4px);
+        opacity: 0.7;
+        mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
+        -webkit-mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
+        z-index: 2;
     }

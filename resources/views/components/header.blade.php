@@ -30,12 +30,12 @@
                     <a class="nav-link dropdown-toggle {{ Request::is('solutions*') ? 'active' : '' }}" href="#" role="button" data-bs-toggle="dropdown">
                         Solutions
                     </a>
-                    <div class="dropdown-menu mega-menu-container bg-body  ">
+                    <div class="dropdown-menu mega-menu-container bg-body">
                         <div class="container p-0">
                             <!-- Main Content Row -->
                             <div class="row g-0 align-items-stretch">
                                 
-                                <div class="col-lg-3 border-end p-4 p-lg-5 d-flex flex-column">
+                                <div class="col-lg-3 border-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
                                     <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2">
                                         Solution Blueprint
                                     </span>
@@ -48,7 +48,7 @@
                                 </div>
 
                                 <!-- Column 2: Modules -->
-                                <div class="col-lg-3 border-end p-4 p-lg-5 d-flex flex-column">
+                                <div class="col-lg-6 col-xl-3 border-end p-4 p-lg-5 d-flex flex-column">
                                     <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Modules</h6>
                                     <div class="mega-list flex-grow-1">
                                         @php
@@ -80,7 +80,7 @@
                                 </div>
 
                                 <!-- Column 3: Industries -->
-                                <div class="col-lg-3 p-4 p-lg-5 d-flex flex-column">
+                                <div class="col-lg-6 col-xl-3 p-4 p-lg-5 d-flex flex-column">
                                     <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Industries</h6>
                                     <div class="row g-0 flex-grow-1">
                                         @php
@@ -108,7 +108,7 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="col-lg-3 p-4 p-lg-4 d-flex flex-column justify-content-center">
+                                <div class="col-lg-3 p-4 p-lg-4 d-none d-xl-flex flex-column justify-content-center">
                                     <div class="bg-accent rounded-5 p-4 h-100 position-relative overflow-hidden d-flex flex-column justify-content-between shadow-lg">
                                         <!-- Content -->
                                         <div class="position-relative z-1">
