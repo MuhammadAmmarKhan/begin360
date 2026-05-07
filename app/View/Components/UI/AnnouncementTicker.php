@@ -6,7 +6,7 @@ use Illuminate\View\Component;
 
 class AnnouncementTicker extends Component
 {
-    public $messages;
+    public mixed $messages;
 
     public function __construct($messages = [])
     {
