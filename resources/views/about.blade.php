@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'About Begin360 | Elite Digital Infrastructure & Odoo Silver Partner')
+@section('title', 'About Begin360 | Elite Digital Infrastructure')
 @section('meta_title', 'About Us - Begin360: Engineering the Future of Enterprise Operations')
-@section('meta_description', 'Discover Begin360\'s mission to transform complex business ecosystems into streamlined, glass-clear infrastructures. As an Elite Odoo Silver Partner, we specialize in high-end ERP implementation and digital architecture.')
-@section('meta_keywords','Odoo Silver Partner, Enterprise Digital Infrastructure, Begin360 About, ERP Implementation Experts, Glassmorphic UI Design, Business Process Optimization, Odoo Consultancy.')
+@section('meta_description', 'Discover Begin360\'s mission to transform complex business ecosystems into streamlined, glass-clear infrastructures. As an Elite Service Provider, we specialize in high-end ERP implementation and digital architecture.')
+@section('meta_keywords','Enterprise Digital Infrastructure, Begin360 About, ERP Implementation Experts, Glassmorphic UI Design, Business Process Optimization, Odoo Consultancy.')
 @push('styles')
 <style>
     #about-hero {
@@ -162,66 +162,6 @@
     @media (max-width: 991px) {
         /* .partner-name { font-size: 3.5rem; } */
         .grayscale-img { height: 500px; }
-    }.custom-pillar {
-        position: relative;
-        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
-        border-radius: 4px; /* Minimal, architectural feel */
-        overflow: hidden;
-    }
-
-    /* Subtle border-on-hover effect */
-    .custom-pillar::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background-color: #56D964; /* Brand accent green */
-        transition: width 0.4s ease;
-    }
-
-    .custom-pillar:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        border-color: rgba(86, 217, 100, 0.2) !important;
-    }
-
-    .custom-pillar:hover::after {
-        width: 100%;
-    }
-
-    /* 3. The Geometric Icon Shape */
-    .icon-shape {
-        width: 70px;
-        height: 70px;
-        background-color: rgba(86, 217, 100, 0.05); /* Green accent, low opacity */
-        border: 2px solid rgba(86, 217, 100, 0.1);
-        transform: rotate(45deg); /* Forms the creative diamond shape */
-        position: relative;
-    }
-
-    /* Keep the actual icon straight */
-    .icon-shape .fa-solid {
-        transform: rotate(-45deg);
-    }
-
-    /* 4. Architectural Offset grid (Creative backdrop, no image) */
-    
-
-    /* Optional: Entrance Animation for pillars */
-    .pillar-item {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: pillarFadeIn 0.6s ease forwards;
-        animation-delay: calc(var(--delay) * 0.15s);
-    }
-
-    @keyframes pillarFadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     
@@ -342,7 +282,7 @@
             [
                 'name' => 'Safdar Razzaq Mithani',
                 'role' => 'Co-Founder and Director',
-                'image' => asset('assets/images/team/safdar-ai.jpg'),
+                'image' => asset('assets/images/team/safdar2.png'),
                 'description' => 'A veteran of 30 years in compliance and process technology, Safdar is one of the most accomplished enterprise experts across Australia and the GCC. He bridges the gap between technical design and regulatory governance, ensuring every Begin360 engagement is delivered with surgical integrity and measurable impact.',
                 'experience_value' => 'Adds sophisticated mastery of cross-border regulatory landscapes, cultural nuances, and high-level governance expectations.'
             ],
@@ -522,7 +462,7 @@
             </div>
             <div class="row g-4">
                 @foreach($erpConsultantPoints as $key => $point)
-                    <div class="col-md-3 pillar-item" style="--delay: {{ $key }}">
+                    <div class="col-lg-3 pillar-item" style="--delay: {{ $key }}">
                         <div class="custom-pillar h-100 p-5 bg-body-tertiary border border-secondary border-opacity-10 shadow-sm rounded-5">
                             <!-- Geometric Icon Shape -->
                             <div class="icon-shape mb-4 d-flex align-items-center justify-content-center">

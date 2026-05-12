@@ -152,53 +152,52 @@
         ];
         $industries = [
             [
-                'title' => 'Consumer Goods',
-                'icon' => 'fa-basket-shopping',
-                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
-                'url' => route('industries.show', 'consumer-goods'),
+                'title' => 'Food & Beverage',
+                'icon' => 'fa-utensils',
+                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience and safety compliance.',
+                'url' => route('industries.show', 'food-beverage'),
                 'column_class' => 'col-12 col-lg-7', // Primary Featured Tile
                 'show_cta' => true,
                 'cta_text' => 'Explore Blueprint'
             ],
             [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Precision MRP architecture and digital twin integration for autonomous, high-fidelity production environments.',
-                'url' => route('industries.show', 'manufacturing'),
-                'column_class' => 'col-12 col-md-6 col-lg-5', // Secondary Hero Tile
+                'title' => 'Retail',
+                'icon' => 'fa-basket-shopping',
+                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
+                'url' => route('industries.show', 'retail'),
+                'column_class' => 'col-12 col-md-6 col-lg-5',
                 'show_cta' => true
             ],
             [
-                'title' => 'Food & Beverage',
-                'icon' => 'fa-utensils',
-                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience.',
-                'url' => route('industries.show', 'food-beverage'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Trades',
+                'icon' => 'fa-screwdriver-wrench',
+                'description' => 'Mobile-first field service automation and real-time resource allocation for agile, high-performance maintenance fleets.',
+                'url' => route('industries.show', 'trades'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Health & Beauty',
-                'icon' => 'fa-capsules',
-                'description' => 'Sophisticated compliance frameworks and multi-location synchronization for specialized pharmaceutical logistics.',
-                'url' => route('industries.show', 'health-beauty'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Professional Services',
+                'icon' => 'fa-briefcase',
+                'description' => 'Sophisticated project-to-billing lifecycles and human capital utilization metrics for intelligence-led service delivery.',
+                'url' => route('industries.show', 'professional-services'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Distribution',
-                'icon' => 'fa-truck-fast',
-                'description' => 'AI-driven demand planning and logic-based freight fulfillment to optimize your global delivery footprint.',
-                'url' => route('industries.show', 'distribution'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Construction',
+                'icon' => 'fa-helmet-safety',
+                'description' => 'Heavy-duty MRP frameworks and project costing architecture designed for complex multi-stage site management.',
+                'url' => route('industries.show', 'construction'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
-            /* Custom Sector Logic */
             [
-                'title' => 'Specialized Enterprise Architecture?',
+                'title' => 'Custom Specialized Architecture?',
                 'icon' => 'fa-microchip',
-                'description' => 'Seeking a bespoke operational framework for a unique industry vertical? We engineer sovereign ecosystems for complex corporate visions.',
+                'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', // Full-width structural footer
+                'column_class' => 'col-12', 
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -856,11 +855,7 @@
     }
 
 </style>
-    <x-customFaqs 
-        title="Still Have<br>Questions?" 
-        :faqs="$faqs" 
-        class="my-custom-margin-class" 
-    />
+    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
 @endsection
 @push('scripts')
 

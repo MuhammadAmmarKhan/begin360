@@ -7,7 +7,7 @@
     <meta name="author" content="Begin360">
 
     {{-- SEO & Meta Management --}}
-    <title>@yield('title', 'Begin360 | Elite Odoo Silver Partner')</title>
+    <title>@yield('title', 'Begin360 | From Concept To Clarity')</title>
     <meta name="description" content="@yield('meta_description', 'Elite digital infrastructure and Odoo implementation.')">
     <meta name="keywords" content="@yield('meta_keywords', 'Odoo, ERP, Digital Transformation')">
 
@@ -16,10 +16,9 @@
     @else
         <meta name="robots" content="index, follow">
     @endif
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <script crossorigin="anonymous" defer src="https://kit.fontawesome.com/0b217c8a25.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])

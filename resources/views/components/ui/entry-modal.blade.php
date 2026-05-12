@@ -14,15 +14,15 @@
                     <div class="col-md-6 p-5 d-flex flex-column justify-content-center bg-obsidian-transparent position-relative">
                         <button type="button" class="btn-close btn-close-body text-accent position-absolute top-0 end-0 m-4" data-bs-dismiss="modal"></button>
                         
-                        <span class="text-accent fw-bold text-uppercase ls-2 mb-2 small">{{ $data['sub_heading'] }}</span>
-                        <h2 class="display-6 fw-black text-uppercase text-body tracking-tighter mb-4">
+                        <span class="text-accent text-uppercase small fw-bold tracking-widest d-block mb-3">{!! $data['sub_heading'] !!}</span>
+                        <h2 class="display-6 fw-semibold mb-4">
                             {!! $data['heading'] !!}
                         </h2>
-                        <p class="text-secondary lh-sm mb-4">{{ $data['paragraph'] }}</p>
+                        <p class="lead text-secondary mb-5 pe-lg-5">{!! $data['paragraph'] !!}</p>
                         
                         <div class="mt-2">
-                            <a href="{{ $data['button_url'] }}" class="btn rounded-pill btn-accent px-5 py-3 fw-bold text-uppercase tracking-widest rounded-0">
-                                {{ $data['button_text'] }}
+                            <a href="{{ $data['button_url'] }}" class="btn rounded-pill btn-accent px-5 py-3 fw-bold text-uppercase rounded-0">
+                                {!! $data['button_text'] !!} 
                             </a>
                         </div>
                     </div>
@@ -61,14 +61,17 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const el = document.getElementById('entryModal');
+        
         if (el) {
             const modal = new bootstrap.Modal(el);
-            
-            // Final check: trigger only when window (images/libraries) is fully locked in
-            window.addEventListener('load', () => {
-                setTimeout(() => {
+            let hasShown = false; // Prevents the modal from showing multiple times
+
+            document.addEventListener('mouseleave', (e) => {
+                // e.clientY < 0 ensures the mouse actually left via the top (address bar area)
+                if (!hasShown && e.clientY < 0) {
                     modal.show();
-                }, 1000); 
+                    hasShown = true; 
+                }
             });
         }
     });

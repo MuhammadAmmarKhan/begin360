@@ -93,53 +93,52 @@
     @php
         $industries = [
             [
-                'title' => 'Consumer Goods',
-                'icon' => 'fa-basket-shopping',
-                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
-                'url' => route('industries.show', 'consumer-goods'),
+                'title' => 'Food & Beverage',
+                'icon' => 'fa-utensils',
+                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience and safety compliance.',
+                'url' => route('industries.show', 'food-beverage'),
                 'column_class' => 'col-12 col-lg-7', // Primary Featured Tile
                 'show_cta' => true,
                 'cta_text' => 'Explore Blueprint'
             ],
             [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Precision MRP architecture and digital twin integration for autonomous, high-fidelity production environments.',
-                'url' => route('industries.show', 'manufacturing'),
-                'column_class' => 'col-12 col-md-6 col-lg-5', // Secondary Hero Tile
+                'title' => 'Retail',
+                'icon' => 'fa-basket-shopping',
+                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
+                'url' => route('industries.show', 'retail'),
+                'column_class' => 'col-12 col-md-6 col-lg-5',
                 'show_cta' => true
             ],
             [
-                'title' => 'Food & Beverage',
-                'icon' => 'fa-utensils',
-                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience.',
-                'url' => route('industries.show', 'food-beverage'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Trades',
+                'icon' => 'fa-screwdriver-wrench',
+                'description' => 'Mobile-first field service automation and real-time resource allocation for agile, high-performance maintenance fleets.',
+                'url' => route('industries.show', 'trades'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Health & Beauty',
-                'icon' => 'fa-capsules',
-                'description' => 'Sophisticated compliance frameworks and multi-location synchronization for specialized pharmaceutical logistics.',
-                'url' => route('industries.show', 'health-beauty'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Professional Services',
+                'icon' => 'fa-briefcase',
+                'description' => 'Sophisticated project-to-billing lifecycles and human capital utilization metrics for intelligence-led service delivery.',
+                'url' => route('industries.show', 'professional-services'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Distribution',
-                'icon' => 'fa-truck-fast',
-                'description' => 'AI-driven demand planning and logic-based freight fulfillment to optimize your global delivery footprint.',
-                'url' => route('industries.show', 'distribution'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Construction',
+                'icon' => 'fa-helmet-safety',
+                'description' => 'Heavy-duty MRP frameworks and project costing architecture designed for complex multi-stage site management.',
+                'url' => route('industries.show', 'construction'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
-            /* Custom Sector Logic */
             [
-                'title' => 'Specialized Enterprise Architecture?',
+                'title' => 'Custom Specialized Architecture?',
                 'icon' => 'fa-microchip',
-                'description' => 'Seeking a bespoke operational framework for a unique industry vertical? We engineer sovereign ecosystems for complex corporate visions.',
+                'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', // Full-width structural footer
+                'column_class' => 'col-12', 
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -270,181 +269,10 @@
         ];
     @endphp
 
-    <x-customFaqs 
-        title="Still Have<br>Questions?" 
-        :faqs="$faqs" 
-        class="my-custom-margin-class" 
-    />
+    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
 
 
 @endsection
 @push('scripts')
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Select ALL elements with the class 'reveal-text'
-    const targets = document.querySelectorAll('.reveal-text');
-    
-    targets.forEach((target) => {
-        const triggerElement = target.closest('.intro-trigger'); // Finds the nearest parent trigger
-        if (!triggerElement) return;
-
-        const originalText = target.textContent.trim();
-        const words = originalText.split(' ');
-        target.textContent = '';
-
-        const allChars = [];
-
-        words.forEach((word, index) => {
-            const wordWrapper = document.createElement('span');
-            wordWrapper.style.whiteSpace = 'nowrap';
-            wordWrapper.style.display = 'inline-block';
-
-            word.split('').forEach(char => {
-                const charSpan = document.createElement('span');
-                charSpan.innerText = char;
-                charSpan.style.display = 'inline-block';
-                charSpan.style.opacity = '0.1'; 
-                wordWrapper.appendChild(charSpan);
-                allChars.push(charSpan);
-            });
-
-            target.appendChild(wordWrapper);
-
-            if (index < words.length - 1) {
-                const space = document.createElement('span');
-                space.innerHTML = '&nbsp;';
-                space.style.display = 'inline-block';
-                target.appendChild(space);
-            }
-        });
-
-        // Initialize unique GSAP animation for THIS specific target
-        gsap.to(allChars, {
-            scrollTrigger: {
-                trigger: triggerElement, // Individual trigger per section
-                start: 'top center',
-                end: 'bottom bottom',
-                scrub: 1.2,
-                markers: false
-            },
-            opacity: 1,
-            y: -40,
-            
-            stagger: 0.05, // Tightened stagger for smoother character reveal
-            ease: "power2.out",
-            color: "var(--bs-body-color)"
-        });
-    });
-});
-</script>
-<script type="module">
-    document.addEventListener("DOMContentLoaded", () => {
-        const canvas = document.querySelector('#about-canvas');
-        const scene = new THREE.Scene();
-        
-        const aspect = window.innerWidth / window.innerHeight;
-        const d = 10;
-        const camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 1000);
-        camera.position.set(0, 10, 0); 
-        camera.lookAt(0, 0, 0);
-
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        const size = 40;
-        const divisions = 60; 
-        const step = size / divisions;
-        const points = [];
-        
-        for (let i = 0; i <= divisions; i++) {
-            for (let j = 0; j < divisions; j++) {
-                points.push(-size/2 + i * step, 0, -size/2 + j * step);
-                points.push(-size/2 + i * step, 0, -size/2 + (j + 1) * step);
-            }
-            for (let j = 0; j < divisions; j++) {
-                points.push(-size/2 + j * step, 0, -size/2 + i * step);
-                points.push(-size/2 + (j + 1) * step, 0, -size/2 + i * step);
-            }
-        }
-
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
-        const initialPositions = new Float32Array(points);
-
-        const material = new THREE.LineBasicMaterial({ 
-            color: 0x888888, 
-            transparent: true, 
-            opacity: 0.12 // Dropped from 0.18 for better text legibility
-        });
-
-        const grid = new THREE.LineSegments(geometry, material);
-        scene.add(grid);
-
-        let mouse = new THREE.Vector2(-999, -999);
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-        });
-
-        function animate() {
-            requestAnimationFrame(animate);
-            const posAttr = geometry.attributes.position;
-            const time = Date.now() * 0.001;
-
-            const mx = mouse.x * d * aspect;
-            const mz = -mouse.y * d;
-
-            for (let i = 0; i < posAttr.count; i++) {
-                const ix = initialPositions[i * 3];
-                const iz = initialPositions[i * 3 + 2];
-
-                // Ambient breathing (Slowed down slightly for "Elite" feel)
-                const waveX = Math.sin(time * 0.3 + ix * 0.2) * 0.03;
-                const waveZ = Math.cos(time * 0.3 + iz * 0.2) * 0.03;
-
-                const dx = ix - mx;
-                const dz = iz - mz;
-                const dist = Math.sqrt(dx * dx + dz * dz);
-
-                // SNAPPY DISPERSAL
-                if (dist < 3.2) {
-                    const force = (3.2 - dist) / 3.2;
-                    const angle = Math.atan2(dz, dx);
-                    
-                    // Increased force multiplier to 1.8 for snappier scuttling
-                    posAttr.setXYZ(
-                        i, 
-                        ix + Math.cos(angle) * force * 1.8 + waveX, 
-                        0, 
-                        iz + Math.sin(angle) * force * 1.8 + waveZ
-                    );
-                } else {
-                    const cx = posAttr.getX(i);
-                    const cz = posAttr.getZ(i);
-                    
-                    // Increased LERP to 0.25 for a faster "spring" back
-                    posAttr.setXYZ(
-                        i,
-                        THREE.MathUtils.lerp(cx, ix + waveX, 0.25),
-                        0,
-                        THREE.MathUtils.lerp(cz, iz + waveZ, 0.25)
-                    );
-                }
-            }
-
-            posAttr.needsUpdate = true;
-            renderer.render(scene, camera);
-            }
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            const aspect = window.innerWidth / window.innerHeight;
-            camera.left = -d * aspect; camera.right = d * aspect;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    });
-</script>
 @endpush

@@ -3,7 +3,7 @@
 @section('title', 'Connect with Begin360 | Strategic Consultation & Enterprise Partnerships')
 @section('meta_title', 'Contact Us - Begin360: Architect Your Digital Transformation')
 @section('meta_description', 'Reach out to Begin360 to discuss high-end ERP architecture, Odoo implementation, or custom digital infrastructure. Engage with our specialists to engineer your enterprise\'s future.')
-@section('meta_keywords', 'Contact Begin360, ERP Consultation, Odoo Implementation Partner, Business Infrastructure Inquiry, Enterprise Digital Strategy, Australia ERP Experts, Odoo Silver Partner Contact.')
+@section('meta_keywords', 'Contact Begin360, ERP Consultation, Odoo Implementation Partner, Business Infrastructure Inquiry, Enterprise Digital Strategy, Australia ERP Experts.')
 @push('styles')
    <style>
      #about-hero {
@@ -54,11 +54,11 @@
                         <span class="text-accent fw-bold text-uppercase tracking-widest mb-3 d-block">
                             Initiate Your Architectural Transformation
                         </span>
-                        <h1 class="display-3 fw-bold mb-4 text-body">
+                        <h1 class="display-3 fw-normal mb-4 text-body">
                             Let’s Engineer the Future of Your <span class="text-accent">Enterprise</span>
                         </h1>
                         <p class="lead mb-4 text-secondary">
-                            Generic solutions are built for the average—rigid, fragmented, and scaling with friction. At Begin360, we believe your digital infrastructure should be as unique as your vision. We don't just implement software; we architect ecosystems that breathe with your business. Whether you are seeking a sovereign Odoo implementation or a complete overhaul of your digital operating system, our consultants are ready to translate your operational complexity into glass-clear efficiency.
+                            Generic solutions are built for the average-rigid, fragmented, and scaling with friction. At <b>Begin360</b>, we believe your digital infrastructure should be as unique as your vision. <br/><br/>We don't just implement software; we architect ecosystems that breathe with your business. Whether you are seeking a sovereign Odoo implementation or a complete overhaul of your digital operating system, our consultants are ready to translate your operational complexity into glass-clear efficiency.
                         </p>
                         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gs-reveal">
                             <!-- Primary Action: Leads to the Form -->

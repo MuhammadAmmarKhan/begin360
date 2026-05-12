@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class tech-stack-scroll extends Component
+class TechStackScroll extends Component
 {
     /**
      * Create a new component instance.

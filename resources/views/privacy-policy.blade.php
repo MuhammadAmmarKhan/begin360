@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'About Begin360 | Elite Digital Infrastructure & Odoo Silver Partner')
+@section('title', 'About Begin360 | Elite Digital Infrastructure')
 @section('meta_title', 'About Us - Begin360: Engineering the Future of Enterprise Operations')
-@section('meta_description', 'Discover Begin360\'s mission to transform complex business ecosystems into streamlined, glass-clear infrastructures. As an Elite Odoo Silver Partner, we specialize in high-end ERP implementation and digital architecture.')
-@section('meta_keywords','Odoo Silver Partner, Enterprise Digital Infrastructure, Begin360 About, ERP Implementation Experts, Glassmorphic UI Design, Business Process Optimization, Odoo Consultancy.')
+@section('meta_description', 'Discover Begin360\'s mission to transform complex business ecosystems into streamlined, glass-clear infrastructures. As an Elite Service Provider , we specialize in high-end ERP implementation and digital architecture.')
+@section('meta_keywords','Enterprise Digital Infrastructure, Begin360 About, ERP Implementation Experts, Glassmorphic UI Design, Business Process Optimization, Odoo Consultancy.')
 @push('styles')
 
 @endpush
@@ -20,7 +20,7 @@
                     Privacy & <span class="text-accent">Cookies</span>
                 </h1>
                 <p class="lead text-secondary mt-4 border-start border-accent ps-4">
-                    As an Odoo Silver Partner, Begin360 Pty Ltd is committed to the highest standards of data integrity and transparency under the Privacy Act 1988 (Cth).
+                    Begin360 Pty Ltd is committed to the highest standards of data integrity and transparency under the Privacy Act 1988 (Cth).
                 </p>
             </div>
         </div>
@@ -116,7 +116,6 @@
                         <h6 class="fw-black text-uppercase small text-black mb-3 ls-1">Policy Framework</h6>
                         <p class="text-white small fw-bold mb-2">APP Compliant</p>
                         <p class="text-black x-small lh-base mb-0">
-                            Partner Tier: Odoo Silver <br>
                             Revision: 3.1.0 <br>
                             Effective: May 2026
                         </p>

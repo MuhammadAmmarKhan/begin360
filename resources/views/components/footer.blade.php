@@ -15,36 +15,36 @@
                 <div class="col-lg-7">
                     <div class="card h-100 border-0 rounded-5 p-4 p-md-5 d-flex flex-column bg-body-tertiary" >
                         
-                        <h2 class="display-3 fw-normal text-body mb-5" style="line-height: 0.9; letter-spacing: -1px;">
-                            Lets Get <br/>Connected
+                        <h2 class="display-6 fw-semibold mb-4" style="line-height: 0.9; letter-spacing: -1px;">
+                            Lets Get <br/><span class="section-accent text-accent fw-light">Connected</span>
                         </h2>
 
                         <form action="#" class="corporate-form">
                             <div class="row g-3">
                                 <!-- First Name -->
                                 <div class="col-md-6">
-                                    <label class="form-label text-body fw-bold small text-uppercase">First Name *</label>
+                                    <label class="form-label text-body fw-normal small text-uppercase">First Name *</label>
                                     <input type="text" class="form-control corporate-input" required>
                                 </div>
                                 <!-- Last Name -->
                                 <div class="col-md-6">
-                                    <label class="form-label text-body fw-bold small text-uppercase">Last Name *</label>
+                                    <label class="form-label text-body fw-normal small text-uppercase">Last Name *</label>
                                     <input type="text" class="form-control corporate-input" required>
                                 </div>
                                 <!-- Company Name -->
                                 <div class="col-12">
-                                    <label class="form-label text-body fw-bold small text-uppercase">Company Name *</label>
+                                    <label class="form-label text-body fw-normal small text-uppercase">Company Name *</label>
                                     <input type="text" class="form-control corporate-input" required>
                                 </div>
                                 <!-- Email -->
                                 <div class="col-12">
-                                    <label class="form-label text-body fw-bold small text-uppercase">Email *</label>
+                                    <label class="form-label text-body fw-normal small text-uppercase">Email *</label>
                                     <input type="email" class="form-control corporate-input" required>
                                 </div>
                                 <!-- Service Interest -->
                                 <div class="col-12">
-                                    <label class="form-label text-body fw-bold small text-uppercase">Service Interest</label>
-                                    <select class="form-select corporate-input">
+                                    <label class="form-label text-body fw-normal small text-uppercase">Service Interest</label>
+                                    <select class="form-select fw-normal corporate-input">
                                         <option selected disabled>Select a service...</option>
                                         <option>CRM Consulting</option>
                                         <option>Workflow Automation</option>
@@ -54,7 +54,7 @@
                                 </div>
                                 <!-- Additional Notes -->
                                 <div class="col-12">
-                                    <label class="form-label text-body fw-bold small text-uppercase">Additional Notes</label>
+                                    <label class="form-label text-body fw-normal small text-uppercase">Additional Notes</label>
                                     <textarea class="form-control corporate-input" rows="3"></textarea>
                                 </div>
                                 
@@ -62,8 +62,8 @@
                                 <div class="col-12 mt-4">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" id="agree" required>
-                                        <label class="form-check-label text-body small fw-medium" for="agree" style="font-size: 0.75rem;">
-                                            I AGREE TO RECEIVE COMMUNICATIONS REGARDING MY PROJECT INQUIRY. DATA RATES MAY APPLY. VIEW OUR PRIVACY POLICY.
+                                        <label class="form-check-label text-body fw-normal" for="agree" style="font-size: 0.75rem;">
+                                            I agree to receive communications regarding my project inquiry. View our <a href="{{ route('privacy') }}" class="text-accent text-decoration-none fw-bold">Privacy Policy</a>.
                                         </label>
                                     </div>
                                 </div>
@@ -102,10 +102,10 @@
         ['name' => 'Demand Planning', 'icon' => 'fa-chart-line', 'slug' => 'planning']
     ];
 
-    $companyName = 'BEGIN360 PTY LTD';
-    $email = 'info@begin360.com.au';
-    $phone = '(02) 1234 5678';
-    $abn = '00 000 000 000'; // Replace with actual ABN
+    $companyName = env('COMPANY_NAME','BEGIN360 PTY LTD');
+    $email = env('COMPANY_EMAIL','info@begin360.com.au');
+    $phone = env('COMPANY_PHONE','(02) 1234 5678');
+    $abn = env('COMPANY_ABN','00 000 000 000');
 @endphp
 
 <x-ui.announcement-ticker />
@@ -125,7 +125,7 @@
                 <div class="d-flex align-items-center mb-4">
                     <img src="{{ asset('assets/images/logo-light.png') }}" alt="Logo" width="250"/>
                 </div>
-                <p class="text-secondary fw-bold text-uppercase small w-75">
+                <p class="text-secondary fw-normal small w-75">
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.
                 </p>
                 <div class="d-flex gap-3 mt-4">
@@ -136,16 +136,18 @@
             </div>
             
             <div class="col-lg-6">
+                <a class="text-decoration-none" href="tel:{{env('COMPANY_PHONE')}}">
                 <div class="bg-black text-white rounded-4 p-5 d-flex justify-content-between align-items-center transition-all border border-secondary border-opacity-25" 
                      style="cursor: pointer;"
                      onmouseover="this.style.borderColor='var(--accent)'" 
                      onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    <h2 class="display-6 fw-black text-uppercase mb-0">Schedule <br>A Call</h2>
+                    <h2 class="display-6 fw-semibold mb-4">Lets Schedule <br>A <i class="section-accent fraunces text-accent fw-light">Call</i></h2>
                     <div class="bg-accent rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                          style="width: 60px; height: 60px;">
                         <i class="fa-solid fa-arrow-up-right-from-square text-dark fs-4"></i>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
 
@@ -155,7 +157,7 @@
         <div class="row g-4 mb-5">
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Modules</h6>
-                <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
+                <ul class="list-unstyled fw-normal  small lh-lg">
                     @foreach($modules as $module)
                         <li>
                             <a href="{{ url('modules/' . $module['slug']) }}" class="text-secondary text-decoration-none hover-white">
@@ -167,7 +169,7 @@
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Industries</h6>
-                <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
+                <ul class="list-unstyled fw-normal small lh-lg">
                     @foreach($industries as $industry)
                         <li>
                             <a href="{{ url('industries/' . $industry['slug']) }}" class="text-secondary text-decoration-none hover-white">
@@ -179,14 +181,14 @@
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Company</h6>
-                <ul class="list-unstyled fw-bold text-uppercase small lh-lg">
+                <ul class="list-unstyled fw-normal small lh-lg">
                     <li><a href="{{ route('about') }}" class="text-secondary text-decoration-none hover-white">About Us</a></li>
                     <li><a href="{{ route('contact') }}" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-6 col-md-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Contact Us</h6>
-                <div class="text-secondary fw-bold text-uppercase small lh-lg">
+                <div class="text-secondary fw-normal  small lh-lg">
                     <p class="mb-2">
                         <a href="mailto:{{ $email }}" class="text-decoration-none text-secondary hover-white">
                             <i class="fa-solid fa-envelope text-accent me-2"></i> {{ $email }}
@@ -208,11 +210,10 @@
 
         <!-- Bottom Section -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10">
-            <p class="small text-secondary fw-bold mb-md-0">© {{ now()->year }} {{ $companyName }}. ALL RIGHTS RESERVED.</p>
-            <div class="d-flex gap-4 small fw-bold text-uppercase">
+            <p class="small text-secondary fw-normal mb-md-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
+            <div class="d-flex gap-4 small fw-normal">
                 <a href="{{ route('privacy') }}" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
                 <a href="{{ route('terms') }}" class="text-secondary text-decoration-none hover-white">Terms of Service</a>
-                <a href="{{ route('refunds') }}" class="text-secondary text-decoration-none hover-white">Refund Policy</a>
             </div>
         </div>
     </div>

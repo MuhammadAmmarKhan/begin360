@@ -4,7 +4,7 @@ use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\IndustriesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {return view('home');});
+Route::get('/', function () {return view('home');})->name('home');
 Route::get('/about-us', function () {return view('about');})->name('about');
 Route::get('/contact', function () {return view('contact');})->name('contact');
 Route::get('/terms-and-conditions', function () {return view('terms-and-conditions');})->name('terms');

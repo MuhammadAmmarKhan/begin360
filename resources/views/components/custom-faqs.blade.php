@@ -10,8 +10,8 @@
                     style="top: 6rem; z-index: 10;">
                     
                     <div class="d-flex justify-content-between align-items-start mb-4">
-                        <h2 class="display-5 fw-normal text-body mb-0" style="line-height: 1;">
-                            Still Have<br>Questions?
+                        <h2 class="display-6 fw-semibold mb-4" style="line-height: 1;">
+                            Still Have<br><i class="section-accent fraunces text-accent fw-light">Questions?</i>
                         </h2>
                         
                         <!-- PERFECT CIRCLE ELEMENT -->
