@@ -12,7 +12,7 @@ class AnnouncementTicker extends Component
     {
         // Default messages if none are provided
         $this->messages = !empty($messages) ? $messages : [
-            'Odoo Silver Partner: Engineering Excellence',
+            'Engineering Excellence',
             'Propelling Enterprise Success with Velocity',
             'Advanced ERP Implementation & Web Architecture',
             'Begin360: Your Strategic Technology Ally'

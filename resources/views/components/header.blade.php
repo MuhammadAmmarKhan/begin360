@@ -7,8 +7,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">            
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-                <li class="nav-item">
+            <ul class="ps-lg-5 navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+                <li class="ps-lg-5 nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>                
                 <!-- <li class="nav-item dropdown">
@@ -31,15 +31,15 @@
                         Solutions
                     </a>
                     <div class="dropdown-menu mega-menu-container bg-body">
-                        <div class="container p-0">
+                        <div class="container-fluid p-0">
                             <!-- Main Content Row -->
                             <div class="row g-0 align-items-stretch">
                                 
-                                <div class="col-lg-3 border-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
+                                <div class="col-lg-3 border-lg-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
                                     <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2">
                                         Solution Blueprint
                                     </span>
-                                    <h3 class="fw-bold mb-4 ls-tight text-uppercase">
+                                    <h3 class="fw-normal mb-4 ls-tight">
                                         Unified Ecosystems <br> for the Modern <span class="text-accent">Enterprise</span>
                                     </h3>
                                     <p class="small opacity-75 mb-0 lh-base">
@@ -48,18 +48,57 @@
                                 </div>
 
                                 <!-- Column 2: Modules -->
-                                <div class="col-lg-6 col-xl-3 border-end p-4 p-lg-5 d-flex flex-column">
+                                <div class="col-lg-6 col-xl-3 border-lg-end p-4 p-lg-5 d-flex flex-column">
                                     <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Modules</h6>
                                     <div class="mega-list flex-grow-1">
                                         @php
                                             $modules = [
-                                                ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
-                                                ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
-                                                ['name' => 'Order Management', 'icon' => 'fa-cart-flatbed', 'slug' => 'orders'],
-                                                ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
-                                                ['name' => 'Freight & Fulfillment', 'icon' => 'fa-truck-ramp-box', 'slug' => 'fulfillment'],
-                                                ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse'],
-                                                ['name' => 'Demand Planning', 'icon' => 'fa-chart-line', 'slug' => 'planning']
+                                                ['name' => 'Compliance & Traceability','icon' => 'fa-clipboard-check','slug' => 'compliance'],
+                                                [
+                                                    'name' => 'Contracts & Progress Claims', 
+                                                    'icon' => 'fa-file-signature', 
+                                                    'slug' => 'contracts'
+                                                ],
+                                                [
+                                                    'name' => 'CRM', 
+                                                    'icon' => 'fa-users-gear', 
+                                                    'slug' => 'crm'
+                                                ],
+                                                [
+                                                    'name' => 'Finance & Accounting', 
+                                                    'icon' => 'fa-calculator', 
+                                                    'slug' => 'finance'
+                                                ],
+                                                [
+                                                    'name' => 'Inventory Management', 
+                                                    'icon' => 'fa-boxes-stacked', 
+                                                    'slug' => 'inventory'
+                                                ],
+                                                [
+                                                    'name' => 'Job Management', 
+                                                    'icon' => 'fa-list-check', 
+                                                    'slug' => 'job-management'
+                                                ],
+                                                [
+                                                    'name' => 'Order Management', 
+                                                    'icon' => 'fa-cart-flatbed', 
+                                                    'slug' => 'orders'
+                                                ],
+                                                [
+                                                    'name' => 'Point of Sale', 
+                                                    'icon' => 'fa-cash-register', 
+                                                    'slug' => 'pos'
+                                                ],
+                                                [
+                                                    'name' => 'Procurement', 
+                                                    'icon' => 'fa-file-invoice-dollar', 
+                                                    'slug' => 'procurement'
+                                                ],
+                                                [
+                                                    'name' => 'Project Management', 
+                                                    'icon' => 'fa-diagram-project', 
+                                                    'slug' => 'project-management'
+                                                ],
                                             ];
                                         @endphp
 
@@ -73,7 +112,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body fw-bold">
+                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black fw-bold">
                                             Explore all modules <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>
@@ -85,11 +124,11 @@
                                     <div class="row g-0 flex-grow-1">
                                         @php
                                             $industries = [
-                                                ['name' => 'Consumer Goods', 'icon' => 'fa-basket-shopping', 'slug' => 'consumer-goods'],
-                                                ['name' => 'Food & Beverage', 'icon' => 'fa-utensils', 'slug' => 'food-beverage'],
-                                                ['name' => 'Health & Beauty', 'icon' => 'fa-capsules', 'slug' => 'health-beauty'],
-                                                ['name' => 'Manufacturing', 'icon' => 'fa-industry', 'slug' => 'manufacturing'],
-                                                ['name' => 'Distribution', 'icon' => 'fa-truck-fast', 'slug' => 'distribution']
+                                                ['name' => 'Food & Beverage','icon' => 'fa-utensils','slug' => 'food-beverage'],
+                                                ['name' => 'Retail','icon' => 'fa-basket-shopping','slug' => 'retail'],
+                                                ['name' => 'Trades & Field Services','icon' => 'fa-screwdriver-wrench','slug' => 'trades'],
+                                                ['name' => 'Professional Services','icon' => 'fa-briefcase','slug' => 'professional-services'],
+                                                ['name' => 'Construction','icon' => 'fa-helmet-safety','slug' => 'construction']
                                             ];
                                         @endphp
 
@@ -103,7 +142,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body small fw-bold">
+                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black small fw-bold">
                                             Explore all industries <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>
@@ -113,7 +152,7 @@
                                         <!-- Content -->
                                         <div class="position-relative z-1">
                                             <p class="small text-black text-uppercase fw-black tracking-wider mb-2 opacity-75">Ready to Scale?</p>
-                                            <h4 class="fw-900 text-black text-uppercase ls-tight mb-4">
+                                            <h4 class="text-black fw-normal ls-tight mb-4">
                                                 Transform your <br> infrastructure <br> today.
                                             </h4>
                                             <a href="{{ url('/contact') }}" class="btn btn-dark btn-sm rounded-pill px-4 py-2 fw-bold text-uppercase">
@@ -140,8 +179,7 @@
                                     Book a demo <i class="fa fa-arrow-right ms-2 text-accent"></i>
                                 </a>
                                 <div class="d-none d-md-block opacity-50 small">
-                                    <span class="me-3">Twitter / X</span>
-                                    <span>LinkedIn</span>
+                                    <span>{{env('COMPANY_PHONE')}}</span>
                                 </div>
                             </div>
                         </div>                        

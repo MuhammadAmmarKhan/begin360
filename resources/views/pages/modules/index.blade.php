@@ -6,85 +6,30 @@
 @section('meta_keywords', 'ERP Modules, Odoo Features, Enterprise Inventory Management, Digital Procurement Systems, Automated Warehouse Management, Demand Planning Software, Begin360 Solutions, Business Process Architecture.')
 @push('styles')
    <style>
-     #about-hero {
-        background-color: var(--bs-body-bg);
-        overflow: hidden;
-    }
-
-    #about-canvas {
-        z-index: 1;
-        transition: opacity 0.5s ease;  
-        /* Blur interaction: Center is sharp, edges are blurred */
-        mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
-        -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
-    }
-
-    /* Edge Blur Overlay */
-    .blur-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        backdrop-filter: blur(4px);
-        opacity: 0.7;
-        mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
-        -webkit-mask-image: radial-gradient(circle at center, transparent 20%, black 80%);
-        z-index: 2;
-    }
-
-    .glass-hero-card {
-        position: relative;
-        z-index: 10;
-        background: rgba(var(--bs-body-bg-rgb), 0.1);
-        backdrop-filter: blur(15px);
-        border: 2px solid rgba(86, 217, 100, 0.2);
-    }
-    .custom-stop-color-1 {
-        /* Replace with your preferred gray/accent color */
-        stop-color: #047b2a; 
-    }
+     
    </style>
 @endpush
 @section('content')
-    <section id="about-hero" class="position-relative vh-100 w-100 overflow-hidden bg-body pt-5">
-        <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="blur-overlay"></div>
-        <div class="container position-relative h-100 d-flex align-items-center" style="z-index: 10;">
-            <div class="row w-100">
-                <div class="col-lg-8 mx-auto">
-                    <div class="glass-hero-card p-5 gs-reveal rounded-5">
-                        <span class="text-accent fw-bold text-uppercase tracking-widest mb-3 d-block ls-2">
-                            The Digital Ecosystem Catalog
-                        </span>
-                        <h1 class="display-3 fw-black text-body mb-4 tracking-tighter">
-                            Modular Architecture for <span class="text-accent gradient-text">Infinite Scale</span>
-                        </h1>
-                        <p class="lead mb-5 text-secondary fw-medium lh-lg" style="max-width: 850px; margin-left: auto; margin-right: auto;">
-                            Fragmented tools create operational friction. At <span class="text-body fw-bold">Begin360</span>, we’ve engineered a comprehensive suite of interoperable modules designed to serve as the building blocks of your enterprise. From AI-driven demand planning to sovereign inventory control, each component is architected to integrate seamlessly, allowing you to deploy precise functionality today while maintaining the flexibility to expand your infrastructure tomorrow.
-                        </p>
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gs-reveal">
-                            <!-- Primary Action: Leads to the Grid -->
-                            <a href="#module-grid" class="btn btn-accent rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-layer-group me-2 small"></i> Explore the Suite
-                            </a>
-                            <!-- Secondary Action: Consultation -->
-                            <a href="{{ url('/contact') }}" class="btn btn-outline-secondary rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-microchip me-2 small"></i> Request Custom Build
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 100;">
-        <div class="mouse-icon border border-2 border-body rounded-pill d-flex align-items-start justify-content-center" style="width: 25px; height: 45px; padding-top: 5px;">
-            <div class="scroll-dot bg-secondary rounded-circle" style="width: 5px; height: 8px;"></div>
-        </div>
-        <span class="small text-secondary tracking-wide">Scroll to see the transformation</span>
-    </div>
+@php
+        $heroData = [
+            'badge' => '— The Digital Ecosystem Catalog —',
+            'heading_start' => 'Modular Architecture for',
+            'dynamic_word' => 'Infinite Scale',
+            'description' => 'Fragmented tools create operational friction. At <span class="text-body fw-bold">Begin360</span>, we’ve engineered a comprehensive suite of interoperable modules designed to serve as the building blocks of your enterprise. From AI-driven demand planning to sovereign inventory control, each component is architected to integrate seamlessly, allowing you to deploy precise functionality today while maintaining the flexibility to expand your infrastructure tomorrow.',
+            'primary_btn' => [
+                'text' => 'Explore the Suite',
+                'url' => '#module-grid',
+                'icon' => 'fa-layer-group'
+            ],
+            'secondary_btn' => [
+                'text' => 'Request Custom Build',
+                'url' => url('/contact'),
+                'icon' => 'fa-microchip'
+            ],
+            'scroll_text' => 'Scroll to see the transformation'
+        ];
+    @endphp    
+    <x-about-hero :heroData="$heroData"/>  
     @php
         $modules = [
             [
@@ -291,181 +236,10 @@
         ];
     @endphp
 
-    <x-custom-faqs 
-        title="Still Have<br>Questions?" 
-        :faqs="$faqs" 
-        class="my-custom-margin-class" 
-    />
+    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
 
 
 @endsection
 @push('scripts')
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    // Select ALL elements with the class 'reveal-text'
-    const targets = document.querySelectorAll('.reveal-text');
-    
-    targets.forEach((target) => {
-        const triggerElement = target.closest('.intro-trigger'); // Finds the nearest parent trigger
-        if (!triggerElement) return;
-
-        const originalText = target.textContent.trim();
-        const words = originalText.split(' ');
-        target.textContent = '';
-
-        const allChars = [];
-
-        words.forEach((word, index) => {
-            const wordWrapper = document.createElement('span');
-            wordWrapper.style.whiteSpace = 'nowrap';
-            wordWrapper.style.display = 'inline-block';
-
-            word.split('').forEach(char => {
-                const charSpan = document.createElement('span');
-                charSpan.innerText = char;
-                charSpan.style.display = 'inline-block';
-                charSpan.style.opacity = '0.1'; 
-                wordWrapper.appendChild(charSpan);
-                allChars.push(charSpan);
-            });
-
-            target.appendChild(wordWrapper);
-
-            if (index < words.length - 1) {
-                const space = document.createElement('span');
-                space.innerHTML = '&nbsp;';
-                space.style.display = 'inline-block';
-                target.appendChild(space);
-            }
-        });
-
-        // Initialize unique GSAP animation for THIS specific target
-        gsap.to(allChars, {
-            scrollTrigger: {
-                trigger: triggerElement, // Individual trigger per section
-                start: 'top center',
-                end: 'bottom bottom',
-                scrub: 1.2,
-                markers: false
-            },
-            opacity: 1,
-            y: -40,
-            
-            stagger: 0.05, // Tightened stagger for smoother character reveal
-            ease: "power2.out",
-            color: "var(--bs-body-color)"
-        });
-    });
-});
-</script>
-<script type="module">
-    document.addEventListener("DOMContentLoaded", () => {
-        const canvas = document.querySelector('#about-canvas');
-        const scene = new THREE.Scene();
-        
-        const aspect = window.innerWidth / window.innerHeight;
-        const d = 10;
-        const camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 1000);
-        camera.position.set(0, 10, 0); 
-        camera.lookAt(0, 0, 0);
-
-        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        const size = 40;
-        const divisions = 60; 
-        const step = size / divisions;
-        const points = [];
-        
-        for (let i = 0; i <= divisions; i++) {
-            for (let j = 0; j < divisions; j++) {
-                points.push(-size/2 + i * step, 0, -size/2 + j * step);
-                points.push(-size/2 + i * step, 0, -size/2 + (j + 1) * step);
-            }
-            for (let j = 0; j < divisions; j++) {
-                points.push(-size/2 + j * step, 0, -size/2 + i * step);
-                points.push(-size/2 + (j + 1) * step, 0, -size/2 + i * step);
-            }
-        }
-
-        const geometry = new THREE.BufferGeometry();
-        geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
-        const initialPositions = new Float32Array(points);
-
-        const material = new THREE.LineBasicMaterial({ 
-            color: 0x888888, 
-            transparent: true, 
-            opacity: 0.12 // Dropped from 0.18 for better text legibility
-        });
-
-        const grid = new THREE.LineSegments(geometry, material);
-        scene.add(grid);
-
-        let mouse = new THREE.Vector2(-999, -999);
-        window.addEventListener('mousemove', (e) => {
-            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
-            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-        });
-
-        function animate() {
-            requestAnimationFrame(animate);
-            const posAttr = geometry.attributes.position;
-            const time = Date.now() * 0.001;
-
-            const mx = mouse.x * d * aspect;
-            const mz = -mouse.y * d;
-
-            for (let i = 0; i < posAttr.count; i++) {
-                const ix = initialPositions[i * 3];
-                const iz = initialPositions[i * 3 + 2];
-
-                // Ambient breathing (Slowed down slightly for "Elite" feel)
-                const waveX = Math.sin(time * 0.3 + ix * 0.2) * 0.03;
-                const waveZ = Math.cos(time * 0.3 + iz * 0.2) * 0.03;
-
-                const dx = ix - mx;
-                const dz = iz - mz;
-                const dist = Math.sqrt(dx * dx + dz * dz);
-
-                // SNAPPY DISPERSAL
-                if (dist < 3.2) {
-                    const force = (3.2 - dist) / 3.2;
-                    const angle = Math.atan2(dz, dx);
-                    
-                    // Increased force multiplier to 1.8 for snappier scuttling
-                    posAttr.setXYZ(
-                        i, 
-                        ix + Math.cos(angle) * force * 1.8 + waveX, 
-                        0, 
-                        iz + Math.sin(angle) * force * 1.8 + waveZ
-                    );
-                } else {
-                    const cx = posAttr.getX(i);
-                    const cz = posAttr.getZ(i);
-                    
-                    // Increased LERP to 0.25 for a faster "spring" back
-                    posAttr.setXYZ(
-                        i,
-                        THREE.MathUtils.lerp(cx, ix + waveX, 0.25),
-                        0,
-                        THREE.MathUtils.lerp(cz, iz + waveZ, 0.25)
-                    );
-                }
-            }
-
-            posAttr.needsUpdate = true;
-            renderer.render(scene, camera);
-            }
-
-        animate();
-
-        window.addEventListener('resize', () => {
-            const aspect = window.innerWidth / window.innerHeight;
-            camera.left = -d * aspect; camera.right = d * aspect;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    });
-</script>
 @endpush

@@ -14,7 +14,7 @@
 
     #about-canvas {
         z-index: 1;
-        transition: opacity 0.5s ease;  
+        transition: opacity 0.5s ease;
         /* Blur interaction: Center is sharp, edges are blurred */
         mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
         -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
@@ -44,10 +44,10 @@
     }
     .custom-stop-color-1 {
         /* Replace with your preferred gray/accent color */
-        stop-color: #047b2a; 
+        stop-color: #047b2a;
     }
     .ls-2 { letter-spacing: 0.2rem; }
-        
+
         /* Responsive & Interactive Logic */
         .hover-lift:hover {
             transform: translateY(-10px);
@@ -152,53 +152,52 @@
         ];
         $industries = [
             [
-                'title' => 'Consumer Goods',
-                'icon' => 'fa-basket-shopping',
-                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
-                'url' => route('industries.show', 'consumer-goods'),
+                'title' => 'Food & Beverage',
+                'icon' => 'fa-utensils',
+                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience and safety compliance.',
+                'url' => route('industries.show', 'food-beverage'),
                 'column_class' => 'col-12 col-lg-7', // Primary Featured Tile
                 'show_cta' => true,
                 'cta_text' => 'Explore Blueprint'
             ],
             [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Precision MRP architecture and digital twin integration for autonomous, high-fidelity production environments.',
-                'url' => route('industries.show', 'manufacturing'),
-                'column_class' => 'col-12 col-md-6 col-lg-5', // Secondary Hero Tile
+                'title' => 'Retail',
+                'icon' => 'fa-basket-shopping',
+                'description' => 'Scalable omnichannel ecosystems designed to synchronize high-volume retail flows and sovereign inventory control.',
+                'url' => route('industries.show', 'retail'),
+                'column_class' => 'col-12 col-md-6 col-lg-5',
                 'show_cta' => true
             ],
             [
-                'title' => 'Food & Beverage',
-                'icon' => 'fa-utensils',
-                'description' => 'Rigid batch-track procurement and perishable inventory logic engineered for global supply chain resilience.',
-                'url' => route('industries.show', 'food-beverage'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Trades',
+                'icon' => 'fa-screwdriver-wrench',
+                'description' => 'Mobile-first field service automation and real-time resource allocation for agile, high-performance maintenance fleets.',
+                'url' => route('industries.show', 'trades'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Health & Beauty',
-                'icon' => 'fa-capsules',
-                'description' => 'Sophisticated compliance frameworks and multi-location synchronization for specialized pharmaceutical logistics.',
-                'url' => route('industries.show', 'health-beauty'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Professional Services',
+                'icon' => 'fa-briefcase',
+                'description' => 'Sophisticated project-to-billing lifecycles and human capital utilization metrics for intelligence-led service delivery.',
+                'url' => route('industries.show', 'professional-services'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
             [
-                'title' => 'Distribution',
-                'icon' => 'fa-truck-fast',
-                'description' => 'AI-driven demand planning and logic-based freight fulfillment to optimize your global delivery footprint.',
-                'url' => route('industries.show', 'distribution'),
-                'column_class' => 'col-12 col-md-6 col-lg-4', // Modular Tile
+                'title' => 'Construction',
+                'icon' => 'fa-helmet-safety',
+                'description' => 'Heavy-duty MRP frameworks and project costing architecture designed for complex multi-stage site management.',
+                'url' => route('industries.show', 'construction'),
+                'column_class' => 'col-12 col-md-6 col-lg-4',
                 'show_cta' => true
             ],
-            /* Custom Sector Logic */
             [
-                'title' => 'Specialized Enterprise Architecture?',
+                'title' => 'Custom Specialized Architecture?',
                 'icon' => 'fa-microchip',
-                'description' => 'Seeking a bespoke operational framework for a unique industry vertical? We engineer sovereign ecosystems for complex corporate visions.',
+                'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', // Full-width structural footer
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -282,11 +281,11 @@
                         <span class="text-accent fw-bold text-uppercase tracking-widest mb-3 d-block ls-2">
                             Sector-Specific Blueprint
                         </span>
-                        
+
                         <h1 class="display-3 fw-black text-body mb-4 tracking-tighter">
                             Architecting High-Volume <span class="text-accent gradient-text">Consumer Ecosystems</span>
                         </h1>
-                        
+
                         <p class="mb-5 text-secondary fw-light" style="max-width: 900px;">
                             In the rapidly shifting retail landscape, fragmented data creates terminal friction. At <span class="text-body fw-bold">Begin360</span>, we deploy a <span class="text-body fw-bold">Unified System</span>—a high-performance Odoo architecture engineered for the complexities of the <span class="text-accent">Consumer Goods</span> sector. From synchronizing omnichannel retail flows to autonomizing warehouse logic through AI-driven demand planning, our blueprints ensure your enterprise maintains sovereign control at infinite scale.
                         </p>
@@ -296,7 +295,7 @@
                             <a href="#sector-architecture" class="btn btn-accent rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
                                 <i class="fa-solid fa-layer-group me-2 small"></i> View Sector Architecture
                             </a>
-                            
+
                             <!-- Secondary Action: Consultation -->
                             <a href="{{ url('/contact') }}" class="btn btn-outline-secondary rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
                                 <i class="fa-solid fa-microchip me-2 small"></i> Request Supply Chain Audit
@@ -343,11 +342,11 @@
             </div>
         </div>
     </section>
-    <x-tech-stack-scroll 
-        subtitle="Sector Connectivity" 
-        title="Consumer Goods Integration Stack" 
+    <x-tech-stack-scroll
+        subtitle="Sector Connectivity"
+        title="Consumer Goods Integration Stack"
     />
-    <section class="py-5 bg-body text-body d-flex min-vh-100 align-items-center justify-content-center">        
+    <section class="py-5 bg-body text-body d-flex min-vh-100 align-items-center justify-content-center">
         <div class="container">
             <div class="row mb-5 gs-reveal">
                 <div class="col-lg-7">
@@ -365,14 +364,14 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Top Visual Anchor -->
             <div class="row gs-reveal">
                 <div class="col-12">
                     <div class="position-relative overflow-hidden rounded-5 border border-light-subtle shadow-lg" style="height: 800px;">
                         <!-- The Visual Placement -->
                         <img src="your-cpg-blueprint-image.jpg" class="w-100 h-100 object-fit-cover" alt="Consumer Goods Operational Architecture">
-                        
+
                         <!-- Overlay Branding -->
                         <div class="position-absolute bottom-0 start-0 p-5 w-100 bg-gradient-to-t">
                             <div class="col-12">
@@ -383,7 +382,7 @@
                                     The CPG <span class="text-accent">Velocity Blueprint</span>
                                 </h2>
                             </div>
-                          
+
                             <div class="col-12">
                                 <div class="row g-2 gs-reveal">
                                     <div class="col-lg-4">
@@ -447,14 +446,14 @@
                     </p>
                 </div>
             </div>
-            
+
             <!-- Top Visual Anchor: The Omnichannel Blueprint -->
             <div class="row mb-5 gs-reveal">
                 <div class="col-12">
                     <div class="position-relative overflow-hidden rounded-5 border border-light-subtle shadow-lg" style="height: 420px;">
                         <!-- The Visual Placement: Optimized for a high-fidelity connectivity graphic -->
                         <img src="your-omnichannel-architecture-image.jpg" class="w-100 h-100 object-fit-cover opacity-50" alt="Omnichannel Ecosystem Architecture">
-                        
+
                         <!-- Overlay Branding: High-Contrast Slate/Accent -->
                         <div class="position-absolute bottom-0 start-0 p-5 w-100 bg-gradient-to-t">
                             <span class="text-accent fw-bold text-uppercase tracking-widest mb-2 d-block ls-2">
@@ -470,7 +469,7 @@
 
             <!-- Three Architectural Modules Side-by-Side -->
             <div class="row g-4 gs-reveal">
-                
+
                 <!-- Module 01: Channel Orchestration -->
                 <div class="col-lg-4">
                     <div class="h-100 p-4 rounded-4 bg-body border border-light-subtle transition-all hover-lift">
@@ -518,7 +517,7 @@
     </section>
     <section class="py-5 bg-body text-body d-flex min-vh-100 align-items-center justify-content-center">
         <div class="container">
-            
+
             <!-- Top Visual Anchor: The Intelligence Matrix -->
             <div class="row mb-5 gs-reveal">
                 <div class="col-lg-7">
@@ -542,7 +541,7 @@
                 <div class="col-12">
                     <div class="position-relative overflow-hidden rounded-5 border border-light-subtle shadow-lg" style="height: 420px;">
                         <img src="your-supply-chain-intelligence-image.jpg" class="w-100 h-100 object-fit-cover opacity-40" alt="Supply Chain Intelligence Matrix">
-                        
+
                         <div class="position-absolute bottom-0 start-0 p-5 w-100 bg-gradient-to-t">
                             <h3 class="h4 fw-black text-body text-uppercase mb-0">
                                 Predictive <span class="text-accent">Data Sovereignty</span>
@@ -554,7 +553,7 @@
 
             <!-- Three Architectural Intelligence Modules -->
             <div class="row g-4 gs-reveal">
-                
+
                 <!-- Module 01: Omnichannel Visibility -->
                 <div class="col-lg-4">
                     <div class="h-100 p-4 rounded-4 bg-body-tertiary border border-light-subtle transition-all hover-lift">
@@ -621,10 +620,10 @@
 
         <!-- The Bento Grid Component -->
         <x-bento-grid :items="$modules" id="module-grid" class="pt-5" />
-    </section>  
+    </section>
     <section class=" d-flex align-items-center bg-body text-body py-5 overflow-hidden">
     <div class="container-fluid px-lg-5">
-        
+
         <!-- Top Row: 3 Counters -->
         <div class="row g-4 mb-4 justify-content-center gs-reveal">
             @foreach(['Market Velocity' => '40%', 'Data Integrity' => '99%', 'Supply Sync' => '24/7'] as $label => $val)
@@ -681,7 +680,7 @@
 </section>
 <section class="py-5 bg-body text-body">
     <div class="container py-5">
-        
+
         <!-- Section Header -->
         <div class="row mb-5 gs-reveal">
             <div class="col-lg-7">
@@ -702,7 +701,7 @@
         <!-- Adaptive Layout: Grid on Large, Scroll on Small -->
         <div class="testimonial-wrapper">
             <div class="row g-4 testimonial-container">
-                
+
                 <!-- Testimonial 01: Large Bento Piece -->
                 <div class="col-lg-8 col-md-12">
                     <div class="h-100 p-5 rounded-5 bg-body-tertiary border border-light-subtle d-flex flex-column justify-content-between">
@@ -784,7 +783,7 @@
             padding-bottom: 2rem;
             margin-right: -1.5rem; /* Allow cards to bleed off edge */
         }
-        
+
         .testimonial-container {
             display: flex;
             flex-wrap: nowrap;
@@ -805,12 +804,12 @@
         }
     }
 
-    
-    
+
+
     .testimonial-container div {
         transition: transform 0.4s ease;
     }
-    
+
     .testimonial-container .rounded-5:hover {
         border-color: var(--accent) !important;
     }
@@ -856,11 +855,7 @@
     }
 
 </style>
-    <x-custom-faqs 
-        title="Still Have<br>Questions?" 
-        :faqs="$faqs" 
-        class="my-custom-margin-class" 
-    />
+    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
 @endsection
 @push('scripts')
 
@@ -868,7 +863,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Select ALL elements with the class 'reveal-text'
     const targets = document.querySelectorAll('.reveal-text');
-    
+
     targets.forEach((target) => {
         const triggerElement = target.closest('.intro-trigger'); // Finds the nearest parent trigger
         if (!triggerElement) return;
@@ -888,7 +883,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const charSpan = document.createElement('span');
                 charSpan.innerText = char;
                 charSpan.style.display = 'inline-block';
-                charSpan.style.opacity = '0.1'; 
+                charSpan.style.opacity = '0.1';
                 wordWrapper.appendChild(charSpan);
                 allChars.push(charSpan);
             });
@@ -914,7 +909,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             opacity: 1,
             y: -40,
-            
+
             stagger: 0.05, // Tightened stagger for smoother character reveal
             ease: "power2.out",
             color: "var(--bs-body-color)"
@@ -926,21 +921,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener("DOMContentLoaded", () => {
         const canvas = document.querySelector('#about-canvas');
         const scene = new THREE.Scene();
-        
+
         const aspect = window.innerWidth / window.innerHeight;
         const d = 10;
         const camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 1000);
-        camera.position.set(0, 10, 0); 
+        camera.position.set(0, 10, 0);
         camera.lookAt(0, 0, 0);
 
         const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
         renderer.setSize(window.innerWidth, window.innerHeight);
 
         const size = 40;
-        const divisions = 60; 
+        const divisions = 60;
         const step = size / divisions;
         const points = [];
-        
+
         for (let i = 0; i <= divisions; i++) {
             for (let j = 0; j < divisions; j++) {
                 points.push(-size/2 + i * step, 0, -size/2 + j * step);
@@ -956,9 +951,9 @@ document.addEventListener('DOMContentLoaded', () => {
         geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
         const initialPositions = new Float32Array(points);
 
-        const material = new THREE.LineBasicMaterial({ 
-            color: 0x888888, 
-            transparent: true, 
+        const material = new THREE.LineBasicMaterial({
+            color: 0x888888,
+            transparent: true,
             opacity: 0.12 // Dropped from 0.18 for better text legibility
         });
 
@@ -995,18 +990,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (dist < 3.2) {
                     const force = (3.2 - dist) / 3.2;
                     const angle = Math.atan2(dz, dx);
-                    
+
                     // Increased force multiplier to 1.8 for snappier scuttling
                     posAttr.setXYZ(
-                        i, 
-                        ix + Math.cos(angle) * force * 1.8 + waveX, 
-                        0, 
+                        i,
+                        ix + Math.cos(angle) * force * 1.8 + waveX,
+                        0,
                         iz + Math.sin(angle) * force * 1.8 + waveZ
                     );
                 } else {
                     const cx = posAttr.getX(i);
                     const cz = posAttr.getZ(i);
-                    
+
                     // Increased LERP to 0.25 for a faster "spring" back
                     posAttr.setXYZ(
                         i,
