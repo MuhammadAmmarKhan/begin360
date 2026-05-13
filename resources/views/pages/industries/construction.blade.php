@@ -343,7 +343,7 @@
 
         $processData = [
             'subheading' => 'The Begin360 Process',
-            'heading' => 'How we get you <br/>up and <i class="section-accent fraunces text-accent fw-light">running</i>',
+            'heading' => 'How we get you <br/>up and <span class="text-accent fraunces section-accent fw-normal">running</span>',
             'description' => 'A structured path from discovery to a fully operational system. No surprises, no projects that drag on with no end in sight.',
             'steps' => [
                 [
@@ -378,7 +378,7 @@
         ];
         $testimonialData = [
             'subheading' => 'From Our Clients',
-            'heading' => 'What <i class="section-accent fraunces text-accent fw-light">Construction</i> <br/>Businesses Say',
+            'heading' => 'What <span class="text-accent fraunces section-accent fw-normal">Construction</span><br/>Businesses Say',
             'description' => 'Stories from Australian builders and contractors who\'ve made the switch.',
             'testimonials' => [
                 [
@@ -447,12 +447,12 @@
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
     subheading="Sound Familiar?"
-    heading="The <i class='section-accent fraunces text-accent fw-light'>problems</i> every construction business owner knows"
+    heading="The <span class='section-accent fraunces text-accent fw-light'>problems</span> every construction business owner knows"
     description="Whether you're a residential builder, commercial contractor, or specialist subcontractor—these are the financial and operational problems we hear most from construction businesses across Australia."
     :points="$painPoints"
 />
     <x-industry-solutions 
-    heading="And how <i class='fraunces section-accent text-accent fw-light '>Begin360</i> fix it!" 
+    heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
     description="We implement an ERP built around how construction businesses actually run projects — from contract award through to final account. Here are the three things that make the biggest difference."
     :points="$constructionSolutions"
 />

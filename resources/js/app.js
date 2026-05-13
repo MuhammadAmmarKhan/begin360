@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         initAboutCanvas();
     }
     if (document.querySelector('.reveal-text')) {
-        initAboutCanvas();
+        initRevealText();
     }
     
     // Only run Horizontal Scroll if the trigger exists

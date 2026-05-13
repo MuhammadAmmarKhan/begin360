@@ -69,9 +69,9 @@
                 
                 <h2 class="display-6 fw-semibold mb-4">
                     {{ $ecosystemContent['heading_start'] }} 
-                    <i class="text-accent fraunces section-accent fw-light">
+                    <span class="text-accent fraunces section-accent fw-normal">
                         {{ $ecosystemContent['heading_accent'] }}
-                    </i> 
+                    </span> 
                 </h2>
                 
                 <p class="lead text-secondary mb-5">

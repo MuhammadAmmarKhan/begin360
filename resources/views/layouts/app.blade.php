@@ -10,6 +10,11 @@
     <title>@yield('title', 'Begin360 | From Concept To Clarity')</title>
     <meta name="description" content="@yield('meta_description', 'Elite digital infrastructure and Odoo implementation.')">
     <meta name="keywords" content="@yield('meta_keywords', 'Odoo, ERP, Digital Transformation')">
+    <link rel="icon" type="image/png" href="{{asset('assets/images/favicon-96x96.png')}}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="{{asset('assets/images/favicon.svg')}}" />
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/apple-touch-icon.png')}}" />
+    <link rel="manifest" href="{{asset('assets/images/site.webmanifest')}}" />
 
     @if(isset($is_private) && $is_private)
         <meta name="robots" content="noindex, nofollow">
@@ -34,19 +39,20 @@
     <div class="cursor-dot"></div>
     <div class="cursor-glow"></div>
 
-    <x-loader />
-    
-    <header>
-        <x-header /> 
-    </header>
+    <!-- <x-loader /> -->
+    <div id="main-body">
+        <header>
+            <x-header /> 
+        </header>
 
-    <main>
-        @yield('content')
-    </main>
+        <main>
+            @yield('content')
+        </main>
 
-    <footer>
-        <x-footer />
-    </footer>
+        <footer>
+            <x-footer />
+        </footer>
+    </div>
 
     @stack('scripts')
 </body>

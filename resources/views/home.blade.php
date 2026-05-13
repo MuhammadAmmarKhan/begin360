@@ -201,32 +201,131 @@
     .dot-pulsing-active {
         animation: syncRadarPulse 1.8s infinite ease-in-out;
     }
+    .letter-spacing-1 {
+        letter-spacing: 1.5px;
+    }
+
+    /* --- Transformation Section Logic --- */
+    .transformation-frame {
+        position: relative;
+        min-height: 300px;
+        aspect-ratio: 16 / 9;
+    }
+
+    .transition-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    @keyframes chaosToClarity {
+        0%, 45% { opacity: 1; z-index: 2; }
+        55%, 100% { opacity: 0; z-index: 1; }
+    }
+
+    @keyframes clarityToChaos {
+        0%, 45% { opacity: 0; z-index: 1; }
+        55%, 100% { opacity: 1; z-index: 2; }
+    }
+
+    .chaos-state { animation: chaosToClarity 8s infinite alternate; }
+    .clarity-state { animation: clarityToChaos 8s infinite alternate; }
+
+    .transition-labels {
+        position: relative;
+        height: 60px;
+    }
+
+    .label-before, .label-after {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
+
+    .label-before { animation: chaosToClarity 8s infinite alternate; }
+    .label-after { animation: clarityToChaos 8s infinite alternate; }
+
+    /* --- Horizontal Scroll Logic --- */
+    @media (max-width: 767.98px) {
+        .transformation-frame {
+            aspect-ratio: 4 / 3;
+        }
+
+        .problem-cards-wrapper {
+            overflow-x: auto !important;
+            overflow-y: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            /* Hide scrollbar for Chrome/Safari/Firefox */
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            padding-bottom: 10px;
+        }
+
+        .problem-cards-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .problem-cards-wrapper .row {
+            margin-right: -15px;
+            margin-left: -15px;
+            padding-left: 15px; /* Gives first card some breathing room */
+        }
+
+        .problem-cards-wrapper .col-10 {
+            scroll-snap-align: center;
+            /* CRITICAL: Prevent the card from shrinking so it forces a scroll */
+            flex: 0 0 85% !important; 
+            max-width: 85% !important;
+        }
+    }
+    
+    .problem-icon-container {
+        height: 400px;
+    }
 
 </style>
-@push('styles')
+@endpush('styles')
 @section('content')
     @php
         $bottlenecks = [
             [
-                'title' => 'Fragmented Data Silos',
-                'desc' => 'Eliminate operational friction where sales, inventory, and finance operate in isolation.',
+                'title' => 'Disconnected Systems',
+                'desc' => 'Your sales, inventory, finance, and other teams use different tools that don\'t talk to each other.',
                 'image' => 'hp1.png'
             ],
             [
-                'title' => 'Operational Inefficiency',
-                'desc' => 'Stop wasting human capital on repetitive data entry. We transform manual bottlenecks.',
+                'title' => 'Manual Work Everywhere',
+                'desc' => 'Teams spend hours on repetitive data entry, switching between tools and fixing errors.',
                 'image' => 'hp2.png'
             ],
             [
-                'title' => 'Blind Decision Making',
-                'desc' => 'Gain real-time business intelligence and 360° visibility to make data-driven decisions.',
+                'title' => 'No Real-Time Visibility',
+                'desc' => 'Important data is always delayed. You only see the problems after they\'ve already impacted results.',
                 'image' => 'hp3.png'
             ],
             [
-                'title' => 'Stagnated ROI',
-                'desc' => 'Optimize your cost structure by consolidating your tech stack into one platform.',
+                'title' => 'Higher Costs, Lower Margins',
+                'desc' => 'Inefficiencies, errors, and delays lead to higher costs and missed opportunities.',
                 'image' => 'hp4.png'
             ],
+        ];
+        $industryHeader = [
+            'section_class' => 'bg-body-tertiary',
+            'badge'          => '— Vertical Operational Sovereignty —',
+            'heading_start'  => 'Begin360 Industry',
+            'dynamic_word'   => 'blueprints:',
+            'description'    => 'Our ecosystem represents a paradigm shift in industrial engineering—moving beyond generic ERP modules to deliver <span class="">logic-driven workflows</span> tailored for sector-specific friction. Synchronize your global procurement, autonomize your inventory logic, and deploy a digital nervous system engineered for your specific industry landscape.',
+            'primary_btn'    => [
+                'text' => 'View All Industries',
+                'url'  => route('industries.index'),
+                'icon' => 'fa-layer-group'
+            ]
         ];
         $industries = [
             [
@@ -373,36 +472,36 @@
             'sidebar' => [
                 'problem_title' => "What's actually slowing your business down?",
                 'problem_subtitle' => "— THE OPERATIONAL BOTTLENECK —",
-                'problem_desc' => "Siloed data architecture and manual dependencies are invisible leaks in your profitability.",
+                'problem_desc' => "Most businesses struggle not because of a lack of effort, but because of disconnected systems and manual processes.",
                 'solution_title' => "From chaos to clarity.",
                 'solution_subtitle' => "— THE SOLUTION —",
-                'solution_desc' => "We unify your operations into a single, automated source of truth using Odoo ERP.",
-                'cta_text' => "Let’s build your digital backbone.",
+                'solution_desc' => "We unify your operations into a single, automated source of truth using ERP.",
+                'cta_text' => "Let’s Get in Touch",
                 'cta_link' => "#"
             ],
             'cards' => [
                 [
                     'num' => '01',
-                    'title' => 'Fragmented Data Silos',
-                    'desc' => 'Eliminate operational friction where sales, inventory, and finance operate in isolation.',
+                    'title' => 'Disconnected Systems',
+                    'desc' => 'Your sales, inventory, finance, and other teams use different tools that don\'t talk to each other.',
                     'img' => 'assets/images/hp1.png'
                 ],
                 [
                     'num' => '02',
-                    'title' => 'Operational Inefficiency',
-                    'desc' => 'Stop wasting human capital on repetitive data entry. We transform manual bottlenecks.',
+                    'title' => 'Manual Work Everywhere',
+                    'desc' => 'Teams spend hours on repetitive data entry, switching between tools and fixing errors.',
                     'img' => 'assets/images/hp2.png'
                 ],
                 [
                     'num' => '03',
-                    'title' => 'Blind Decision Making',
-                    'desc' => 'Gain real-time business intelligence and 360° visibility to make data-driven decisions.',
+                    'title' => 'No Real-Time Visibility',
+                    'desc' => 'Important data is always delayed. You only see the problems after they\'ve already impacted results.',
                     'img' => 'assets/images/hp3.png'
                 ],
                 [
                     'num' => '04',
-                    'title' => 'Stagnated ROI',
-                    'desc' => 'Optimize your cost structure by consolidating your tech stack into one platform.',
+                    'title' => 'Higher Costs, Lower Margins',
+                    'desc' => 'Inefficiencies, errors, and delays lead to higher costs and missed opportunities.',
                     'img' => 'assets/images/hp4.png'
                 ]
             ],
@@ -430,20 +529,20 @@
             ]
         ];
     @endphp
-    <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body">
+    <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body ">
         <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="container position-relative bg-body border-accent py-5 mb-5">
+        <div class="container position-relative bg-body bg-opacity-75 border border-accent py-5 mb-5 z-2 rounded-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 col-lg-5 order-1 order-md-0 text-start">
                     <div class="hero-content">
                         <div class="overflow-hidden mb-2">
-                            <span class="d-block text-uppercase fw-bold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
-                                Smarter Operations, Better Decisions.
+                            <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
+                                — Smarter Operations, Better Decisions —
                             </span>
                         </div>
                         
-                        <h1 class="display-4 fw-bold text-body mb-4 lh-1 gs-reveal">
-                            From Scattered systems to <span class="section-accent text-nowrap">complete control.</span>
+                        <h1 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
+                            From Scattered systems to <span class="text-accent fraunces section-accent fw-normal">complete control.</span>
                         </h1>
                         
                         <p class="fs-6 text-secondary mb-5 gs-reveal w-100 lh-base fw-light">
@@ -557,78 +656,117 @@
         </div>
     </section>
     <x-bottleneck-component :sectionData="$sectionData"/>
-    
+    <section class="py-5 bg-body-tertiary overflow-hidden d-block d-md-none">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
+                    — THE HIDDEN PROBLEM —
+                </span>
+                <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">What's actually slowing your business <span class="text-accent fraunces section-accent fw-normal">down?</span></h2>
+                <p class="lead text-body mx-auto" style="max-width: 700px;">
+                    Most businesses struggle not because of a lack of effort, but because of disconnected systems and manual processes.
+                </p>
+            </div>
+
+            <div class="problem-cards-wrapper px-2 px-md-0">
+                <div class="row flex-nowrap flex-md-wrap g-4">
+                    @foreach($bottlenecks as $index => $item)
+                        <div class="col-10 col-md-3">
+                            <div class="card h-100 border-light-subtle shadow-sm p-4 rounded-4">
+                                <div class="mb-4">
+                                    <span class="badge rounded-pill bg-accent text-black px-3">
+                                        {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
+                                    </span>
+                                </div>
+                                <div class="problem-icon-container d-flex align-items-center justify-content-center">
+                                    <img src="{{ asset('assets/images/' . $item['image']) }}" 
+                                        alt="{{ $item['title'] }}" 
+                                        class="img-fluid">
+                                </div>
+                                <h4 class="fw-semibold h5">{{ $item['title'] }}</h4>
+                                <p class="text-secondary small mb-0">{{ $item['desc'] }}</p>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted mb-1">There's a better way to run your business.</p>
+                <a href="{{ route('contact') }}" class="text-accent fw-bold text-decoration-none">
+                    Let's build it.
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="transformation-section py-5 bg-body d-block d-md-none">
+        <div class="container">
+            <div class="text-center mb-5">
+                <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
+                    — THE TRANSFORMATION —
+                </span>
+                <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
+                    From chaos to <span class="text-accent fraunces section-accent fw-normal">clarity.</span>
+                </h2>
+                <p class="lead text-muted mx-auto" style="max-width: 700px;">
+                    Bring everything together in one connected system and run your business with confidence.
+                </p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 position-relative">
+                    
+                    <div class="transformation-frame rounded-4 overflow-hidden">
+                        <img src="{{ asset('assets/images/disconnected.png') }}" 
+                            class="img-fluid w-100 transition-img chaos-state" 
+                            alt="Disconnected manual systems chaos">
+                        
+                        <img src="{{ asset('assets/images/clarity.png') }}" 
+                            class="img-fluid w-100 transition-img clarity-state" 
+                            alt="Unified business clarity system">
+                    </div>
+
+                    <div class="text-center mt-4 transition-labels">
+                        <div class="label-before">
+                            <span class="text-danger fw-bold small text-uppercase">✕ Before</span>
+                            <h3 class="h4 fw-bold mt-1">Disconnected. Manual. Unreliable.</h3>
+                        </div>
+                        <div class="label-after">
+                            <span class="text-accent fw-bold small text-uppercase">✓ After</span>
+                            <h3 class="h4 fw-bold mt-1">Connected. Automated. High-Fidelity.</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-9">
+                    <div class="bg-body-tertiary p-4 rounded-pill shadow-sm d-flex align-items-center justify-content-center text-center">
+                        <div class="me-3 d-none d-md-block">
+                            <i class="fa-light fa-lightbulb-on text-accent fs-4"></i>
+                        </div>
+                        <p class="mb-0 fw-medium text-body">
+                            Clarity brings confidence. When everything is connected, you can 
+                            <span class="text-accent">see it, control it, and grow it.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
     <x-process-stepper 
-        subheading="How It Works"
-        heading="We connect the dots.<br/>You see the <i class='text-accent section-accent'>results</i>"
+        subheading="— How It Works —"
+        heading="We connect the dots.<br/>You see the <span class='text-accent fraunces section-accent fw-normal'>results.</span>"
         description="A proven approach to unify your business, automate operations, and give you real-time clarity."
         :steps="$processSteps"
     />
-    <section id="module-introduction" class="py-5 bg-body">
-        <div class="container text-center d-flex flex-column align-items-center">
-            <div class="row text-start py-5 align-items-center">
-                <div class="col-lg-5">
-                    <span class="text-accent fw-bold text-uppercase tracking-widest mb-2 d-block ls-2">
-                        Vertical Operational Sovereignty
-                    </span>
-                    <h2 class="display-6 fw-bold text-body mb-4">
-                        Begin360 Industry <span class="text-accent">Blueprints:</span>
-                    </h2>
-                </div>
-                <div class="col-lg-6 offset-lg-1">
-                    <p class="text-secondary mb-5"> 
-                        Our ecosystem represents a paradigm shift in industrial engineering—moving beyond generic ERP modules to deliver <span class="">logic-driven workflows</span> tailored for sector-specific friction. Synchronize your global procurement, autonomize your inventory logic, and deploy a digital nervous system engineered for your specific industry landscape.
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <!-- The Bento Grid Component -->
-        <x-bento-grid :items="$industries" id="module-grid" class="pt-5" />
-    </section>
-    <!-- <section class="py-0 border-top border-bottom border-light-subtle">
-        <div class="container-fluid px-0">
-            <div class="bg-black w-100 position-relative overflow-hidden">
-                
-                <div class="row g-0 align-items-center">
-                    
-                    <div class="col-xl-8 col-lg-7 p-5 p-md-5 ps-xl-5">
-                        <div class="py-lg-5 ps-xl-4" style="max-width:600px">
-                            <p class="text-accent fw-bold text-uppercase tracking-widest mb-3">
-                                Next-Level Efficiency
-                            </p>
-                            <h2 class="display-6 fw-800 text-white text-uppercase mb-4" style="letter-spacing: -1px;">
-                                The Future of <span class="text-accent">Business Operations</span> is Here.
-                            </h2>
-                            <p class="fs-6 text-secondary fw-light mb-0" style="max-width: 700px;">
-                                Transition from fragmented workflows to a unified corporate ecosystem designed for scale.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-4 col-lg-5 bg-accent p-5 p-md-5 d-flex align-items-center justify-content-center">
-                        <div class="text-center text-lg-start w-100 py-lg-5">
-                            <h3 class="text-white fw-black text-uppercase mb-4">Ready to Integrate?</h3>
-                            <div class="d-grid gap-3">
-                                <a href="#contact-form" class="btn btn-dark btn-lg rounded-pill py-3 fw-black text-uppercase shadow-lg border-0">
-                                    Contact Our Team <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                                <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                            </svg>
-                                </a>
-                                <a href="#contact-form" class="btn btn-light btn-lg rounded-pill py-3 fw-black text-uppercase border-2">
-                                    Book a Demo
-                                </a>
-                            </div>
-                            <p class="text-white-50 mt-4 small text-uppercase fw-bold mb-0">
-                                <i class="fa-solid fa-lock me-2"></i> Secure Corporate API Access Included
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
+    <x-bento-grid 
+            :items="$industries" 
+            :bentoData="$industryHeader" 
+            id="industry-sectors" 
+            class="pt-5" 
+        />
     <section class="py-5 bg-body-tertiary">
         <div class="container py-lg-5">
             <div class="row g-5 align-items-center">
@@ -695,21 +833,19 @@
                 <div class="col-lg-5 text-center text-md-start">
                     <div class="mb-4">
                         <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
-                            <div class="border-top border-accent border-2" style="width: 20px;"></div>
-                            <span class="text-accent fw-bold px-2 small tracking-widest text-uppercase">Let's Get Started</span>
-                            <div class="border-top border-accent border-2" style="width: 20px;"></div>
+                            <span class="text-accent fw-bold px-2 small tracking-widest text-uppercase">— Let's Get Started —</span>
                         </div>
-                        <h2 class="display-6 fw-black text-body text-uppercase mb-4" style="line-height: 1.1;">
-                            Ready to bring your business onto <span class="text-accent">one system?</span>
+                        <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
+                            Ready to bring your business onto <span class="text-accent fraunces section-accent fw-normal">one system?</span>
                         </h2>
-                        <p class="lead text-secondary mb-5">
+                        <p class="fw-normal fs-6 text-secondary mb-5">
                             In 30 minutes, we'll understand your business, map your processes, and show how a modern ERP can bring everything together.
                         </p>
                     </div>
 
                     <!-- Action Button -->
                     <div class="mb-5">
-                        <a href="#contact-form" class="btn btn-accent btn-lg rounded-pill px-4 py-3 fw-black text-uppercase shadow-lg d-inline-flex align-items-center transition-up">
+                        <a href="#contact-form" class="btn btn-accent rounded-pill px-5 py-3 fw-bold text-uppercase tracking-wide text-black shadow-sm d-inline-flex align-items-center">
                             <i class="fa-regular fa-calendar-check me-3 fs-4"></i>
                             Book a 30-min walkthrough
                         </a>
@@ -718,17 +854,17 @@
                     <!-- Trust Indicators -->
                     <div class="row g-3 justify-content-center justify-content-md-start">
                         <div class="col-auto">
-                            <div class="d-flex align-items-center text-secondary small fw-bold text-uppercase">
+                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
                                 <i class="fa-solid fa-circle-check text-accent me-2"></i> No Pressure
                             </div>
                         </div>
                         <div class="col-auto px-3 border-start border-light-subtle">
-                            <div class="d-flex align-items-center text-secondary small fw-bold text-uppercase">
+                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
                                 <i class="fa-regular fa-clock text-accent me-2"></i> 30 Minutes
                             </div>
                         </div>
                         <div class="col-auto px-3 border-start border-light-subtle">
-                            <div class="d-flex align-items-center text-secondary small fw-bold text-uppercase">
+                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
                                 <i class="fa-solid fa-wand-magic-sparkles text-accent me-2"></i> Tailored
                             </div>
                         </div>

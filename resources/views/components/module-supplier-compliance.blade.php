@@ -11,8 +11,8 @@
 @props(['data'])
 
 <section {{ $attributes->merge(['class' => 'py-5 bg-body position-relative overflow-hidden']) }}>
-    <div class="position-absolute top-0 end-0 bg-accent opacity-10 rounded-circle" 
-         style="width: 400px; height: 400px; filter: blur(100px); transform: translate(30%, -30%);"></div>
+    <!-- <div class="position-absolute top-0 end-0 bg-accent opacity-10 rounded-circle" 
+         style="width: 400px; height: 400px; filter: blur(100px); transform: translate(30%, -30%);"></div> -->
 
     <div class="container position-relative py-5">
         <div class="row g-5 mb-5 align-items-center">
@@ -20,12 +20,11 @@
             {{-- Left Side: Narrative --}}
             <div class="col-lg-5 order-2 order-lg-1">
                 <div class="pe-lg-4">
-                    <span class="badge rounded-pill bg-accent bg-opacity-10 text-black px-4 py-2 mb-4 border border-accent border-opacity-25">
-                        <i class="fa-solid {{ $data['intro']['badge_icon'] ?? 'fa-shield' }} me-2"></i> 
+                    <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
                         {{ $data['intro']['badge_text'] ?? 'SUPPLIER COMPLIANCE' }}
                     </span>
                     
-                    <h2 class="display-6 fw-bold text-body text-uppercase mb-4">
+                    <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
                         {!! $data['intro']['title'] !!}
                     </h2>
                     

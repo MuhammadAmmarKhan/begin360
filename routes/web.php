@@ -3,6 +3,7 @@
 use App\Http\Controllers\ModulesController;
 use App\Http\Controllers\IndustriesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {return view('home');})->name('home');
 Route::get('/about-us', function () {return view('about');})->name('about');
@@ -22,3 +23,5 @@ Route::prefix('industries')->group(function () {
     Route::get('/', [IndustriesController::class, 'index'])->name('industries.index');
     Route::get('/{slug}', [IndustriesController::class, 'show'])->name('industries.show');
 });
+
+Route::post('/contact-submit', [ContactController::class, 'submit'])->name('contact.submit');

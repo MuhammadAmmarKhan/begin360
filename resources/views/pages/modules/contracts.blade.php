@@ -16,7 +16,7 @@
                 ['label' => 'Modules', 'url' => route("modules.index"), 'active' => false],
                 ['label' => 'Contract & Claims', 'url' => null, 'active' => true],
             ],
-            'badge' => 'Module',
+            'badge' => '— Module —',
             'heading_start' => 'Get your claims right.<br/>Get paid',
             'dynamic_word' => 'faster.',
             'description' => 'In construction, cash flow lives or dies on progress claims. This module centralizes contracts, retentions, and variations — ensuring your claims go out with proper documentation and come back approved.',
@@ -99,8 +99,8 @@
         ];
         $complianceModule = [
             'intro' => [
-                'badge'   => 'Contract & Progress Claims',
-                'title'   => 'Your contract, your claims, and your cash flow — <br/><i class="text-accent section-accent fraunces fw-light italic">all connected</i>',
+                'badge'   => '— Contract & Progress Claims —',
+                'title'   => 'Your contract, your claims, and your cash flow <span class="text-accent fraunces section-accent fw-normal">all connected</span>',
                 'content' => '<p class="lead mb-4">Building a claim manually takes significant time and is easy to get wrong. This module manages your contract schedule and tracks completion at each milestone.</p>
                             <p class="small opacity-75">Produce properly documented claims automatically—so disputes are less likely and approvals come back faster.</p>'
             ],
@@ -137,8 +137,8 @@
             'bg_text' => 'CONTRACTS',
             'header' => [
                 'badge_icon'  => 'fa-file-signature',
-                'badge_text'  => 'SYSTEM ARCHITECTURE',
-                'title'       => 'What\'s <i class="text-accent section-accent fw-normal">included</i> ?',
+                'badge_text'  => '— SYSTEM ARCHITECTURE —',
+                'title'       => 'What\'s <span class="text-accent fraunces section-accent fw-normal">included</span> ?',
                 'description' => 'Everything you need to manage construction contracts, submit claims on time, and protect your cash flow if a payment dispute arises.'
             ],
             'features' => [
@@ -162,9 +162,9 @@
         
         $supplierModule = [
             'intro' => [
-                'badge_text' => 'CASH FLOW SECURITY',
+                'badge_text' => '— CASH FLOW SECURITY —',
                 'badge_icon' => 'fa-vault',
-                'title'      => 'Know exactly what\'s being held and when you\'re <i class="text-accent fraunces fw-light italic section-accent">getting it back</i>',
+                'title'      => 'Know exactly what\'s being held and when you\'re <span class="text-accent fraunces section-accent fw-normal">getting it back</span>',
                 'content'    => 'Retention is a major cash flow hurdle. Without a proper system, it\'s easy to lose track of what\'s owed or miss the tranches you\'re entitled to claim back. This module automates the deduction and tracking of every dollar held against your work.'
             ],
             'ui' => [
@@ -208,10 +208,10 @@
 
         $modulesHeader = [
             'section_class' => 'bg-body',
-            'badge'          => 'Sectors We Transform',
+            'badge'          => '— Other Modules —',
             'heading_start'  => 'Explore the',
             'dynamic_word'   => 'full suite',
-            'description'    => 'Compliance & Traceability works best when connected to your inventory, procurement, and order management. Here\'s what else is available.',
+            'description'    => 'Contracts & Progress Claims works best alongside project management, variations, and procurement. Here\'s what else is available.',
             'primary_btn'    => [
                 'text' => 'View All Modules',
                 'url'  => route('modules.index'),
@@ -299,10 +299,10 @@
 
         $industryHeader = [
             'section_class' => 'bg-body-tertiary',
-            'badge'          => 'Sectors We Transform',
+            'badge'          => '— Sectors We Transform —',
             'heading_start'  => 'Which industries use this',
             'dynamic_word'   => 'module',
-            'description'    => 'Compliance & Traceability is built specifically for food and beverage operations where lot tracking and FSANZ compliance are mandatory.',
+            'description'    => 'Contracts & Progress Claims is built specifically for construction businesses where contract management and progress billing are central to how the business operates.',
             'primary_btn'    => [
                 'text' => 'View All Industries',
                 'url'  => route('industries.index'),

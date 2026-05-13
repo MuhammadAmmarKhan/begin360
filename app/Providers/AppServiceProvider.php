@@ -19,6 +19,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->app->bind(NotFoundHttpException::class, function ($app) {
+            return response()->view('my-404', [], 404);
+        });
     }
 }

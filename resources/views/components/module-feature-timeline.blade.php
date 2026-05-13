@@ -31,8 +31,8 @@
         {{-- Header Section --}}
         <div class="row align-items-center mb-5 mb-lg-100">
             <div class="col-lg-6 mb-4 mb-lg-0">
-                <span class="badge rounded-pill bg-accent bg-opacity-10 text-black px-4 py-2 mb-3 border border-accent border-opacity-10">
-                    <i class="fa-solid {{ $data['header']['badge_icon'] ?? 'fa-code-merge' }} fa-sm me-2"></i> 
+                <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
+                    <!-- <i class="fa-solid {{ $data['header']['badge_icon'] ?? 'fa-code-merge' }} fa-sm me-2"></i>  -->
                     {{ $data['header']['badge_text'] ?? 'SYSTEM ARCHITECTURE' }}
                 </span>
                 <h2 class="display-6 fw-bold text-white mb-0">

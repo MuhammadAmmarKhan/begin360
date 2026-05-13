@@ -7,8 +7,8 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navContent">            
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
-                <li class="nav-item">
+            <ul class="ps-lg-5 navbar-nav mx-auto mb-2 mb-lg-0 align-items-center">
+                <li class="ps-lg-5 nav-item">
                     <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>                
                 <!-- <li class="nav-item dropdown">
@@ -35,7 +35,7 @@
                             <!-- Main Content Row -->
                             <div class="row g-0 align-items-stretch">
                                 
-                                <div class="col-lg-3 border-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
+                                <div class="col-lg-3 border-lg-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
                                     <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2">
                                         Solution Blueprint
                                     </span>
@@ -48,7 +48,7 @@
                                 </div>
 
                                 <!-- Column 2: Modules -->
-                                <div class="col-lg-6 col-xl-3 border-end p-4 p-lg-5 d-flex flex-column">
+                                <div class="col-lg-6 col-xl-3 border-lg-end p-4 p-lg-5 d-flex flex-column">
                                     <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Modules</h6>
                                     <div class="mega-list flex-grow-1">
                                         @php
@@ -112,7 +112,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body fw-bold">
+                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black fw-bold">
                                             Explore all modules <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>
@@ -142,7 +142,7 @@
                                         @endforeach
                                     </div>
                                     <div class="mt-4 pt-4">
-                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-body small fw-bold">
+                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black small fw-bold">
                                             Explore all industries <i class="fa-solid fa-arrow-right ms-1"></i>
                                         </a>
                                     </div>

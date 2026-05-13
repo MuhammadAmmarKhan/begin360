@@ -7,29 +7,31 @@
     <div class="blur-overlay"></div>
 
     <div class="container py-5 z-3">
-        <nav aria-label="breadcrumb" class="mb-4 gs-reveal">
-                    <ol class="breadcrumb justify-content-start text-uppercase ls-1 small fw-normal">
-                        @foreach($heroData['breadcrumbs'] as $crumb)
-                            @if($crumb['active'])
-                                <li class="breadcrumb-item active text-accent" aria-current="page">
+        @if(isset($heroData['breadcrumbs']) && !empty($heroData['breadcrumbs']))
+            <nav aria-label="breadcrumb" class="mb-4 gs-reveal">
+                <ol class="breadcrumb justify-content-center text-uppercase ls-1 small fw-normal">
+                    @foreach($heroData['breadcrumbs'] as $crumb)
+                        @if($crumb['active'])
+                            <li class="breadcrumb-item active text-accent" aria-current="page">
+                                {{ $crumb['label'] }}
+                            </li>
+                        @else
+                            <li class="breadcrumb-item">
+                                <a href="{{ $crumb['url'] }}" class="text-secondary text-decoration-none hover-accent transition-all">
                                     {{ $crumb['label'] }}
-                                </li>
-                            @else
-                                <li class="breadcrumb-item">
-                                    <a href="{{ $crumb['url'] }}" class="text-secondary text-decoration-none hover-accent transition-all">
-                                        {{ $crumb['label'] }}
-                                    </a>
-                                </li>
-                            @endif
-                        @endforeach
-                    </ol>
-                </nav>
-        <div class="row align-items-center glass-hero-card shadow-lg p-4 p-md-5 gs-reveal rounded-5 text-start border border-light-subtle">
+                                </a>
+                            </li>
+                        @endif
+                    @endforeach
+                </ol>
+            </nav>
+        @endif
+        <div class="row align-items-center {{ isset($heroData['hero_image']) ? 'glass-hero-card shadow-lg p-4 p-md-5 gs-reveal rounded-5 text-start border border-light-subtle' : '' }} ">
             {{-- Conditional Layout Logic --}}
-            <div class="{{ isset($heroData['hero_image']) ? 'col-lg-6' : 'col-lg-7 mx-auto' }}">
+            <div class="{{ isset($heroData['hero_image']) ? 'col-lg-6' : 'col-lg-7 mx-auto glass-hero-card shadow-lg p-4 p-md-5 gs-reveal rounded-5 text-start border border-light-subtle' }}">
 
                 <div class="">
-                    <span class="badge text-accent fw-bold text-uppercase tracking-widest mb-3 ls-2">
+                    <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal mb-3" style="font-size: 0.85rem; letter-spacing: 0.2em;">
                         {!! $heroData['badge'] !!}
                     </span>
                     
@@ -40,7 +42,7 @@
                         </span>
                     </h1>
                     
-                    <p class="mb-5 text-secondary fw-medium lead">
+                    <p class="mb-5 text-secondary fw-normal">
                         {!! $heroData['description'] !!}
                     </p>
 

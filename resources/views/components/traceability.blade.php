@@ -55,7 +55,7 @@
                 <div class="col-md-6 col-xl-3">
                     <div class="p-5 rounded-5 border border-secondary border-opacity-10 bg-body-tertiary bg-opacity-25 shadow-sm transition-hover h-100">
                         <div class="mb-4 d-inline-flex align-items-center justify-content-center bg-accent bg-opacity-10 rounded-4 p-3 border border-accent border-opacity-10">
-                            <i class="fa-solid {{ $feature['icon'] }} fa-xl text-accent"></i>
+                            <i class="fa-solid {{ $feature['icon'] }} fa-2x text-black"></i>
                         </div>
                         <h3 class="h5 fw-bold text-body mb-3">{{ $feature['title'] }}</h3>
                         <p class="small text-body opacity-75 mb-0 line-height-relaxed">

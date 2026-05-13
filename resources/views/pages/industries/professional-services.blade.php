@@ -262,7 +262,7 @@
 
         $processData = [
             'subheading' => 'The Begin360 Process',
-            'heading' => 'How we get you <br/>up and <i class="section-accent fraunces text-accent fw-light">running</i>',
+            'heading' => 'How we get you <br/>up and <span class="text-accent fraunces section-accent fw-normal">running</span>',
             'description' => 'A structured path from discovery to a fully operational system. No surprises, no projects that drag on with no end in sight.',
             'steps' => [
                 [
@@ -297,7 +297,8 @@
         ];
         $testimonialData = [
             'subheading' => 'From Our Clients',
-            'heading' => 'What <i class="section-accent fraunces text-accent fw-light">Professional Services</i> <br/>Firms Say',
+            'heading' => 'What <span class="text-accent fraunces section-accent fw-normal">Professional Services</span>
+<br/>Firms Say',
             'description' => "Stories from Australian consulting firms, agencies, and practices who've made the switch.",
             'testimonials' => [
                 [

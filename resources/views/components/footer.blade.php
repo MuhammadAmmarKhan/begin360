@@ -1,105 +1,179 @@
 <section class="py-5 bg-body" id="contact-form">
-        <div class="container py-lg-5">
-            <div class="row g-4 align-items-stretch">
-                
-                <!-- Left Side: Visual/Image -->
-                <div class="col-lg-5">
-                <!-- Animated Container Wrapper -->
-                    <div class="project-image-wrapper rounded-5 overflow-hidden h-100 shadow-sm position-relative">
-                        <div class="arrow-animations h-100 w-100"></div>
-                    </div>
+    <div class="container py-lg-5">
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+                <div class="project-image-wrapper rounded-5 overflow-hidden h-100 shadow-sm position-relative">
+                    <div class="arrow-animations h-100 w-100"></div>
                 </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="card h-100 border-0 rounded-5 p-4 p-md-5 d-flex flex-column bg-body-tertiary" >
+                    
+                    <h2 class="display-6 fw-semibold mb-4">
+                        Lets Get <br/><span class="text-accent fraunces section-accent fw-normal">Connected</span>
+                    </h2>
 
-
-                <!-- Right Side: Contact Form (Accent Background) -->
-                <div class="col-lg-7">
-                    <div class="card h-100 border-0 rounded-5 p-4 p-md-5 d-flex flex-column bg-body-tertiary" >
+                    <form action="{{ route('contact.submit') }}" method="POST" class="corporate-form" novalidate>
+                        @csrf
                         
-                        <h2 class="display-6 fw-semibold mb-4" style="line-height: 0.9; letter-spacing: -1px;">
-                            Lets Get <br/><span class="section-accent text-accent fw-light">Connected</span>
-                        </h2>
+                        @if(session('success'))
+                            <div class="alert alert-success border-0 rounded-4 mb-4 shadow-sm d-flex align-items-center">
+                                <i class="fa fa-check-circle me-2"></i>
+                                {{ session('success') }}
+                            </div>
+                        @endif
 
-                        <form action="#" class="corporate-form">
-                            <div class="row g-3">
-                                <!-- First Name -->
-                                <div class="col-md-6">
-                                    <label class="form-label text-body fw-normal small text-uppercase">First Name *</label>
-                                    <input type="text" class="form-control corporate-input" required>
-                                </div>
-                                <!-- Last Name -->
-                                <div class="col-md-6">
-                                    <label class="form-label text-body fw-normal small text-uppercase">Last Name *</label>
-                                    <input type="text" class="form-control corporate-input" required>
-                                </div>
-                                <!-- Company Name -->
-                                <div class="col-12">
-                                    <label class="form-label text-body fw-normal small text-uppercase">Company Name *</label>
-                                    <input type="text" class="form-control corporate-input" required>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-12">
-                                    <label class="form-label text-body fw-normal small text-uppercase">Email *</label>
-                                    <input type="email" class="form-control corporate-input" required>
-                                </div>
-                                <!-- Service Interest -->
-                                <div class="col-12">
-                                    <label class="form-label text-body fw-normal small text-uppercase">Service Interest</label>
-                                    <select class="form-select fw-normal corporate-input">
-                                        <option selected disabled>Select a service...</option>
-                                        <option>CRM Consulting</option>
-                                        <option>Workflow Automation</option>
-                                        <option>Custom API Development</option>
-                                        <option>Revenue Operations</option>
-                                    </select>
-                                </div>
-                                <!-- Additional Notes -->
-                                <div class="col-12">
-                                    <label class="form-label text-body fw-normal small text-uppercase">Additional Notes</label>
-                                    <textarea class="form-control corporate-input" rows="3"></textarea>
-                                </div>
-                                
-                                <!-- Opt-in / Disclaimer -->
-                                <div class="col-12 mt-4">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="agree" required>
-                                        <label class="form-check-label text-body fw-normal" for="agree" style="font-size: 0.75rem;">
-                                            I agree to receive communications regarding my project inquiry. View our <a href="{{ route('privacy') }}" class="text-accent text-decoration-none fw-bold">Privacy Policy</a>.
-                                        </label>
-                                    </div>
-                                </div>
+                        @if($errors->any())
+                            <div class="alert alert-danger border-0 rounded-4 mb-4 shadow-sm small">
+                                <i class="fa fa-exclamation-triangle me-2"></i>
+                                Please correct the highlighted fields below.
+                            </div>
+                        @endif
 
-                                <!-- Submit Button -->
-                                <div class="col-12 mt-4 text-center">
-                                    <button type="submit" class="btn btn-accent rounded-pill px-5 py-3 fw-black text-uppercase w-100 w-md-auto shadow-sm">
-                                        Submit Request
-                                    </button>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label text-body fw-normal small text-uppercase">First Name *</label>
+                                <input type="text" name="first_name" 
+                                    class="form-control corporate-input @error('first_name') is-invalid @enderror" 
+                                    value="{{ old('first_name') }}" required>
+                                @error('first_name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label text-body fw-normal small text-uppercase">Last Name *</label>
+                                <input type="text" name="last_name" 
+                                    class="form-control corporate-input @error('last_name') is-invalid @enderror" 
+                                    value="{{ old('last_name') }}" required>
+                                @error('last_name')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-body fw-normal small text-uppercase">Company Name *</label>
+                                <input type="text" name="company" 
+                                    class="form-control corporate-input @error('company') is-invalid @enderror" 
+                                    value="{{ old('company') }}" required>
+                                @error('company')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-body fw-normal small text-uppercase">Email Address *</label>
+                                <input type="email" name="email" 
+                                    class="form-control corporate-input @error('email') is-invalid @enderror" 
+                                    value="{{ old('email') }}" required>
+                                @error('email')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-body fw-normal small text-uppercase">Service Interest</label>
+                                <select name="service" class="form-select corporate-input @error('service') is-invalid @enderror">
+                                    <option selected disabled value="">Select a service...</option>
+                                    @foreach(['CRM Consulting', 'Workflow Automation', 'Custom API Development', 'Revenue Operations'] as $option)
+                                        <option value="{{ $option }}" {{ old('service') == $option ? 'selected' : '' }}>{{ $option }}</option>
+                                    @endforeach
+                                </select>
+                                @error('service')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label text-body fw-normal small text-uppercase">Additional Notes</label>
+                                <textarea name="notes" class="form-control corporate-input @error('notes') is-invalid @enderror" rows="3">{{ old('notes') }}</textarea>
+                                @error('notes')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            
+                            <div class="col-12 mt-4">
+                                <div class="form-check">
+                                    <input class="form-check-input @error('agree') is-invalid @enderror" type="checkbox" name="agree" id="agree" required>
+                                    <label class="form-check-label text-body fw-normal" for="agree" style="font-size: 0.75rem;">
+                                        I agree to receive communications regarding my project inquiry.
+                                    </label>
+                                    @error('agree')
+                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                    @enderror
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
 
+                            <div class="col-12 mt-4 text-center">
+                                <button type="submit" class="btn btn-accent rounded-pill px-5 py-3 fw-bold text-uppercase w-100 w-md-auto shadow-sm">
+                                    Submit Request
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
 @php
     // These would typically be passed from a View Composer or the Controller
-    $industries = $industries ?? [
-        ['name' => 'Consumer Goods', 'icon' => 'fa-basket-shopping', 'slug' => 'consumer-goods'],
-        ['name' => 'Food & Beverage', 'icon' => 'fa-utensils', 'slug' => 'food-beverage'],
-        ['name' => 'Health & Beauty', 'icon' => 'fa-capsules', 'slug' => 'health-beauty'],
-        ['name' => 'Manufacturing', 'icon' => 'fa-industry', 'slug' => 'manufacturing'],
-        ['name' => 'Distribution', 'icon' => 'fa-truck-fast', 'slug' => 'distribution']
+    $industries = [
+        ['name' => 'Food & Beverage','icon' => 'fa-utensils','slug' => 'food-beverage'],
+        ['name' => 'Retail','icon' => 'fa-basket-shopping','slug' => 'retail'],
+        ['name' => 'Trades & Field Services','icon' => 'fa-screwdriver-wrench','slug' => 'trades'],
+        ['name' => 'Professional Services','icon' => 'fa-briefcase','slug' => 'professional-services'],
+        ['name' => 'Construction','icon' => 'fa-helmet-safety','slug' => 'construction']
     ];
 
-    $modules = $modules ?? [
-        ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
-        ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
-        ['name' => 'Order Management', 'icon' => 'fa-cart-flatbed', 'slug' => 'orders'],
-        ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
-        ['name' => 'Freight & Fulfillment', 'icon' => 'fa-truck-ramp-box', 'slug' => 'fulfillment'],
-        ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse'],
-        ['name' => 'Demand Planning', 'icon' => 'fa-chart-line', 'slug' => 'planning']
+    $modules = [
+        ['name' => 'Compliance & Traceability','icon' => 'fa-clipboard-check','slug' => 'compliance'],
+        [
+            'name' => 'Contracts & Progress Claims', 
+            'icon' => 'fa-file-signature', 
+            'slug' => 'contracts'
+        ],
+        [
+            'name' => 'CRM', 
+            'icon' => 'fa-users-gear', 
+            'slug' => 'crm'
+        ],
+        [
+            'name' => 'Finance & Accounting', 
+            'icon' => 'fa-calculator', 
+            'slug' => 'finance'
+        ],
+        [
+            'name' => 'Inventory Management', 
+            'icon' => 'fa-boxes-stacked', 
+            'slug' => 'inventory'
+        ],
+        [
+            'name' => 'Job Management', 
+            'icon' => 'fa-list-check', 
+            'slug' => 'job-management'
+        ],
+        [
+            'name' => 'Order Management', 
+            'icon' => 'fa-cart-flatbed', 
+            'slug' => 'orders'
+        ],
+        [
+            'name' => 'Point of Sale', 
+            'icon' => 'fa-cash-register', 
+            'slug' => 'pos'
+        ],
+        [
+            'name' => 'Procurement', 
+            'icon' => 'fa-file-invoice-dollar', 
+            'slug' => 'procurement'
+        ],
+        [
+            'name' => 'Project Management', 
+            'icon' => 'fa-diagram-project', 
+            'slug' => 'project-management'
+        ],
     ];
 
     $companyName = env('COMPANY_NAME','BEGIN360 PTY LTD');
@@ -141,7 +215,7 @@
                      style="cursor: pointer;"
                      onmouseover="this.style.borderColor='var(--accent)'" 
                      onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    <h2 class="display-6 fw-semibold mb-4">Lets Schedule <br>A <i class="section-accent fraunces text-accent fw-light">Call</i></h2>
+                    <h2 class="display-6 fw-semibold mb-4">Lets Schedule <br>A <span class="text-accent fraunces section-accent fw-normal">Call</span></h2>
                     <div class="bg-accent rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                          style="width: 60px; height: 60px;">
                         <i class="fa-solid fa-arrow-up-right-from-square text-dark fs-4"></i>

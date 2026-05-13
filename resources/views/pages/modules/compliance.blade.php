@@ -16,7 +16,7 @@
                 ['label' => 'Modules', 'url' => route("modules.index"), 'active' => false], // Link to a general modules landing if you have one
                 ['label' => 'Compliance & Traceability', 'url' => null, 'active' => true],
             ],
-            'badge' => 'Module',
+            'badge' => '— Module —',
             'heading_start' => 'Trace anything.<br/>In under a',
             'dynamic_word' => 'minute.',
             'description' => 'Most food and beverage businesses can\'t quickly answer the question: \'Which customers received product from this batch? This module makes that answer available in seconds, building your compliance documentation automatically as you work.',
@@ -123,7 +123,7 @@
 
         $modulesHeader = [
             'section_class' => 'bg-body',
-            'badge'          => 'Sectors We Transform',
+            'badge'          => '— Other Modules —',
             'heading_start'  => 'Explore the',
             'dynamic_word'   => 'full suite',
             'description'    => 'Compliance & Traceability works best when connected to your inventory, procurement, and order management. Here\'s what else is available.',
@@ -214,7 +214,7 @@
 
         $industryHeader = [
             'section_class' => 'bg-body-tertiary',
-            'badge'          => 'Sectors We Transform',
+            'badge'          => '— Sectors We Transform —',
             'heading_start'  => 'Which industries use this',
             'dynamic_word'   => 'module',
             'description'    => 'Compliance & Traceability is built specifically for food and beverage operations where lot tracking and FSANZ compliance are mandatory.',
@@ -486,9 +486,9 @@
         ];
         $complianceModule = [
             'intro' => [
-                'badge'   => 'Traceability & FSANZ',
-                'title'   => 'Your compliance paperwork, done automatically <br/><i class="text-accent section-accent fraunces fw-light italic">as you work</i>',
-                'content' => '<p class="lead mb-4">If you\'re in food and beverage, traceability isn\'t optional. FSANZ requires tracking from ingredient to delivery.</p>
+                'badge'   => '— Traceability & FSANZ —',
+                'title'   => 'Your compliance paperwork, done automatically <br/><span class="text-accent fraunces section-accent fw-normal">as you work</span>',
+                'content' => '<p class="fs-6 mb-4">If you\'re in food and beverage, traceability isn\'t optional. FSANZ requires tracking from ingredient to delivery.</p>
                             <p class="small opacity-75">This module builds the trail as you work, reducing mock recalls from days to under 60 seconds.</p>'
             ],
             'features' => [
@@ -530,8 +530,8 @@
         'bg_text' => 'COMPLIANCE',
         'header' => [
             'badge_icon'  => 'fa-code-merge',
-            'badge_text'  => 'SYSTEM ARCHITECTURE',
-            'title'       => 'What\'s <i class="text-accent section-accent fw-normal">included</i> ?',
+            'badge_text'  => '— SYSTEM ARCHITECTURE —',
+            'title'       => 'What\'s <span class="text-accent fraunces section-accent fw-normal">included</span> ?',
             'description' => 'Everything you need to stay FSANZ-compliant and recall-ready — without your team having to think about it separately from their daily work.'
         ],
         'features' => [
@@ -555,9 +555,9 @@
     
     $supplierModule = [
         'intro' => [
-            'badge_text' => 'SUPPLIER COMPLIANCE',
+            'badge_text' => '— SUPPLIER COMPLIANCE —',
             'badge_icon' => 'fa-shield',
-            'title'      => 'Know your suppliers are compliant before their stock reaches your <i class="text-accent fraunces fw-light italic section-accent">kitchen</i>',
+            'title'      => 'Know your suppliers are compliant before their stock reaches your <span class="text-accent fraunces section-accent fw-normal">kitchen</span>',
             'content'    => 'A lot of food safety risk enters a business through the supplier relationship. If a supplier\'s food safety certificate lapses and you don\'t notice, you\'re exposed. This module tracks every supplier document and flags expiries automatically.'
         ],
         'ui' => [

@@ -10,43 +10,26 @@
    </style>
 @endpush
 @section('content')
-    <section id="about-hero" class="position-relative vh-100 w-100 overflow-hidden bg-body pt-5">
-        <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="blur-overlay"></div>
-        <div class="container position-relative h-100 d-flex align-items-center" style="z-index: 10;">
-            <div class="row w-100">
-                <div class="col-lg-8 mx-auto">
-                    <div class="glass-hero-card p-5 gs-reveal rounded-5">
-                        <span class="text-accent fw-bold text-uppercase tracking-widest mb-3 d-block ls-2">
-                            The Digital Ecosystem Catalog
-                        </span>
-                        <h1 class="display-3 fw-black text-body mb-4 tracking-tighter">
-                            Modular Architecture for <span class="text-accent gradient-text">Infinite Scale</span>
-                        </h1>
-                        <p class="lead mb-5 text-secondary fw-medium lh-lg" style="max-width: 850px; margin-left: auto; margin-right: auto;">
-                            Fragmented tools create operational friction. At <span class="text-body fw-bold">Begin360</span>, we’ve engineered a comprehensive suite of interoperable modules designed to serve as the building blocks of your enterprise. From AI-driven demand planning to sovereign inventory control, each component is architected to integrate seamlessly, allowing you to deploy precise functionality today while maintaining the flexibility to expand your infrastructure tomorrow.
-                        </p>
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gs-reveal">
-                            <!-- Primary Action: Leads to the Grid -->
-                            <a href="#module-grid" class="btn btn-accent rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-layer-group me-2 small"></i> Explore the Suite
-                            </a>
-                            <!-- Secondary Action: Consultation -->
-                            <a href="{{ url('/contact') }}" class="btn btn-outline-secondary rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-microchip me-2 small"></i> Request Custom Build
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 100;">
-        <div class="mouse-icon border border-2 border-body rounded-pill d-flex align-items-start justify-content-center" style="width: 25px; height: 45px; padding-top: 5px;">
-            <div class="scroll-dot bg-secondary rounded-circle" style="width: 5px; height: 8px;"></div>
-        </div>
-        <span class="small text-secondary tracking-wide">Scroll to see the transformation</span>
-    </div>
+@php
+        $heroData = [
+            'badge' => '— The Digital Ecosystem Catalog —',
+            'heading_start' => 'Modular Architecture for',
+            'dynamic_word' => 'Infinite Scale',
+            'description' => 'Fragmented tools create operational friction. At <span class="text-body fw-bold">Begin360</span>, we’ve engineered a comprehensive suite of interoperable modules designed to serve as the building blocks of your enterprise. From AI-driven demand planning to sovereign inventory control, each component is architected to integrate seamlessly, allowing you to deploy precise functionality today while maintaining the flexibility to expand your infrastructure tomorrow.',
+            'primary_btn' => [
+                'text' => 'Explore the Suite',
+                'url' => '#module-grid',
+                'icon' => 'fa-layer-group'
+            ],
+            'secondary_btn' => [
+                'text' => 'Request Custom Build',
+                'url' => url('/contact'),
+                'icon' => 'fa-microchip'
+            ],
+            'scroll_text' => 'Scroll to see the transformation'
+        ];
+    @endphp    
+    <x-about-hero :heroData="$heroData"/>  
     @php
         $modules = [
             [

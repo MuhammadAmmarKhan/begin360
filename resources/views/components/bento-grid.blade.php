@@ -50,22 +50,20 @@
             <div class="row mb-5">
                 <div class="col-lg-8">
                     @if(isset($bentoData['badge']))
-                        <span class="badge rounded-pill bg-accent bg-opacity-10 text-black px-4 py-2 mb-3 border border-accent border-opacity-10 ls-2 text-uppercase fw-bold">
+                        <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
                             {!! $bentoData['badge'] !!}
                         </span>
                     @endif
                     
                     @if(isset($bentoData['heading_start']))
-                        <h2 class="display-5 fw-bold text-body mb-4 tracking-tighter">
+                        <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
                             {!! $bentoData['heading_start'] !!} 
-                            <i class="text-accent section-accent fraunces fw-light italic">
-                                {!! $bentoData['dynamic_word'] ?? '' !!}
-                            </i>
+                            <span class="text-accent fraunces section-accent fw-normal">{!! $bentoData['dynamic_word'] ?? '' !!}</span>
                         </h2>
                     @endif
                     
                     @if(isset($bentoData['description']))
-                        <p class="text-secondary fw-medium lead opacity-75 mb-4">
+                        <p class="text-secondary fw-normal small mb-4">
                             {!! $bentoData['description'] !!}
                         </p>
                     @endif
@@ -91,15 +89,15 @@
 
                 <div class="{{ $item['column_class'] ?? 'col-10 col-md-6 col-lg-4' }}">
                     <a href="{{ $item['url'] ?? '#' }}" 
-                       class="bento-card shadow-sm rounded-4 p-4 p-md-5 d-flex flex-column justify-content-between h-100 text-decoration-none position-relative overflow-hidden {{ $isFeatured ? 'bg-accent is-featured' : 'bg-body border' }}">
+                       class="bento-card shadow-sm rounded-4 p-4 py-md-3 px-md-5 d-flex flex-column justify-content-between h-100 text-decoration-none position-relative overflow-hidden {{ $isFeatured ? 'bg-accent is-featured' : 'bg-body border' }}">
                         
                         @if(!$isFeatured)
                             <div class="hover-bg-layer"></div>
                         @endif
 
                         <div class="position-relative z-2">
-                            <div class="icon-container mb-4">
-                                <i class="fa-solid {{ $item['icon'] }} fa-3x {{ $isFeatured ? 'text-black' : 'text-accent' }}"></i>
+                            <div class="icon-container mb-2">
+                                <i class="fa-solid {{ $item['icon'] }} fa-2x {{ $isFeatured ? 'text-black' : 'text-accent' }}"></i>
                             </div>
                             
                             <h3 class="h4 fw-bold mb-3 {{ $isFeatured ? 'text-black' : 'text-body' }}">
@@ -111,11 +109,11 @@
                             </p>
                         </div>
 
-                        <div class="mt-auto pt-5 d-flex justify-content-between align-items-center position-relative z-2">
+                        <div class="pt-2 d-flex justify-content-between align-items-center position-relative z-2">
                             <span class="fw-bold text-uppercase small tracking-widest {{ $isFeatured ? 'text-black' : 'text-accent' }}">
                                 {{ $item['cta_text'] ?? 'Explore' }}
                             </span>
-                            <div class="btn-circle bg-{{ $isFeatured ? 'black' : 'accent' }} bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
+                            <div class="btn-circle bg-{{ $isFeatured ? 'black' : 'accent' }} rounded-circle d-flex align-items-center justify-content-center" style="width: 32px; height: 32px;">
                                 <i class="fa-solid fa-arrow-right small {{ $isFeatured ? 'text-accent' : 'text-black' }}"></i>
                             </div>
                         </div>

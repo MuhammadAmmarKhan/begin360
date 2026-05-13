@@ -179,10 +179,10 @@
 
     {{-- Dynamic Header --}}
     <div class="section-header-zone container px-4">
-        <span class="badge rounded-pill border border-success text-accent mb-3 text-uppercase px-3" style="border-color: #56D964 !important; font-size: 0.75rem; letter-spacing: 1px;">
+        <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
             {{ $subheading }}
         </span>
-        <h2 class="display-5 fw-bold mb-2 text-body">{!! $heading !!}</h2>
+        <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">{!! $heading !!}</h2>
         <p class="text-secondary mx-auto small mb-0" style="max-width: 600px;">{{ $description }}</p>
     </div>
 
@@ -201,13 +201,13 @@
             @foreach($steps as $index => $step)
                 <div class="step-slide p-1">
                     <div class="content-card-inner bg-body rounded-4 px-5 py-3">
-                        <h3 class="fw-normal text-uppercase text-accent mb-1 fs-5">0{{ $index + 1 }}. {{ $step['title'] }}</h3>
-                        <h2 class="fs-4 text-accent mb-3 small d-none d-lg-block">{{ $step['subtitle'] }}</h2>
-                        <p class="fs-6 text-secondary fw-normal">{{$step['description']}}</p>
+                        <h3 class="badge bg-accent fw-semibold text-uppercase text-black rounded-pill mb-1 small">0{{ $index + 1 }}. {{ $step['title'] }}</h3>
+                        <h2 class="fs-6 text-body mb-2 small d-none d-lg-block">{{ $step['subtitle'] }}</h2>
+                        <p class="small text-secondary fw-normal">{{$step['description']}}</p>
                         
                         <div class="d-flex flex-wrap justify-content-center gap-2">
                             @foreach($step['bullets'] as $bullet)
-                                <span class="small fw-bold text-body px-3 py-1 rounded-pill bg-body-tertiary bg-opacity-5 border border-white border-opacity-10" style="font-size: 0.75rem;">
+                                <span class="small fw-semibold text-body px-3 py-1 rounded-pill bg-body-tertiary bg-opacity-5 border border-white border-opacity-10" style="font-size: 0.75rem;">
                                     <i class="fa-solid fa-check text-accent me-2"></i> {{ $bullet }}
                                 </span>
                             @endforeach

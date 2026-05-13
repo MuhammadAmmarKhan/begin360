@@ -452,7 +452,7 @@
         ];
         $processData = [
             'subheading' => 'The Begin360 Process',
-            'heading' => 'How we get you <br/>up and <i class="section-accent fraunces text-accent fw-light">running</i>',
+            'heading' => 'How we get you <br/>up and <span class="text-accent fraunces section-accent fw-normal">running</span>',
             'description' => 'A structured path from discovery to a fully operational system. No surprises, no projects that drag on with no end in sight.',
             'steps' => [
                 [
@@ -479,7 +479,7 @@
         ];
         $testimonialData = [
             'subheading' => 'From Our Customers',
-            'heading' => 'What <i class="section-accent fraunces text-accent fw-light">Food and Beverage</i> <br/>Businesses Say',
+            'heading' => 'What <span class="text-accent fraunces section-accent fw-normal">Food and Beverage</span><br/>Businesses Say',
             'description' => 'Stories from Australian food and beverage businesses who\'ve made the switch.',
             'testimonials' => [
                 [
@@ -518,12 +518,12 @@
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
         subheading="Sounds Familiar?"
-        heading="The <i class='section-accent fraunces text-accent fw-light'>headaches</i> that come with running a food business"
+        heading="The <span class='section-accent fraunces text-accent fw-light'>headaches</span> that come with running a food business"
         description="These are the problems we hear most from F&B owners across Australia. If any feel familiar, you're in the right place."
         :points="$painPoints"
     />
     <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light '>Begin360</i> fix it!" 
+        heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
         description="We implement an ERP system built around how your food business actually works. Here are the three things that make the biggest difference."
         :points="$fbSolutions"
     />

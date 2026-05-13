@@ -49,47 +49,26 @@
    </style>
 @endpush
 @section('content')
-    <section id="about-hero" class="position-relative vh-100 w-100 overflow-hidden bg-body pt-5">
-        <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="blur-overlay"></div>
-        <div class="container position-relative h-100 d-flex align-items-center" style="z-index: 10;">
-            <div class="row w-100">
-                <div class="col-lg-8 mx-auto">
-                    <div class="glass-hero-card p-5 gs-reveal rounded-5 text-center">
-                        <span class="text-accent fw-bold text-uppercase tracking-widest mb-3 d-block ls-2">
-                            The Industry Blueprint Catalog
-                        </span>
-                        
-                        <h1 class="display-3 fw-black text-body mb-4 tracking-tighter">
-                            Engineered Ecosystems for <span class="text-accent gradient-text">Global Industries</span>
-                        </h1>
-                        
-                        <p class="lead mb-5 text-secondary fw-medium lh-lg mx-auto" style="max-width: 900px;">
-                            Generic platforms fail to capture the nuances of complex sectors. At <span class="text-body fw-bold">Begin360</span>, we deploy a <span class="text-body fw-bold">Unified System</span>—a high-performance Odoo architecture tailored to the specific demands of your vertical. From synchronizing <span class="text-accent">Maritime Logistics</span> to autonomizing <span class="text-accent">Enterprise Supply Chains</span>, our blueprints integrate sovereign data control with AI-driven demand planning to ensure your enterprise is built for infinite scale.
-                        </p>
-
-                        <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center gap-3 gs-reveal">
-                            <!-- Primary Action: Leads to Industry Grid -->
-                            <a href="#industry-grid" class="btn btn-accent rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-industry me-2 small"></i> Explore the Blueprints
-                            </a>
-                            
-                            <!-- Secondary Action: Consultation -->
-                            <a href="{{ url('/contact') }}" class="btn btn-outline-secondary rounded-pill px-5 py-3 fw-800 text-uppercase tracking-wide d-inline-flex align-items-center justify-content-center w-100 w-sm-auto text-decoration-none">
-                                <i class="fa-solid fa-diagram-project me-2 small"></i> Request Sector Audit
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 100;">
-        <div class="mouse-icon border border-2 border-body rounded-pill d-flex align-items-start justify-content-center" style="width: 25px; height: 45px; padding-top: 5px;">
-            <div class="scroll-dot bg-secondary rounded-circle" style="width: 5px; height: 8px;"></div>
-        </div>
-        <span class="small text-secondary tracking-wide">Scroll to see the transformation</span>
-    </div>
+@php
+        $heroData = [
+            'badge' => '— The Industry Blueprint Catalog —',
+            'heading_start' => 'Engineered Ecosystems for',
+            'dynamic_word' => 'Global Industries',
+            'description' => 'Generic platforms fail to capture the nuances of complex sectors. At <span class="text-body fw-bold">Begin360</span>, we deploy a <span class="text-body fw-bold">Unified System</span>—a high-performance Odoo architecture tailored to the specific demands of your vertical. From synchronizing <span class="text-accent">Maritime Logistics</span> to autonomizing <span class="text-accent">Enterprise Supply Chains</span>, our blueprints integrate sovereign data control with AI-driven demand planning to ensure your enterprise is built for infinite scale.',
+            'primary_btn' => [
+                'text' => 'Explore Industries',
+                'url' => '#industry-grid',
+                'icon' => 'fa-industry'
+            ],
+            'secondary_btn' => [
+                'text' => 'Request Sector Audit',
+                'url' => url('/contact'),
+                'icon' => 'fa-diagram-project'
+            ],
+            'scroll_text' => 'Scroll to see the transformation'
+        ];
+    @endphp    
+    <x-about-hero :heroData="$heroData"/>  
     @php
         $industries = [
             [
