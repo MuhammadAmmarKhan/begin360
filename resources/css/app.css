@@ -188,11 +188,6 @@ body{
     box-shadow: inset -5px -2px 0 0 #fff; /* Makes the knob look like a moon */
 }
 
-#operational-bottleneck-trigger {
-    /* display: block !important;
-    overflow: visible !important; */
-}
-
 #master-horizontal-wrapper {
     /* Required for GSAP Pinning to work without jumping */
     will-change: transform;
