@@ -14,7 +14,7 @@
 
     #about-canvas {
         z-index: 1;
-        transition: opacity 0.5s ease;  
+        transition: opacity 0.5s ease;
         /* Blur interaction: Center is sharp, edges are blurred */
         mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
         -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 100%);
@@ -44,7 +44,7 @@
     }
     .custom-stop-color-1 {
         /* Replace with your preferred gray/accent color */
-        stop-color: #047b2a; 
+        stop-color: #047b2a;
     }
    </style>
 @endpush
@@ -67,8 +67,8 @@
             ],
             'scroll_text' => 'Scroll to see the transformation'
         ];
-    @endphp    
-    <x-about-hero :heroData="$heroData"/>  
+    @endphp
+    <x-about-hero :heroData="$heroData"/>
     @php
         $industries = [
             [
@@ -117,7 +117,7 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -166,8 +166,8 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <p class="lead text-secondary mb-5 lh-lg">
-                        Whether orchestrating <span class="text-body fw-bold">Maritime Logistics</span>, optimizing complex <span class="text-body fw-bold">Manufacturing Blueprints</span>, or deploying <span class="text-body fw-bold">Omnichannel Retail Architecture</span>, the Begin360 Operations Cloud scales to the unique constraints of your vertical. 
-                        
+                        Whether orchestrating <span class="text-body fw-bold">Maritime Logistics</span>, optimizing complex <span class="text-body fw-bold">Manufacturing Blueprints</span>, or deploying <span class="text-body fw-bold">Omnichannel Retail Architecture</span>, the Begin360 Operations Cloud scales to the unique constraints of your vertical.
+
                         Our ecosystem represents a paradigm shift in industrial engineering—moving beyond generic ERP modules to deliver <span class="text-body fw-bold">logic-driven workflows</span> tailored for sector-specific friction. Synchronize your global procurement, autonomize your inventory logic, and deploy a digital nervous system engineered for your specific industry landscape.
                     </p>
                 </div>
@@ -248,7 +248,7 @@
         ];
     @endphp
 
-    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
+    <x-custom-faqs title="Still Have<br>Questions?" :faqs="$faqs" />
 
 
 @endsection

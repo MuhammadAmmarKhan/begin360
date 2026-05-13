@@ -80,7 +80,7 @@
         top: 0;
         left: 0;
         pointer-events: none;
-        
+
         opacity: 0.1;
         z-index: -1;
     }
@@ -150,7 +150,7 @@
     /* Positioning dots based on row */
     /* Top Row Nodes (Orders, Inventory, Finance) */
     .node-orders::after, .node-inventory::after, .node-finance::after {
-        bottom: -5px; 
+        bottom: -5px;
     }
 
     /* Bottom Row Nodes (Spreadsheet, Emails) */
@@ -262,7 +262,7 @@
             -webkit-overflow-scrolling: touch;
             scroll-snap-type: x mandatory;
             /* Hide scrollbar for Chrome/Safari/Firefox */
-            scrollbar-width: none; 
+            scrollbar-width: none;
             -ms-overflow-style: none;
             padding-bottom: 10px;
         }
@@ -280,11 +280,11 @@
         .problem-cards-wrapper .col-10 {
             scroll-snap-align: center;
             /* CRITICAL: Prevent the card from shrinking so it forces a scroll */
-            flex: 0 0 85% !important; 
+            flex: 0 0 85% !important;
             max-width: 85% !important;
         }
     }
-    
+
     .problem-icon-container {
         height: 400px;
     }
@@ -374,7 +374,7 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -437,7 +437,7 @@
                 'question' => 'Do you offer change management services?',
                 'answer' => 'We recognize that tools are only half the battle. We provide change management advisory to help align your company culture with new digital processes.'
             ]
-        ];   
+        ];
         $processSteps = [
             [
                 'title' => 'Map',
@@ -540,11 +540,11 @@
                                 — Smarter Operations, Better Decisions —
                             </span>
                         </div>
-                        
+
                         <h1 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
                             From Scattered systems to <span class="text-accent fraunces section-accent fw-normal">complete control.</span>
                         </h1>
-                        
+
                         <p class="fs-6 text-secondary mb-5 gs-reveal w-100 lh-base fw-light">
                             We help growing businesses unify their operations, automate workflows, and gain real-time visibility - all in one place.
                         </p>
@@ -559,9 +559,9 @@
                     </div>
                 </div>
                 <div class="col-lg-6 position-relative min-vh-50 d-flex align-items-center justify-content-center" id="erpAether">
-    
+
                     <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
-                        
+
                         <div class="asset-wrapper asset-lg floating-1" style="top: 0%; left: 35%;">
                             <img src="{{ asset('assets/images/inventory.png') }}" alt="Inventory" class="img-fluid glass-asset">
                         </div>
@@ -600,21 +600,21 @@
                         <div class="connector-container position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 1;">
                             <svg viewBox="0 0 1000 500" preserveAspectRatio="none" class="w-100 h-100">
                                 <path class="path-bg" d="
-                                    M 150 170 V 230 
-                                    M 500 170 V 230 
-                                    M 850 170 V 230 
+                                    M 150 170 V 230
+                                    M 500 170 V 230
+                                    M 850 170 V 230
                                     M 150 230 H 850
-                                    M 300 290 V 230 
-                                    M 700 290 V 230" 
+                                    M 300 290 V 230
+                                    M 700 290 V 230"
                                     stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none" />
-                                
+
                                 <path class="path-active" id="syncPath" d="
-                                    M 150 170 V 230 
-                                    M 500 170 V 230 
-                                    M 850 170 V 230 
+                                    M 150 170 V 230
+                                    M 500 170 V 230
+                                    M 850 170 V 230
                                     M 150 230 H 850
-                                    M 300 290 V 230 
-                                    M 700 290 V 230" 
+                                    M 300 290 V 230
+                                    M 700 290 V 230"
                                     stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round" />
 
                                 <circle cx="150" cy="170" r="10" class="connector-dot dot-pulse" />
@@ -679,8 +679,8 @@
                                     </span>
                                 </div>
                                 <div class="problem-icon-container d-flex align-items-center justify-content-center">
-                                    <img src="{{ asset('assets/images/' . $item['image']) }}" 
-                                        alt="{{ $item['title'] }}" 
+                                    <img src="{{ asset('assets/images/' . $item['image']) }}"
+                                        alt="{{ $item['title'] }}"
                                         class="img-fluid">
                                 </div>
                                 <h4 class="fw-semibold h5">{{ $item['title'] }}</h4>
@@ -715,14 +715,14 @@
 
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10 position-relative">
-                    
+
                     <div class="transformation-frame rounded-4 overflow-hidden">
-                        <img src="{{ asset('assets/images/disconnected.png') }}" 
-                            class="img-fluid w-100 transition-img chaos-state" 
+                        <img src="{{ asset('assets/images/disconnected.png') }}"
+                            class="img-fluid w-100 transition-img chaos-state"
                             alt="Disconnected manual systems chaos">
-                        
-                        <img src="{{ asset('assets/images/clarity.png') }}" 
-                            class="img-fluid w-100 transition-img clarity-state" 
+
+                        <img src="{{ asset('assets/images/clarity.png') }}"
+                            class="img-fluid w-100 transition-img clarity-state"
                             alt="Unified business clarity system">
                     </div>
 
@@ -747,25 +747,25 @@
                             <i class="fa-light fa-lightbulb-on text-accent fs-4"></i>
                         </div>
                         <p class="mb-0 fw-medium text-body">
-                            Clarity brings confidence. When everything is connected, you can 
+                            Clarity brings confidence. When everything is connected, you can
                             <span class="text-accent">see it, control it, and grow it.</span>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>    
-    <x-process-stepper 
+    </section>
+    <x-process-stepper
         subheading="— How It Works —"
         heading="We connect the dots.<br/>You see the <span class='text-accent fraunces section-accent fw-normal'>results.</span>"
         description="A proven approach to unify your business, automate operations, and give you real-time clarity."
         :steps="$processSteps"
     />
-    <x-bento-grid 
-            :items="$industries" 
-            :bentoData="$industryHeader" 
-            id="industry-sectors" 
-            class="pt-5" 
+    <x-bento-grid
+            :items="$industries"
+            :bentoData="$industryHeader"
+            id="industry-sectors"
+            class="pt-5"
         />
     <section class="py-5 bg-body-tertiary">
         <div class="container py-lg-5">
@@ -775,7 +775,7 @@
                     <div class="position-relative">
                         <!-- Subtle Glow Backdrop -->
                         <div class="position-absolute top-50 start-50 translate-middle bg-accent opacity-10 rounded-circle blur-3xl" style="width: 400px; height: 400px; filter: blur(80px);"></div>
-                        
+
                         <!-- Dashboard Frame -->
                         <div class="card border-0 shadow-2xl bg-body rounded-4 overflow-hidden position-relative">
                             <div class="row g-0">
@@ -788,7 +788,7 @@
                                     <i class="fa-solid fa-chart-pie text-accent small"></i>
                                     <div class="mt-auto"><i class="fa-solid fa-gear text-white small"></i></div>
                                 </div>
-                                
+
                                 <!-- Dashboard Content -->
                                 <div class="col p-4 p-md-5 bg-body">
                                     <!-- Top Stats -->
@@ -828,7 +828,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Left Side: Content -->
                 <div class="col-lg-5 text-center text-md-start">
                     <div class="mb-4">
@@ -874,12 +874,12 @@
             </div>
         </div>
     </section>
-    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
+    <x-custom-faqs title="Still Have<br>Questions?" :faqs="$faqs" />
 @endsection
 @push('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    
+
         const scatterView = document.getElementById('clutteredScatter'); // Original messy layout ID
         const structuredView = document.getElementById('structuredNetwork'); // The structured network ID
 
@@ -891,7 +891,7 @@
 
             window.addEventListener('load', () => {
                 setTimeout(() => {
-                    
+
                     syncTL.play(); // Initialize the sequence
 
                     syncTL.to('#clutteredScatter .asset-wrapper', {

@@ -855,7 +855,7 @@
     }
 
 </style>
-    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
+    <x-custom-faqs title="Still Have<br>Questions?" :faqs="$faqs" />
 @endsection
 @push('scripts')
 

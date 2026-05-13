@@ -5,7 +5,7 @@
 @section('meta_keywords', 'Retail ERP Australia, Omnichannel Inventory, Multi-store POS Sync, Retail Replenishment Logic, Odoo Retail Solutions, Inventory Velocity, Begin360 Retail Cloud, Margin Integrity Systems')
 @push('styles')
    <style>
-    
+
    </style>
 @endpush
 @section('content')
@@ -136,7 +136,7 @@
                 'cta_text' => 'Start a Conversation'
             ]
         ];
-        
+
         $industries = [
             [
                 'title' => 'Food & Beverage',
@@ -184,47 +184,47 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
             ]
         ];
-        
+
         $painPoints = [
             [
-                'icon' => 'fa-file-invoice', 
-                'title' => 'Quoting takes way too long and accuracy is a gamble.', 
+                'icon' => 'fa-file-invoice',
+                'title' => 'Quoting takes way too long and accuracy is a gamble.',
                 'content' => 'Building quotes manually from scratch leads to inconsistency and hours of unpaid office work. Without a standardized system, you risk underquoting jobs or losing projects because your response time was too slow.'
             ],
             [
-                'icon' => 'fa-calendar-circle-exclamation', 
-                'title' => 'Scheduling is a mess of double-bookings and gaps.', 
+                'icon' => 'fa-calendar-circle-exclamation',
+                'title' => 'Scheduling is a mess of double-bookings and gaps.',
                 'content' => 'Coordinating technicians across multiple jobs using whiteboards or calendars is pure chaos. When one job runs over, the whole day collapses—leaving customers waiting and your team frustrated.'
             ],
             [
-                'icon' => 'fa-cash-register', 
-                'title' => 'We\'re waiting weeks to get paid after a job is done.', 
+                'icon' => 'fa-cash-register',
+                'title' => 'We\'re waiting weeks to get paid after a job is done.',
                 'content' => 'Invoices that are sent late or contain errors lead to massive payment delays. You can have your busiest month on record but still struggle to meet payroll because your cash is trapped in "pending" status.'
             ],
             [
-                'icon' => 'fa-truck-ramp-box', 
-                'title' => 'We never know if we have the right parts on the van.', 
+                'icon' => 'fa-truck-ramp-box',
+                'title' => 'We never know if we have the right parts on the van.',
                 'content' => 'Technicians arriving on-site without essential materials means wasted travel time and double-handling. Tracking inventory across multiple service vehicles and job sites is nearly impossible without a real-time system.'
             ],
             [
-                'icon' => 'fa-magnifying-glass-chart', 
-                'title' => 'I don\'t actually know which jobs are making money.', 
+                'icon' => 'fa-magnifying-glass-chart',
+                'title' => 'I don\'t actually know which jobs are making money.',
                 'content' => 'Business is busy, but "busy" doesn\'t always mean profitable. Without seeing the true margin on every job after labour, materials, and travel are accounted for, you might be repeating your most expensive mistakes.'
             ],
             [
-                'icon' => 'fa-folder-tree', 
-                'title' => 'Compliance paperwork is scattered and disorganized.', 
+                'icon' => 'fa-folder-tree',
+                'title' => 'Compliance paperwork is scattered and disorganized.',
                 'content' => 'Certificates, WHS documentation, and sign-offs are buried in emails or filing cabinets. Finding the right record during a dispute or a safety audit becomes a high-stress scavenger hunt.'
             ]
         ];
 
-        
+
         $tradeSolutions = [
             [
                 'sub' => '01 — Run Your Jobs Better',
@@ -467,7 +467,7 @@
                 ]
             ]
         ];
-        
+
         $ecosystemContent = [
             'kicker' => 'Platforms',
             'heading_start' => 'We find what',
@@ -476,7 +476,7 @@
             'cta_text' => "Not sure? Let's talk",
             'cta_link' => '#contact-form'
         ];
-        
+
         $testimonialData = [
             'subheading' => 'From Our Clients',
             'heading' => 'What <span class="text-accent fraunces section-accent fw-normal">Trade & Field Service</span><br/>Businesses Say',
@@ -512,7 +512,7 @@
                 ]
             ]
         ];
-        
+
         $faqs = [
             [
                 'question' => 'Will my team in the field actually use it?',
@@ -543,26 +543,26 @@
                 'answer' => 'Absolutely. We provide hands-on training tailored to different roles — from technicians logging materials in the field to office managers running job-profitability reports — ensuring your whole business is self-sufficient from day one.'
             ]
         ];
-        
+
     @endphp
-    <x-about-hero :heroData="$heroData"/>    
+    <x-about-hero :heroData="$heroData"/>
     <x-stats :statsData="$statsData"/>
-    <x-industry-pain-points 
+    <x-industry-pain-points
         subheading="Sound Familiar?"
         heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> every trade business knows"
         description="Whether you're an electrician, plumber, HVAC technician, or builder — these are the operational bottlenecks we hear most from trade businesses across Australia."
         :points="$painPoints"
     />
-    <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fixes it!" 
+    <x-industry-solutions
+        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fixes it!"
         description="We implement an ERP built around how trade and field service businesses actually run — from quoting in the office to signing off on site. Here are the three things that make the biggest difference."
         :points="$tradeSolutions"
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
-    
+
 @endpush

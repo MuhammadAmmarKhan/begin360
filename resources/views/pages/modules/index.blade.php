@@ -6,7 +6,7 @@
 @section('meta_keywords', 'ERP Modules, Odoo Features, Enterprise Inventory Management, Digital Procurement Systems, Automated Warehouse Management, Demand Planning Software, Begin360 Solutions, Business Process Architecture.')
 @push('styles')
    <style>
-     
+
    </style>
 @endpush
 @section('content')
@@ -28,8 +28,8 @@
             ],
             'scroll_text' => 'Scroll to see the transformation'
         ];
-    @endphp    
-    <x-about-hero :heroData="$heroData"/>  
+    @endphp
+    <x-about-hero :heroData="$heroData"/>
     @php
         $modules = [
             [
@@ -152,10 +152,10 @@
                 </div>
                 <div class="col-lg-6 offset-lg-1">
                     <p class="lead text-secondary mb-5 lh-lg">
-                        From precision production and sovereign inventory control to global procurement and omnichannel order orchestration, the 
-                        <span class="text-body fw-bold">Begin360 Operations Cloud</span> represents a paradigm shift in enterprise engineering. 
-                        Our modules are high-performance, flexible frameworks of data architecture and logic-driven workflows designed to be 
-                        composed into a singular digital nervous system. Deploy specific modules to solve immediate operational friction 
+                        From precision production and sovereign inventory control to global procurement and omnichannel order orchestration, the
+                        <span class="text-body fw-bold">Begin360 Operations Cloud</span> represents a paradigm shift in enterprise engineering.
+                        Our modules are high-performance, flexible frameworks of data architecture and logic-driven workflows designed to be
+                        composed into a singular digital nervous system. Deploy specific modules to solve immediate operational friction
                         or integrate the full suite for total end-to-end command.
                     </p>
                 </div>
@@ -236,7 +236,7 @@
         ];
     @endphp
 
-    <x-customFaqs title="Still Have<br>Questions?" :faqs="$faqs" />
+    <x-custom-faqs title="Still Have<br>Questions?" :faqs="$faqs" />
 
 
 @endsection

@@ -5,7 +5,7 @@
 @section('meta_keywords', 'Retail ERP Australia, Omnichannel Inventory, Multi-store POS Sync, Retail Replenishment Logic, Odoo Retail Solutions, Inventory Velocity, Begin360 Retail Cloud, Margin Integrity Systems')
 @push('styles')
    <style>
-    
+
    </style>
 @endpush
 @section('content')
@@ -136,7 +136,7 @@
                 'cta_text' => 'Start a Conversation'
             ]
         ];
-        
+
         $industries = [
             [
                 'title' => 'Food & Beverage',
@@ -184,48 +184,48 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
             ]
         ];
-        
+
 
         $painPoints = [
             [
-                'icon' => 'fa-boxes-stacked', 
-                'title' => 'We\'re losing sales to stock-outs on our best-selling items.', 
+                'icon' => 'fa-boxes-stacked',
+                'title' => 'We\'re losing sales to stock-outs on our best-selling items.',
                 'content' => 'Without real-time inventory velocity data, you’re constantly reacting. You lose revenue on trending products because they aren’t reordered fast enough, while capital stays tied up in slow-moving "dead" stock.'
             ],
             [
-                'icon' => 'fa-rotate', 
-                'title' => 'Online and in-store stock levels are never actually in sync.', 
+                'icon' => 'fa-rotate',
+                'title' => 'Online and in-store stock levels are never actually in sync.',
                 'content' => 'Selling an item in-store that was just purchased online leads to cancelled orders and frustrated customers. Fragmented systems create a manual "reconciliation nightmare" every single morning.'
             ],
             [
-                'icon' => 'fa-chart-line-down', 
-                'title' => 'I don\'t know my true margin after landed costs and shipping.', 
+                'icon' => 'fa-chart-line-down',
+                'title' => 'I don\'t know my true margin after landed costs and shipping.',
                 'content' => 'Between freight, duties, and packaging, calculating the true profitability of a SKU is often guesswork. You might be discounting or promoting items that are already barely breaking even.'
             ],
             [
-                'icon' => 'fa-barcode', 
-                'title' => 'Shrinkage and "missing" stock are eating our net profit.', 
+                'icon' => 'fa-barcode',
+                'title' => 'Shrinkage and "missing" stock are eating our net profit.',
                 'content' => 'Without a rigid audit trail for every stock movement—from receiving at the dock to customer returns—thefts and administrative errors go unnoticed until the end-of-year stocktake.'
             ],
             [
-                'icon' => 'fa-truck-fast', 
-                'title' => 'Fulfilment is slow, manual, and prone to expensive errors.', 
+                'icon' => 'fa-truck-fast',
+                'title' => 'Fulfilment is slow, manual, and prone to expensive errors.',
                 'content' => 'Picking and packing from spreadsheets or legacy systems leads to the wrong items being shipped. Every shipping error costs you double in return freight and damages your brand reputation.'
             ],
             [
-                'icon' => 'fa-users-viewfinder', 
-                'title' => 'We have customers, but we don’t own their data.', 
+                'icon' => 'fa-users-viewfinder',
+                'title' => 'We have customers, but we don’t own their data.',
                 'content' => 'Sales are happening, but project history and customer loyalty are scattered across different platforms. You can\'t see who your high-value repeat buyers are, making your marketing a "spray and pray" effort.'
             ]
         ];
 
-        
+
         $retailSolutions = [
             [
                 'sub' => '01 — One View of Everything',
@@ -292,7 +292,7 @@
                 ]
             ]
         ];
-        
+
         $ecosystemContent = [
             'kicker' => 'Ecosystem Validation',
             'heading_start' => 'We find what',
@@ -301,7 +301,7 @@
             'cta_text' => "Not sure? Let's talk",
             'cta_link' => '#contact-form'
         ];
-        
+
         $testimonialData = [
             'subheading' => 'From Our Clients',
             'heading' => 'What <span class="text-accent fraunces section-accent fw-normal">Retail Businesses</span><br/>Say',
@@ -337,7 +337,7 @@
                 ]
             ]
         ];
-        
+
         $faqs = [
             [
                 'question' => 'We sell in-store and online. Can one system handle both simultaneously?',
@@ -368,26 +368,26 @@
                 'answer' => 'Yes. We provide hands-on training tailored to different roles—from staff using the POS at the counter to warehouse teams managing pick-and-pack workflows—ensuring everyone is confident on day one.'
             ]
         ];
-        
+
     @endphp
-    <x-about-hero :heroData="$heroData"/>    
+    <x-about-hero :heroData="$heroData"/>
     <x-stats :statsData="$statsData"/>
-    <x-industry-pain-points 
+    <x-industry-pain-points
         subheading="Sound Familiar?"
         heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> most growing retail brands share"
         description="Whether you're a multi-store boutique, a growing e-commerce brand, or a national wholesaler—these are the operational bottlenecks we hear most from retail founders and operations managers across Australia."
         :points="$painPoints"
     />
-    <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!" 
+    <x-industry-solutions
+        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!"
         description="We implement an ERP built around how your retail business actually works. Here are the three things that make the biggest difference."
         :points="$retailSolutions"
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
-    
+
 @endpush

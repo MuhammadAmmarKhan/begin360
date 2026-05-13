@@ -5,7 +5,7 @@
 @section('meta_keywords', 'Food and Beverage ERP, Batch-Track Procurement, Perishable Inventory Logic, Supply Chain Resilience, Odoo F&B Solutions, Food Safety Compliance Systems, Digital Production Architecture, Begin360 ERP Ecosystem')
 @push('styles')
    <style>
-    
+
    </style>
 @endpush
 @section('content')
@@ -181,7 +181,7 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
@@ -512,26 +512,26 @@
                 ]
             ]
         ];
-        
+
     @endphp
-    <x-about-hero :heroData="$heroData"/>    
+    <x-about-hero :heroData="$heroData"/>
     <x-stats :statsData="$statsData"/>
-    <x-industry-pain-points 
+    <x-industry-pain-points
         subheading="Sounds Familiar?"
         heading="The <span class='section-accent fraunces text-accent fw-light'>headaches</span> that come with running a food business"
         description="These are the problems we hear most from F&B owners across Australia. If any feel familiar, you're in the right place."
         :points="$painPoints"
     />
-    <x-industry-solutions 
-        heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
+    <x-industry-solutions
+        heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!"
         description="We implement an ERP system built around how your food business actually works. Here are the three things that make the biggest difference."
         :points="$fbSolutions"
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
-    
+
 @endpush

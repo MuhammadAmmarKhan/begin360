@@ -5,7 +5,7 @@
 @section('meta_keywords', 'Construction ERP Australia, Progress Claim Automation, Subcontractor Orchestration, Project Margin Integrity, Odoo Construction Solutions, Variation Tracking Systems, Digital Build Architecture, Begin360 Operations Cloud, Enterprise Construction Logic')
 @push('styles')
    <style>
-    
+
    </style>
 @endpush
 @section('content')
@@ -181,46 +181,46 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
             ]
         ];
-        
+
         $painPoints = [
             [
-                'icon' => 'fa-chart-line', 
-                'title' => 'We don\'t know a project is losing money until it\'s done.', 
+                'icon' => 'fa-chart-line',
+                'title' => 'We don\'t know a project is losing money until it\'s done.',
                 'content' => 'Costs come in from multiple directions—labour, materials, subcontractors, plant hire. By the time everything is reconciled, the project is finished and there\'s nothing you can do about the overrun.'
             ],
             [
-                'icon' => 'fa-file-invoice-dollar', 
-                'title' => 'Progress claims take forever and come back with disputes.', 
+                'icon' => 'fa-file-invoice-dollar',
+                'title' => 'Progress claims take forever and come back with disputes.',
                 'content' => 'Building a progress claim manually from scratch and waiting weeks for approval is a cash flow nightmare—especially when the client pushes back on items you can\'t easily substantiate.'
             ],
             [
-                'icon' => 'fa-file-signature', 
-                'title' => 'Variations are everywhere and we\'re not capturing them all.', 
+                'icon' => 'fa-file-signature',
+                'title' => 'Variations are everywhere and we\'re not capturing them all.',
                 'content' => 'Scope changes happen on every project. By the end of a job, you\'ve done thousands of dollars of extra work that never made it onto an invoice because it wasn\'t documented on-site.'
             ],
             [
-                'icon' => 'fa-helmet-safety', 
-                'title' => 'Subcontractor management is a constant headache.', 
+                'icon' => 'fa-helmet-safety',
+                'title' => 'Subcontractor management is a constant headache.',
                 'content' => 'Tracking what each subbie is owed, whether their insurances and licences are current, and whether work has been signed off across multiple sites is nearly impossible without a proper system.'
             ],
             [
-                'icon' => 'fa-clipboard-check', 
-                'title' => 'WHS documentation is all over the place.', 
+                'icon' => 'fa-clipboard-check',
+                'title' => 'WHS documentation is all over the place.',
                 'content' => 'SWMS, incident reports, and site logs are stored in folders and emails across multiple sites. If something goes wrong, finding the documentation you need quickly is incredibly stressful.'
             ],
             [
-                'icon' => 'fa-layer-group', 
-                'title' => 'Running multiple projects at once means things get missed.', 
+                'icon' => 'fa-layer-group',
+                'title' => 'Running multiple projects at once means things get missed.',
                 'content' => 'When you\'re managing five sites simultaneously, important tasks fall through the cracks—a claim not submitted on time, a subbie not followed up, or a purchase order sent without approval.'
             ]
         ];
-        
+
         $constructionSolutions = [
             [
                 'sub' => '01 — Control Your Project Costs',
@@ -441,26 +441,26 @@
                 'answer' => 'We provide comprehensive onboarding and hands-on training sessions specifically for site managers and office administrators to ensure your team is fully equipped to manage the new ecosystem independently.'
             ]
         ];
-        
+
     @endphp
-    <x-about-hero :heroData="$heroData"/>    
+    <x-about-hero :heroData="$heroData"/>
     <x-stats :statsData="$statsData"/>
-    <x-industry-pain-points 
+    <x-industry-pain-points
     subheading="Sound Familiar?"
     heading="The <span class='section-accent fraunces text-accent fw-light'>problems</span> every construction business owner knows"
     description="Whether you're a residential builder, commercial contractor, or specialist subcontractor—these are the financial and operational problems we hear most from construction businesses across Australia."
     :points="$painPoints"
 />
-    <x-industry-solutions 
-    heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
+    <x-industry-solutions
+    heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!"
     description="We implement an ERP built around how construction businesses actually run projects — from contract award through to final account. Here are the three things that make the biggest difference."
     :points="$constructionSolutions"
 />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
-    
+
 @endpush

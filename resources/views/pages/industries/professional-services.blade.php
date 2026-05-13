@@ -5,7 +5,7 @@
 @section('meta_keywords', 'Professional Services ERP Australia, Resource Orchestration, Utilization Tracking, WIP Integrity, Odoo Consulting Solutions, Revenue Operations Systems, Digital Service Architecture, Begin360 Operations Cloud, Enterprise Professional Logic')
 @push('styles')
    <style>
-    
+
    </style>
 @endpush
 @section('content')
@@ -181,46 +181,46 @@
                 'icon' => 'fa-microchip',
                 'description' => 'Seeking a bespoke operational framework for a unique vertical? We engineer sovereign ecosystems for complex corporate visions.',
                 'url' => url('/contact'),
-                'column_class' => 'col-12', 
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'featured' => true,
                 'cta_text' => 'Initiate Sector Discovery'
             ]
         ];
-        
+
         $painPoints = [
             [
-                'icon' => 'fa-clock', 
-                'title' => 'We\'re doing the work but not billing all of it.', 
+                'icon' => 'fa-clock',
+                'title' => 'We\'re doing the work but not billing all of it.',
                 'content' => 'Time gets lost between the work being done and the timesheet being submitted. Small write-offs add up—and at the end of the month, you\'ve left real money on the table.'
             ],
             [
-                'icon' => 'fa-chart-pie', 
-                'title' => 'Projects go over budget and we don\'t notice until it\'s too late.', 
+                'icon' => 'fa-chart-pie',
+                'title' => 'Projects go over budget and we don\'t notice until it\'s too late.',
                 'content' => 'By the time you realise a project has blown out, the work is done and the invoice is already written. There\'s no early warning to have a conversation with the client before it\'s awkward.'
             ],
             [
-                'icon' => 'fa-file-invoice-dollar', 
-                'title' => 'Invoicing is slow, manual, and inconsistent.', 
+                'icon' => 'fa-file-invoice-dollar',
+                'title' => 'Invoicing is slow, manual, and inconsistent.',
                 'content' => 'Getting invoices out means chasing timesheets and reconciling notes. It takes days, and when billing is delayed, your cash flow is the one that suffers.'
             ],
             [
-                'icon' => 'fa-users-gear', 
-                'title' => 'I don\'t know if my team is too busy or not busy enough.', 
+                'icon' => 'fa-users-gear',
+                'title' => 'I don\'t know if my team is too busy or not busy enough.',
                 'content' => 'Without visibility into real-time capacity, resourcing is guesswork. Someone is overloaded while another has capacity—and you only find out when someone burns out.'
             ],
             [
-                'icon' => 'fa-brain', 
-                'title' => 'Our client relationships live in everyone\'s heads.', 
+                'icon' => 'fa-brain',
+                'title' => 'Our client relationships live in everyone\'s heads.',
                 'content' => 'Project history and relationship context are scattered across personal notebooks and memory. When a key staff member leaves, that critical knowledge walks out the door with them.'
             ],
             [
-                'icon' => 'fa-arrow-up-right-dots', 
-                'title' => 'I can\'t see which clients or services are actually profitable.', 
+                'icon' => 'fa-arrow-up-right-dots',
+                'title' => 'I can\'t see which clients or services are actually profitable.',
                 'content' => 'Revenue looks fine, but you can\'t tell which engagements are genuinely profitable after overhead and time are accounted for. You might be working hardest for your least profitable clients.'
             ]
         ];
-        
+
         $profServicesSolutions = [
             [
                 'sub' => '01 — Capture Every Hour',
@@ -361,26 +361,26 @@
                 'answer' => 'Absolutely. We provide hands-on training tailored to different roles — from consultants logging time to principals reviewing profitability dashboards — ensuring your firm is fully self-sufficient within the new ecosystem.'
             ]
         ];
-        
+
     @endphp
-    <x-about-hero :heroData="$heroData"/>    
+    <x-about-hero :heroData="$heroData"/>
     <x-stats :statsData="$statsData"/>
-    <x-industry-pain-points 
+    <x-industry-pain-points
         subheading="Sound Familiar?"
         heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> most professional services firms share"
         description="Whether you're a consulting firm, accounting practice, engineering group, or marketing agency—these are the problems we hear most from principals and business owners across Australia."
         :points="$painPoints"
     />
-    <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!" 
+    <x-industry-solutions
+        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!"
         description="We implement an ERP built around how professional services firms actually run engagements — from proposal to final invoice. Here are the three things that make the biggest difference."
         :points="$profServicesSolutions"
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
-    
+
 @endpush
