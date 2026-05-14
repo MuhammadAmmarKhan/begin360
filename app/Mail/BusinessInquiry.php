@@ -1,8 +1,10 @@
 <?php
 namespace App\Mail;
 
+use App\Models\ContactInquiry;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -11,24 +13,24 @@ class BusinessInquiry extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $data;
-
-    public function __construct($data)
+    public function __construct(public ContactInquiry $inquiry)
     {
-        $this->data = $data;
     }
 
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'New Business Inquiry: ' . $this->data['company'],
+            replyTo: [
+                new Address($this->inquiry->email, $this->inquiry->full_name),
+            ],
+            subject: 'New Begin360 Inquiry: ' . $this->inquiry->company,
         );
     }
 
     public function content(): Content
     {
         return new Content(
-            view: 'emails.inquiry', // We will create this next
+            view: 'emails.inquiry',
         );
     }
 }

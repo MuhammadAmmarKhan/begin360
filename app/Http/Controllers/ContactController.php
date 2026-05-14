@@ -1,13 +1,12 @@
 <?php
 namespace App\Http\Controllers;
 
-use App\Mail\BusinessInquiry; // Import the Mailable
+use App\Services\ContactInquiryService;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
-    public function submit(Request $request)
+    public function submit(Request $request, ContactInquiryService $contactInquiryService)
     {
         $validated = $request->validate([
             'first_name' => 'required|regex:/^[a-zA-Z\s]+$/|min:2|max:50',
@@ -24,11 +23,7 @@ class ContactController extends Controller
                 'agree.accepted'   => 'You must agree to the terms.'
             ]);
 
-        //$recipient = env('COMPANY_EMAIL', 'ammar.tribal@gmail.com');
-        $recipient = 'ammar.tribal@gmail.com';
-
-        // Send using the Mailable class
-        Mail::to($recipient)->send(new BusinessInquiry($validated));
+        $contactInquiryService->submit($validated, $request);
 
         return back()->with('success', 'Inquiry sent! Our team will contact you shortly.');
     }
