@@ -35,14 +35,14 @@
     @stack('head')
     @stack('styles')
 </head>
-<body>
+<body class="w-100 overflow-x-hidden">
     <div class="cursor-dot"></div>
     <div class="cursor-glow"></div>
 
     {{-- <x-loader /> --}}
     <div id="main-body">
         <header>
-            <x-header /> 
+            <x-header />
         </header>
 
         <main>

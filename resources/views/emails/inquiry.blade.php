@@ -1,104 +1,119 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>New Begin360 Inquiry</title>
 </head>
-<body style="margin:0; padding:0; background:#eef2f0; font-family:Arial, Helvetica, sans-serif; color:#17201b;">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%; background:#eef2f0; margin:0; padding:0;">
-        <tr>
-            <td align="center" style="padding:28px 12px;">
-                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%; max-width:680px; background:#ffffff; border-radius:18px; overflow:hidden; border:1px solid #dde7e1;">
-                    <tr>
-                        <td style="background:#17201b; padding:28px 32px;">
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td style="vertical-align:middle;">
-                                        <div style="font-size:22px; line-height:1; font-weight:800; color:#53dc63; letter-spacing:.02em;">Begin360</div>
-                                        <div style="font-size:12px; line-height:1.5; color:#aebbb4; margin-top:8px; text-transform:uppercase; letter-spacing:.14em;">Website inquiry</div>
-                                    </td>
-                                    <td align="right" style="vertical-align:middle;">
-                                        <span style="display:inline-block; background:#53dc63; color:#0d140f; font-size:12px; font-weight:700; padding:8px 12px; border-radius:999px;">New lead</span>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+<body
+    style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;">
+    <tr>
+        <td align="center" style="padding: 40px 10px;">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                   style="max-width: 600px; background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
 
-                    <tr>
-                        <td style="padding:32px 32px 18px;">
-                            <h1 style="margin:0; color:#17201b; font-size:26px; line-height:1.25; font-weight:800;">{{ $inquiry->full_name }} wants to talk.</h1>
-                            <p style="margin:14px 0 0; color:#5d6a62; font-size:16px; line-height:1.6;">
-                                A new contact form submission was received from the Begin360 website.
-                            </p>
-                        </td>
-                    </tr>
+                <tr>
+                    <td style="background-color: #56D964; height: 6px;"></td>
+                </tr>
 
-                    <tr>
-                        <td style="padding:0 32px 28px;">
-                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f7faf8; border:1px solid #e2ebe5; border-radius:14px;">
-                                <tr>
-                                    <td style="padding:22px 22px 10px;">
-                                        <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
-                                            <tr>
-                                                <td width="50%" style="padding:0 10px 18px 0; vertical-align:top;">
-                                                    <div style="font-size:11px; line-height:1.4; color:#7b887f; font-weight:700; text-transform:uppercase; letter-spacing:.12em;">Name</div>
-                                                    <div style="font-size:16px; line-height:1.5; color:#17201b; font-weight:700;">{{ $inquiry->full_name }}</div>
-                                                </td>
-                                                <td width="50%" style="padding:0 0 18px 10px; vertical-align:top;">
-                                                    <div style="font-size:11px; line-height:1.4; color:#7b887f; font-weight:700; text-transform:uppercase; letter-spacing:.12em;">Company</div>
-                                                    <div style="font-size:16px; line-height:1.5; color:#17201b; font-weight:700;">{{ $inquiry->company }}</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td width="50%" style="padding:0 10px 18px 0; vertical-align:top;">
-                                                    <div style="font-size:11px; line-height:1.4; color:#7b887f; font-weight:700; text-transform:uppercase; letter-spacing:.12em;">Email</div>
-                                                    <a href="mailto:{{ $inquiry->email }}" style="font-size:16px; line-height:1.5; color:#1a9f39; font-weight:700; text-decoration:none;">{{ $inquiry->email }}</a>
-                                                </td>
-                                                <td width="50%" style="padding:0 0 18px 10px; vertical-align:top;">
-                                                    <div style="font-size:11px; line-height:1.4; color:#7b887f; font-weight:700; text-transform:uppercase; letter-spacing:.12em;">Service</div>
-                                                    <div style="font-size:16px; line-height:1.5; color:#17201b; font-weight:700;">{{ $inquiry->service ?: 'General inquiry' }}</div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2" style="padding:0 0 8px; vertical-align:top;">
-                                                    <div style="font-size:11px; line-height:1.4; color:#7b887f; font-weight:700; text-transform:uppercase; letter-spacing:.12em;">Message</div>
-                                                    <div style="font-size:15px; line-height:1.7; color:#3c4841; margin-top:6px; white-space:pre-line;">{{ $inquiry->notes ?: 'No additional notes provided.' }}</div>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
+                <tr>
+                    <td style="padding: 40px 40px 20px 40px; text-align: left;">
+                        <h1 style="margin: 0; color: #111111; font-size: 24px; font-weight: 700; line-height: 1.2;">New
+                            Inquiry Received</h1>
+                        <p style="margin: 20px 0 0 0; color: #555555; font-size: 16px; line-height: 1.5;">
+                            Hello, you have received a new business inquiry from your website. Here are the details of
+                            the request:
+                        </p>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td style="padding:0 32px 32px;">
-                            <table role="presentation" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td style="background:#53dc63; border-radius:999px;">
-                                        <a href="mailto:{{ $inquiry->email }}" style="display:inline-block; padding:13px 22px; color:#0d140f; font-size:14px; line-height:1; font-weight:800; text-decoration:none;">Reply to {{ $inquiry->first_name }}</a>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p style="margin:18px 0 0; color:#7b887f; font-size:13px; line-height:1.6;">
-                                Submitted {{ $inquiry->created_at?->format('d M Y, H:i') }}. IP: {{ $inquiry->ip_address ?: 'Unavailable' }}.
-                                This inquiry has also been stored in the website database.
-                            </p>
-                        </td>
-                    </tr>
+                <tr>
+                    <td style="padding: 0 40px 30px 40px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                               style="background-color: #fafafa; border-radius: 12px; padding: 25px;">
+                            <tr>
+                                <td style="padding-bottom: 15px;">
+                                    <div
+                                        style="color: #999999; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">
+                                        Client Name
+                                    </div>
+                                    <div
+                                        style="color: #111111; font-size: 16px; font-weight: 500;">{{ $inquiry->first_name ?? '' }} {{ $inquiry->last_name ?? '' }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">
+                                    <div
+                                        style="color: #999999; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">
+                                        Company
+                                    </div>
+                                    <div
+                                        style="color: #111111; font-size: 16px; font-weight: 500;">{{ $inquiry->company ?? '' }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">
+                                    <div
+                                        style="color: #999999; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">
+                                        Email Address
+                                    </div>
+                                    <div
+                                        style="color: #56D964; font-size: 16px; font-weight: 500;">{{ $inquiry->email ?? '' }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding-bottom: 15px;">
+                                    <div
+                                        style="color: #999999; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">
+                                        Service Interest
+                                    </div>
+                                    <div
+                                        style="color: #111111; font-size: 16px; font-weight: 500;">{{ $inquiry->service ?? 'General Inquiry' }}</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div
+                                        style="color: #999999; font-size: 11px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">
+                                        Message
+                                    </div>
+                                    <div
+                                        style="color: #555555; font-size: 15px; line-height: 1.5; margin-top: 5px;">{{ $inquiry->notes ?? 'No additional notes provided.' }}</div>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
-                    <tr>
-                        <td style="background:#17201b; padding:22px 32px; color:#9daba3; font-size:12px; line-height:1.6;">
-                            Sent automatically by Begin360. Replying to this email will reply to {{ $inquiry->email }}.
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+                <tr>
+                    <td style="padding: 0 40px 40px 40px;">
+                        <h3 style="margin: 0 0 15px 0; color: #111111; font-size: 18px; font-weight: 700;">Recommended
+                            Next Steps</h3>
+                        <ul style="margin: 0; padding: 0 0 0 20px; color: #555555; font-size: 14px; line-height: 1.8;">
+                            <li>Review the client's company website and LinkedIn profile.</li>
+                            <li>Verify the email domain for authenticity.</li>
+                            <li>Prepare an initial project scope or meeting invite.</li>
+                            <li>Reply to the client within 24 hours to maintain momentum.</li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #111111; padding: 40px; text-align: center; border-radius: 0 0 16px 16px;">
+                        <img src="{{ asset('assets/images/logo-dark.png') }}" alt="Logo"
+                             style="width: 140px; height: auto; margin-bottom: 20px;">
+                        <p style="margin: 0; color: #666666; font-size: 12px; line-height: 1.6;">
+                            &copy; {{ date('Y') }} All Rights Reserved.<br>
+                            This is an automated notification. Replies to this email address are not monitored.<br>
+                            <span style="color: #444444;">ID: {{ uniqid('trb_', true) }}</span>
+                        </p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
