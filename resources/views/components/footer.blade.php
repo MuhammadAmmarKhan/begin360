@@ -203,9 +203,8 @@
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.
                 </p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="#" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="{{env('SOCIAL_LI')}}" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="{{env('SOCIAL_FB')}}" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-facebook"></i></a>
                 </div>
             </div>
             

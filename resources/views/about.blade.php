@@ -138,6 +138,7 @@
         filter: grayscale(100%) contrast(110%);
         transition: filter 0.6s ease, transform 0.6s ease;
         object-fit: cover;
+        object-position:top;
         width: 100%;
         height: 500px; /* Fixed height for architectural consistency */
     }

@@ -477,7 +477,7 @@
                 'solution_subtitle' => "— THE SOLUTION —",
                 'solution_desc' => "We unify your operations into a single, automated source of truth using ERP.",
                 'cta_text' => "Let’s Get in Touch",
-                'cta_link' => "#"
+                'cta_link' => "#contact-form"
             ],
             'cards' => [
                 [
