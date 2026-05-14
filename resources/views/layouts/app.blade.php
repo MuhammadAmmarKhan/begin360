@@ -8,13 +8,14 @@
 
     {{-- SEO & Meta Management --}}
     <title>@yield('title', 'Begin360 | From Concept To Clarity')</title>
-    <meta name="description" content="@yield('meta_description', 'Elite digital infrastructure and Odoo implementation.')">
+    <meta name="description"
+          content="@yield('meta_description', 'Elite digital infrastructure and Odoo implementation.')">
     <meta name="keywords" content="@yield('meta_keywords', 'Odoo, ERP, Digital Transformation')">
-    <link rel="icon" type="image/png" href="{{asset('assets/images/favicon-96x96.png')}}" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="{{asset('assets/images/favicon.svg')}}" />
-    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}" />
-    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/apple-touch-icon.png')}}" />
-    <link rel="manifest" href="{{asset('assets/images/site.webmanifest')}}" />
+    <link rel="icon" type="image/png" href="{{asset('assets/images/favicon-96x96.png')}}" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="{{asset('assets/images/favicon.svg')}}"/>
+    <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('assets/images/apple-touch-icon.png')}}"/>
+    <link rel="manifest" href="{{asset('assets/images/site.webmanifest')}}"/>
 
     @if(isset($is_private) && $is_private)
         <meta name="robots" content="noindex, nofollow">
@@ -23,10 +24,13 @@
     @endif
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
     <script crossorigin="anonymous" defer src="https://kit.fontawesome.com/0b217c8a25.js"></script>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}?v=20260514b">
+    <script src="{{ asset('assets/js/app.js') }}?v=20260514b" defer></script>
 
     @env('production')
         <!-- Insert Analytics/Production-only scripts here -->
@@ -36,23 +40,23 @@
     @stack('styles')
 </head>
 <body>
-    <div class="cursor-dot"></div>
-    <div class="cursor-glow"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-glow"></div>
 {{--     <x-loader --}}
-    <div id="main-body">
-        <header>
-            <x-header />
-        </header>
+<div id="main-body">
+    <header>
+        <x-header/>
+    </header>
 
-        <main>
-            @yield('content')
-        </main>
+    <main>
+        @yield('content')
+    </main>
 
-        <footer>
-            <x-footer />
-        </footer>
-    </div>
+    <footer>
+        <x-footer/>
+    </footer>
+</div>
 
-    @stack('scripts')
+@stack('scripts')
 </body>
 </html>

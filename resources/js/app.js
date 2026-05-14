@@ -1,20 +1,19 @@
-import $ from 'jquery';
+import jQuery from 'jquery';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import * as THREE from 'three';
-import 'bootstrap'; // This usually handles the window.bootstrap assignment
-import { Modal } from 'bootstrap';
-window.bootstrap = { Modal }; // Explicitly attach it to the window object
+import * as bootstrap from 'bootstrap';
 import "@lottiefiles/lottie-player";
 
 // Register Plugins
 gsap.registerPlugin(ScrollTrigger, TextPlugin);
 
 // Global Exposure (The "Elite" fix for ReferenceErrors)
-window.$ = window.jQuery = $;
+window.$ = window.jQuery = jQuery;
 window.gsap = gsap;
 window.THREE = THREE;
+window.bootstrap = bootstrap;
 window.ScrollTrigger = ScrollTrigger;
 window.TextPlugin = TextPlugin;
 
@@ -24,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initCookieConsent();
     initBackToTop();
     initCustomCursor();
-    
+
     if (document.querySelector('#erp-canvas')) {
         initThreeParticles();
     }
@@ -37,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.reveal-text')) {
         initRevealText();
     }
-    
+
     // Only run Horizontal Scroll if the trigger exists
     if (document.querySelector("#operational-bottleneck-trigger")) {
         initHorizontalScroll();
@@ -60,9 +59,9 @@ function initNavigation() {
                 gsap.to(menu, { opacity: 1, y: 5, duration: 0.4, ease: "expo.out" });
             });
             item.addEventListener('mouseleave', () => {
-                gsap.to(menu, { 
-                    opacity: 0, y: 15, duration: 0.3, 
-                    onComplete: () => menu.style.display = 'none' 
+                gsap.to(menu, {
+                    opacity: 0, y: 15, duration: 0.3,
+                    onComplete: () => menu.style.display = 'none'
                 });
             });
         });
@@ -75,7 +74,7 @@ function initThemeToggle() {
 
     // 1. Function to get preferred theme
     const getStoredTheme = () => localStorage.getItem('theme');
-    
+
     // 2. Function to get system preference
     const getSystemTheme = () => {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
@@ -90,12 +89,12 @@ function initThemeToggle() {
         themeBtn.addEventListener('click', () => {
             const current = html.getAttribute('data-bs-theme');
             const newTheme = current === 'dark' ? 'light' : 'dark';
-            
+
             html.setAttribute('data-bs-theme', newTheme);
-            
+
             // Save to LocalStorage (Standard Practice)
             localStorage.setItem('theme', newTheme);
-            
+
             // Save to Cookie (For Server-Side awareness / Odoo sync)
             document.cookie = `theme=${newTheme}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
         });
@@ -241,7 +240,7 @@ function initCustomCursor() {
     window.addEventListener("mousemove", (e) => {
         // Dot follows instantly
         gsap.set(dot, { x: e.clientX, y: e.clientY });
-        
+
         // Glow follows with smooth lag
         gsap.to(glow, {
             x: e.clientX,
@@ -253,28 +252,28 @@ function initCustomCursor() {
 
     // Elite Hover Interactions
     const interactables = document.querySelectorAll('a, button, .nav-link, .navbar-brand');
-    
+
     interactables.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            // Expand the circle but make the background ALMOST transparent 
+            // Expand the circle but make the background ALMOST transparent
             // so the text underneath remains perfectly sharp.
-            gsap.to(glow, { 
-                width: 60, 
-                height: 60, 
-                backgroundColor: "rgba(86, 217, 100, 0.05)", 
+            gsap.to(glow, {
+                width: 60,
+                height: 60,
+                backgroundColor: "rgba(86, 217, 100, 0.05)",
                 borderColor: "rgba(86, 217, 100, 0.6)",
-                duration: 0.3 
+                duration: 0.3
             });
             gsap.to(dot, { scale: 0, duration: 0.2 }); // Hide the dot on hover for a cleaner look
         });
 
         el.addEventListener('mouseleave', () => {
-            gsap.to(glow, { 
-                width: 30, 
-                height: 30, 
-                backgroundColor: "rgba(86, 217, 100, 0.1)", 
+            gsap.to(glow, {
+                width: 30,
+                height: 30,
+                backgroundColor: "rgba(86, 217, 100, 0.1)",
                 borderColor: "rgba(86, 217, 100, 0.2)",
-                duration: 0.3 
+                duration: 0.3
             });
             gsap.to(dot, { scale: 1, duration: 0.2 });
         });
@@ -282,24 +281,26 @@ function initCustomCursor() {
 }
 
 function initSectionAccentAnim() {
+    return;
+
     gsap.registerPlugin(ScrollTrigger);
 
     const targets = document.querySelectorAll(".section-accent");
 
     targets.forEach((target) => {
         const originalText = target.innerText;
-        
+
         // Wrap text in a span to control visibility without losing dimensions
         // Add a secondary span for the cursor
         target.innerHTML = `
             <span class="accent-text" style="color: transparent;">${originalText}</span>
             <span class="accent-cursor" style="position: absolute; display: inline-block; width: 2px; height: 1.2em; background: #56D964; margin-left: 0px; z-index: 5;"></span>
         `;
-        
+
         const textSpan = target.querySelector(".accent-text");
         const cursor = target.querySelector(".accent-cursor");
 
-        gsap.set(target, { 
+        gsap.set(target, {
             display: "inline-block",
             position: "relative",
             whiteSpace: "nowrap" // Prevents text from wrapping and jumping rows
@@ -316,8 +317,6 @@ function initSectionAccentAnim() {
 
         // 2. Main Typing Timeline
         const tl = gsap.timeline({
-            repeat: -1,
-            repeatDelay: 2,
             scrollTrigger: {
                 trigger: target,
                 start: "top 95%",
@@ -330,13 +329,13 @@ function initSectionAccentAnim() {
                 // Calculate progress and determine how many characters to show
                 const progress = this.progress();
                 const charCount = Math.floor(progress * originalText.length);
-                
+
                 // Show typed part in black, rest stays transparent
                 const typed = originalText.substring(0, charCount);
                 const untyped = originalText.substring(charCount);
-                
+
                 textSpan.innerHTML = `<span class="text-accent">${typed}</span><span style="color: transparent;">${untyped}</span>`;
-                
+
                 // Position cursor at the end of the visible text
                 // We do this by measuring a ghost element or simply following the text flow
                 const charWidth = 1;//textSpan.offsetWidth / originalText.length;
@@ -345,29 +344,35 @@ function initSectionAccentAnim() {
             ease: "none"
         });
 
-        // 3. Pause at the end before loop resets
-        tl.to({}, { duration: 0.1 });
+        // 3. Keep the completed word visible after the typing pass.
+        tl.set(textSpan, { onComplete: () => {
+            textSpan.innerHTML = `<span class="text-accent">${originalText}</span>`;
+            gsap.killTweensOf(cursor);
+            gsap.set(cursor, { opacity: 0 });
+        }});
     });
 }
 
 function initAboutCanvas(){
     const canvas = document.querySelector('#about-canvas');
+    if (!canvas) return;
+
     const scene = new THREE.Scene();
-    
+
     const aspect = window.innerWidth / window.innerHeight;
     const d = 10;
     const camera = new THREE.OrthographicCamera(-d * aspect, d * aspect, d, -d, 1, 1000);
-    camera.position.set(0, 10, 0); 
+    camera.position.set(0, 10, 0);
     camera.lookAt(0, 0, 0);
 
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const size = 40;
-    const divisions = 60; 
+    const divisions = 60;
     const step = size / divisions;
     const points = [];
-    
+
     for (let i = 0; i <= divisions; i++) {
         for (let j = 0; j < divisions; j++) {
             points.push(-size/2 + i * step, 0, -size/2 + j * step);
@@ -383,9 +388,9 @@ function initAboutCanvas(){
     geometry.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
     const initialPositions = new Float32Array(points);
 
-    const material = new THREE.LineBasicMaterial({ 
-        color: 0x888888, 
-        transparent: true, 
+    const material = new THREE.LineBasicMaterial({
+        color: 0x888888,
+        transparent: true,
         opacity: 0.12 // Dropped from 0.18 for better text legibility
     });
 
@@ -422,18 +427,18 @@ function initAboutCanvas(){
             if (dist < 3.2) {
                 const force = (3.2 - dist) / 3.2;
                 const angle = Math.atan2(dz, dx);
-                
+
                 // Increased force multiplier to 1.8 for snappier scuttling
                 posAttr.setXYZ(
-                    i, 
-                    ix + Math.cos(angle) * force * 1.8 + waveX, 
-                    0, 
+                    i,
+                    ix + Math.cos(angle) * force * 1.8 + waveX,
+                    0,
                     iz + Math.sin(angle) * force * 1.8 + waveZ
                 );
             } else {
                 const cx = posAttr.getX(i);
                 const cz = posAttr.getZ(i);
-                
+
                 // Increased LERP to 0.25 for a faster "spring" back
                 posAttr.setXYZ(
                     i,
@@ -460,7 +465,7 @@ function initAboutCanvas(){
 
 function initRevealText(){
     const targets = document.querySelectorAll('.reveal-text');
-    
+
     targets.forEach((target) => {
         const triggerElement = target.closest('.intro-trigger'); // Finds the nearest parent trigger
         if (!triggerElement) return;
@@ -480,7 +485,7 @@ function initRevealText(){
                 const charSpan = document.createElement('span');
                 charSpan.innerText = char;
                 charSpan.style.display = 'inline-block';
-                charSpan.style.opacity = '0.1'; 
+                charSpan.style.opacity = '0.1';
                 wordWrapper.appendChild(charSpan);
                 allChars.push(charSpan);
             });
@@ -506,7 +511,7 @@ function initRevealText(){
             },
             opacity: 1,
             y: -40,
-            
+
             stagger: 0.05, // Tightened stagger for smoother character reveal
             ease: "power2.out",
             color: "var(--bs-body-color)"
