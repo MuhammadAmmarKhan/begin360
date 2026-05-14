@@ -530,7 +530,7 @@
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>
-    <x-customFaqs :faqs="$faqs"/>
+    <x-custom-faqs :faqs="$faqs"/>
 @endsection
 @push('scripts')
     
