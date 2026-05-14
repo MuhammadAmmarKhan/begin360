@@ -64,13 +64,17 @@
         
         if (el) {
             const modal = new bootstrap.Modal(el);
-            let hasShown = false; // Prevents the modal from showing multiple times
 
             document.addEventListener('mouseleave', (e) => {
-                // e.clientY < 0 ensures the mouse actually left via the top (address bar area)
-                if (!hasShown && e.clientY < 0) {
+                // 1. Check if the 'modalShown' flag exists in this session
+                const hasShownThisSession = sessionStorage.getItem('modalShown');
+
+                // 2. Only show if it hasn't been shown yet and the mouse leaves the top
+                if (!hasShownThisSession && e.clientY < 0) {
                     modal.show();
-                    hasShown = true; 
+                    
+                    // 3. Set the flag so it won't show again until the tab is closed/reopened
+                    sessionStorage.setItem('modalShown', 'true');
                 }
             });
         }
