@@ -39,7 +39,7 @@
     <div class="cursor-dot"></div>
     <div class="cursor-glow"></div>
 
-    <!-- <x-loader /> -->
+    {{-- <x-loader /> --}}
     <div id="main-body">
         <header>
             <x-header /> 
