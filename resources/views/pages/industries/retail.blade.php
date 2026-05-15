@@ -38,102 +38,103 @@
                 'target' => 28,
                 'suffix' => '%',
                 'title' => 'Inventory Efficiency',
-                'description' => 'Average reduction in overstock and dead inventory after implementing intelligent replenishment.',
+                'description' => 'Average reduction in overstock and dead inventory after implementation.',
                 'is_range' => false
             ],
             [
                 'target' => 1,
                 'suffix' => ' view',
                 'title' => 'Omnichannel Clarity',
-                'description' => 'A single real-time picture of stock, orders, and customers across all locations and digital channels.',
+                'description' => 'Single real-time picture of stock across all locations and channels.',
                 'is_range' => false
             ],
             [
                 'target' => 2,
                 'target_end' => 4,
                 'suffix' => ' mo',
-                'title' => 'Rapid Deployment',
-                'description' => 'Typical timeframe to get your retail operations fully integrated and running live.',
+                'title' => 'Typical Deployment',
+                'description' => 'Typical time to get fully up and running.',
                 'is_range' => true
+            ]
+        ];
+
+        $modulesHeader = [
+            'section_class'  => 'bg-body',
+            'badge'          => '— WHAT\'S INCLUDED —',
+            'heading_start'  => 'Everything your retail business needs,',
+            'dynamic_word'   => 'in one place',
+            'description'    => 'We configure the modules that make sense for your business. Each module has its own page where you can explore how it works in more detail.',
+            'primary_btn'    => [
+                'text' => 'View All Modules',
+                'url'  => route('modules.index'),
+                'icon' => 'fa-layer-group'
             ]
         ];
 
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
+                'title'        => 'Inventory Management',
+                'icon'         => 'fa-boxes-stacked',
+                'description'  => 'Real-time stock across every store and channel. Set reorder points, track variants (size, colour), and stop selling things you don\'t have.',
+                'url'          => route('modules.show', 'inventory'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Multi-location', 'Variants', 'Reorder alerts']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
+                'title'        => 'Order Management',
+                'icon'         => 'fa-cart-flatbed',
+                'description'  => 'Handle in-store, online, phone, and wholesale orders in one place. Automated fulfilment routing and customer notifications included.',
+                'url'          => route('modules.show', 'orders'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Omnichannel', 'Click & collect', 'Returns']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
+                'title'        => 'Procurement',
+                'icon'         => 'fa-file-invoice-dollar',
+                'description'  => 'Automate purchase orders based on stock levels. Manage supplier terms, lead times, and pricing—all linked to your inventory in real time.',
+                'url'          => route('modules.show', 'procurement'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Auto PO', 'Supplier pricing', 'Lead times']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Point of Sale',
+                'icon'         => 'fa-cash-register',
+                'description'  => 'A modern POS that feeds directly into your inventory and accounts. Works online and offline, and supports loyalty programmes and gift cards.',
+                'url'          => route('modules.show', 'pos'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Offline mode', 'Loyalty', 'Gift cards']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Finance & Accounting',
+                'icon'         => 'fa-calculator',
+                'description'  => 'Sales and purchases automatically posted to your accounts. GST-compliant, BAS-ready, and integrates with Xero and MYOB.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['GST / BAS', 'Xero sync', 'P&L by store']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Customer Management',
+                'icon'         => 'fa-users-gear',
+                'description'  => 'Know who your best customers are, what they buy, and when they last visited. Build loyalty programmes and automate follow-up communications.',
+                'url'          => route('modules.show', 'crm'),
+                'column_class' => 'col-10 col-md-8 col-lg-6',
+                'show_cta'     => true,
+                'features'     => ['Purchase history', 'Loyalty', 'Segmentation']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
-            ],
-            [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
-            ],
-            /* New "Drop a line" Item */
-            [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Need something specific?',
+                'icon'         => 'fa-comments',
+                'description'  => 'Every retail business is a little different. Tell us what you need and we\'ll figure out the right setup together.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-12 col-lg-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Conversation'
             ]
         ];
         
@@ -194,34 +195,34 @@
 
         $painPoints = [
             [
-                'icon' => 'fa-boxes-stacked', 
-                'title' => 'We\'re losing sales to stock-outs on our best-selling items.', 
-                'content' => 'Without real-time inventory velocity data, you’re constantly reacting. You lose revenue on trending products because they aren’t reordered fast enough, while capital stays tied up in slow-moving "dead" stock.'
+                'icon'    => 'fa-rotate', 
+                'title'   => '"Our online store shows stock we don\'t actually have."', 
+                'content' => 'When your point-of-sale and online store aren\'t connected, inventory gets out of sync fast. Customers order things you can\'t fulfil, and refunds and apologies follow.'
             ],
             [
-                'icon' => 'fa-rotate', 
-                'title' => 'Online and in-store stock levels are never actually in sync.', 
-                'content' => 'Selling an item in-store that was just purchased online leads to cancelled orders and frustrated customers. Fragmented systems create a manual "reconciliation nightmare" every single morning.'
+                'icon'    => 'fa-chart-line-down', 
+                'title'   => '"We don\'t know what\'s actually selling until it\'s gone."', 
+                'content' => 'By the time you notice a product is flying off the shelves, you\'ve already missed sales waiting for a reorder to arrive. There\'s no early warning system.'
             ],
             [
-                'icon' => 'fa-chart-line-down', 
-                'title' => 'I don\'t know my true margin after landed costs and shipping.', 
-                'content' => 'Between freight, duties, and packaging, calculating the true profitability of a SKU is often guesswork. You might be discounting or promoting items that are already barely breaking even.'
+                'icon'    => 'fa-store', 
+                'title'   => '"Stock levels at each store are a mystery."', 
+                'content' => 'If you have more than one location, moving stock between stores involves phone calls and guesswork. You can\'t see what\'s sitting unsold somewhere while another store runs out.'
             ],
             [
-                'icon' => 'fa-barcode', 
-                'title' => 'Shrinkage and "missing" stock are eating our net profit.', 
-                'content' => 'Without a rigid audit trail for every stock movement—from receiving at the dock to customer returns—thefts and administrative errors go unnoticed until the end-of-year stocktake.'
+                'icon'    => 'fa-money-bill-transfer', 
+                'title'   => '"We\'re tying up cash in stock that doesn\'t move."', 
+                'content' => 'Without visibility into which products are slow-movers, you keep reordering the wrong things. Cash is locked up in shelves full of stock nobody wants.'
             ],
             [
-                'icon' => 'fa-truck-fast', 
-                'title' => 'Fulfilment is slow, manual, and prone to expensive errors.', 
-                'content' => 'Picking and packing from spreadsheets or legacy systems leads to the wrong items being shipped. Every shipping error costs you double in return freight and damages your brand reputation.'
+                'icon'    => 'fa-file-csv', 
+                'title'   => '"End-of-month takes days of reconciling spreadsheets."', 
+                'content' => 'Sales from different channels, supplier invoices, and stock counts all live in different places. Getting a clear financial picture at month-end is exhausting and error-prone.'
             ],
             [
-                'icon' => 'fa-users-viewfinder', 
-                'title' => 'We have customers, but we don’t own their data.', 
-                'content' => 'Sales are happening, but project history and customer loyalty are scattered across different platforms. You can\'t see who your high-value repeat buyers are, making your marketing a "spray and pray" effort.'
+                'icon'    => 'fa-handshake-slash', 
+                'title'   => '"Suppliers have no idea what we actually need."', 
+                'content' => 'Reorders are based on gut feel or habit, not data. You end up over-ordering some things and scrambling for others, and your relationships with suppliers suffer for it.'
             ]
         ];
 
@@ -374,14 +375,20 @@
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
         subheading="Sound Familiar?"
-        heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> most growing retail brands share"
-        description="Whether you're a multi-store boutique, a growing e-commerce brand, or a national wholesaler—these are the operational bottlenecks we hear most from retail founders and operations managers across Australia."
+        heading="The <span class='text-accent fraunces section-accent fw-normal'>frustrations</span> every retailer knows too well"
+        description="These are the problems we hear most from retail business owners across Australia. If any feel familiar, you're in the right place."
         :points="$painPoints"
     />
     <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!" 
+        heading="And how <span class='text-accent fraunces section-accent fw-normal'>Begin360</span> fix it!" 
         description="We implement an ERP built around how your retail business actually works. Here are the three things that make the biggest difference."
         :points="$retailSolutions"
+    />
+    <x-bento-grid 
+        :items="$modules" 
+        :bentoData="$modulesHeader" 
+        id="industry-sectors" 
+        class="pt-5" 
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>

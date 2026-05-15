@@ -31,159 +31,117 @@
                         Solutions
                     </a>
                     <div class="dropdown-menu mega-menu-container bg-body">
-                        <div class="container-fluid p-0">
-                            <!-- Main Content Row -->
-                            <div class="row g-0 align-items-stretch">
-                                
-                                <div class="col-lg-3 border-lg-end p-4 p-lg-5 d-flex flex-column d-none d-xl-flex">
-                                    <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2">
-                                        Solution Blueprint
-                                    </span>
-                                    <h3 class="fw-normal mb-4 ls-tight">
-                                        Unified Ecosystems <br> for the Modern <span class="text-accent">Enterprise</span>
-                                    </h3>
-                                    <p class="small opacity-75 mb-0 lh-base">
-                                        Beyond fragmented software, we engineer natively compliant operational layers that synchronize your entire value chain with mathematical precision.
-                                    </p>
-                                </div>
+    <div class="container-fluid p-0">
+        <div class="row g-0 align-items-stretch">
+            
+            <div class="col-xl-3 border-lg-end p-4 p-lg-5 d-none d-xl-flex flex-column justify-content-between bg-light-subtle">
+                <div>
+                    <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2 d-block">
+                        Solution Blueprint
+                    </span>
+                    <h3 class="fw-normal mb-4 ls-tight">
+                        Unified Ecosystems for the Modern <span class="text-accent">Enterprise</span>
+                    </h3>
+                    <p class="small opacity-75 mb-5 lh-base">
+                        Beyond fragmented software, we engineer natively compliant operational layers that synchronize your entire value chain.
+                    </p>
+                </div>
 
-                                <!-- Column 2: Modules -->
-                                <div class="col-lg-6 col-xl-3 border-lg-end p-4 p-lg-5 d-flex flex-column">
-                                    <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Modules</h6>
-                                    <div class="mega-list flex-grow-1">
-                                        @php
-                                            $modules = [
-                                                ['name' => 'Compliance & Traceability','icon' => 'fa-clipboard-check','slug' => 'compliance'],
-                                                [
-                                                    'name' => 'Contracts & Progress Claims', 
-                                                    'icon' => 'fa-file-signature', 
-                                                    'slug' => 'contracts'
-                                                ],
-                                                [
-                                                    'name' => 'CRM', 
-                                                    'icon' => 'fa-users-gear', 
-                                                    'slug' => 'crm'
-                                                ],
-                                                [
-                                                    'name' => 'Finance & Accounting', 
-                                                    'icon' => 'fa-calculator', 
-                                                    'slug' => 'finance'
-                                                ],
-                                                [
-                                                    'name' => 'Inventory Management', 
-                                                    'icon' => 'fa-boxes-stacked', 
-                                                    'slug' => 'inventory'
-                                                ],
-                                                [
-                                                    'name' => 'Job Management', 
-                                                    'icon' => 'fa-list-check', 
-                                                    'slug' => 'job-management'
-                                                ],
-                                                [
-                                                    'name' => 'Order Management', 
-                                                    'icon' => 'fa-cart-flatbed', 
-                                                    'slug' => 'orders'
-                                                ],
-                                                [
-                                                    'name' => 'Point of Sale', 
-                                                    'icon' => 'fa-cash-register', 
-                                                    'slug' => 'pos'
-                                                ],
-                                                [
-                                                    'name' => 'Procurement', 
-                                                    'icon' => 'fa-file-invoice-dollar', 
-                                                    'slug' => 'procurement'
-                                                ],
-                                                [
-                                                    'name' => 'Project Management', 
-                                                    'icon' => 'fa-diagram-project', 
-                                                    'slug' => 'project-management'
-                                                ],
-                                            ];
-                                        @endphp
-
-                                        @foreach($modules as $module)
-                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/modules/'.$module['slug']) }}">
-                                                <div class="icon-box-sm border rounded-2 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fa-solid {{ $module['icon'] }}"></i>
-                                                </div>
-                                                <span class="fw-medium">{{ $module['name'] }}</span>
-                                            </a>
-                                        @endforeach
-                                    </div>
-                                    <div class="mt-4 pt-4">
-                                        <a href="{{ route('modules.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black fw-bold">
-                                            Explore all modules <i class="fa-solid fa-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-                                <!-- Column 3: Industries -->
-                                <div class="col-lg-6 col-xl-3 p-4 p-lg-5 d-flex flex-column">
-                                    <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Industries</h6>
-                                    <div class="row g-0 flex-grow-1">
-                                        @php
-                                            $industries = [
-                                                ['name' => 'Food & Beverage','icon' => 'fa-utensils','slug' => 'food-beverage'],
-                                                ['name' => 'Retail','icon' => 'fa-basket-shopping','slug' => 'retail'],
-                                                ['name' => 'Trades & Field Services','icon' => 'fa-screwdriver-wrench','slug' => 'trades'],
-                                                ['name' => 'Professional Services','icon' => 'fa-briefcase','slug' => 'professional-services'],
-                                                ['name' => 'Construction','icon' => 'fa-helmet-safety','slug' => 'construction']
-                                            ];
-                                        @endphp
-
-                                        @foreach($industries as $industry)
-                                            <a class="dropdown-item d-flex align-items-center py-1 px-0 bg-transparent" href="{{ url('/industries/'.$industry['slug']) }}">
-                                                <div class="icon-box-sm border rounded-2 p-2 me-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                                    <i class="fa-solid {{ $industry['icon'] }}"></i>
-                                                </div>
-                                                <span class="fw-medium">{{ $industry['name'] }}</span>
-                                            </a>
-                                        @endforeach
-                                    </div>
-                                    <div class="mt-4 pt-4">
-                                        <a href="{{ route('industries.index') }}" class="text-decoration-none btn btn-accent btn-lg rounded-pill fs-6 w-100 text-black small fw-bold">
-                                            Explore all industries <i class="fa-solid fa-arrow-right ms-1"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3 p-4 p-lg-4 d-none d-xl-flex flex-column justify-content-center">
-                                    <div class="bg-accent rounded-5 p-4 h-100 position-relative overflow-hidden d-flex flex-column justify-content-between shadow-lg">
-                                        <!-- Content -->
-                                        <div class="position-relative z-1">
-                                            <p class="small text-black text-uppercase fw-black tracking-wider mb-2 opacity-75">Ready to Scale?</p>
-                                            <h4 class="text-black fw-normal ls-tight mb-4">
-                                                Transform your <br> infrastructure <br> today.
-                                            </h4>
-                                            <a href="{{ url('/contact') }}" class="btn btn-dark btn-sm rounded-pill px-4 py-2 fw-bold text-uppercase">
-                                                Get Started
-                                            </a>
-                                        </div>
-
-                                        <!-- Large Bottom-Right Icon -->
-                                        <div class="position-absolute bottom-0 end-0 m-n3 opacity-10">
-                                            <i class="fa-solid fa-microchip display-1 text-black" style="font-size: 8rem; transform: rotate(-15deg);"></i>
-                                        </div>
-                                        
-                                        <!-- Secondary Icon for subtle depth -->
-                                        <div class="position-absolute bottom-0 end-0 p-3 opacity-25">
-                                            <i class="fa-solid fa-diagram-project fa-3x text-black"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Footer Row: Book a Demo CTA -->
-                            <div class="py-3 px-4 px-lg-5 border-top d-flex justify-content-between align-items-center">
-                                <a href="{{ route('contact') }}" class="text-decoration-none text-accent fw-bold small text-uppercase tracking-wider">
-                                    Book a demo <i class="fa fa-arrow-right ms-2 text-accent"></i>
-                                </a>
-                                <div class="d-none d-md-block opacity-50 small">
-                                    <span>{{env('COMPANY_PHONE')}}</span>
-                                </div>
-                            </div>
-                        </div>                        
+                <div class="bg-accent rounded-4 p-4 position-relative overflow-hidden shadow-sm">
+                    <div class="position-relative z-1">
+                        <p class="small text-black text-uppercase fw-bold mb-2 opacity-75">Ready to Scale?</p>
+                        <h5 class="text-black fw-bold mb-3">Transform your infrastructure today.</h5>
+                        <a href="{{ url('/contact') }}" class="btn btn-dark btn-sm rounded-pill px-4 fw-bold">
+                            Get Started
+                        </a>
                     </div>
+                    <i class="fa-solid fa-microchip position-absolute bottom-0 end-0 m-n3 text-black opacity-10" style="font-size: 5rem; transform: rotate(-15deg);"></i>
+                </div>
+            </div>
+
+            <div class="col-lg-8 col-xl-6 border-lg-end p-4 p-lg-5">
+                <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Modules</h6>
+                <div class="row g-2">
+                    @php
+                        $modules = [
+                            ['name' => 'Compliance & Traceability', 'icon' => 'fa-clipboard-check', 'slug' => 'compliance'],
+                            ['name' => 'Contracts & Progress Claims', 'icon' => 'fa-file-signature', 'slug' => 'contracts'],
+                            ['name' => 'Customer Management', 'icon' => 'fa-users-gear', 'slug' => 'crm'],
+                            ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
+                            ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
+                            ['name' => 'Job Management', 'icon' => 'fa-list-check', 'slug' => 'job-management'],
+                            ['name' => 'Order Management', 'icon' => 'fa-cart-flatbed', 'slug' => 'orders'],
+                            ['name' => 'Point of Sale', 'icon' => 'fa-cash-register', 'slug' => 'pos'],
+                            ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
+                            ['name' => 'Project Management', 'icon' => 'fa-diagram-project', 'slug' => 'project-management'],
+                            ['name' => 'Quoting & Estimating', 'icon' => 'fa-file-lines', 'slug' => 'quoting-estimating'],
+                            ['name' => 'Resource Planning', 'icon' => 'fa-calendar-check', 'slug' => 'resource-planning'],
+                            ['name' => 'Scheduling & Dispatch', 'icon' => 'fa-clock-rotate-left', 'slug' => 'scheduling-dispatch'],
+                            ['name' => 'Subcontractor Management', 'icon' => 'fa-user-group', 'slug' => 'subcontractor-management'],
+                            ['name' => 'Time Tracking & Billing', 'icon' => 'fa-stopwatch', 'slug' => 'time-tracking'],
+                            ['name' => 'Variation Management', 'icon' => 'fa-code-branch', 'slug' => 'variations'],
+                            ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse-management'],
+                        ];
+                    @endphp
+
+                    @foreach($modules as $module)
+                        <div class="col-12 col-lg-6 col-xl-6">
+                            <a class="dropdown-item d-flex align-items-center py-2 px-2 rounded-3" href="{{ url('/modules/'.$module['slug']) }}">
+                                <div class="icon-box-sm border rounded-2 me-2 d-flex align-items-center justify-content-center bg-body" style="width: 35px; height: 35px; min-width: 35px;">
+                                    <i class="fa-solid {{ $module['icon'] }} small"></i>
+                                </div>
+                                <span class="fw-medium small">{{ $module['name'] }}</span>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+                <div class="mt-4">
+                    <a href="{{ route('modules.index') }}" class="rounded-pill btn btn-accent fw-bold small text-decoration-none">
+                        View All Modules <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-xl-3 p-4 p-lg-5">
+                <h6 class="small text-uppercase fw-bold mb-4 opacity-50">Industries</h6>
+                <div class="d-flex flex-column gap-1">
+                    @php
+                        $industries = [
+                            ['name' => 'Food & Beverage','icon' => 'fa-utensils','slug' => 'food-beverage'],
+                            ['name' => 'Retail','icon' => 'fa-basket-shopping','slug' => 'retail'],
+                            ['name' => 'Trades & Field Services','icon' => 'fa-screwdriver-wrench','slug' => 'trades'],
+                            ['name' => 'Professional Services','icon' => 'fa-briefcase','slug' => 'professional-services'],
+                            ['name' => 'Construction','icon' => 'fa-helmet-safety','slug' => 'construction']
+                        ];
+                    @endphp
+
+                    @foreach($industries as $industry)
+                        <a class="dropdown-item d-flex align-items-center py-2 px-2 rounded-3" href="{{ url('/industries/'.$industry['slug']) }}">
+                            <div class="icon-box-sm border rounded-2 me-2 d-flex align-items-center justify-content-center bg-body" style="width: 35px; height: 35px; min-width: 35px;">
+                                <i class="fa-solid {{ $industry['icon'] }} small"></i>
+                            </div>
+                            <span class="fw-medium small">{{ $industry['name'] }}</span>
+                        </a>
+                    @endforeach
+                </div>
+                <div class="mt-4">
+                    <a href="{{ route('industries.index') }}" class="rounded-pill btn btn-accent fw-bold small text-decoration-none">
+                        View All Industries <i class="fa-solid fa-arrow-right ms-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-3 px-4 px-lg-5 border-top d-none d-xl-flex justify-content-between align-items-center bg-body">
+            <a href="{{ route('contact') }}" class="text-decoration-none text-accent fw-bold small text-uppercase tracking-wider">
+                Book a demo <i class="fa fa-arrow-right ms-2"></i>
+            </a>
+            <div class="opacity-50 small">
+                <span>{{env('COMPANY_PHONE')}}</span>
+            </div>
+        </div>
+    </div>
+</div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('contact') ? 'active' : '' }}" href="{{ url('/contact') }}">Contact</a>

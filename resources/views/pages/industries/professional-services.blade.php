@@ -56,82 +56,83 @@
                 'is_range' => true
             ]
         ];
+        $modulesHeader = [
+            'section_class'  => 'bg-body',
+            'badge'          => '— WHAT\'S INCLUDED —',
+            'heading_start'  => 'Everything your firm needs,',
+            'dynamic_word'   => 'in one place',
+            'description'    => 'We configure the modules that make sense for how your firm operates. Each module has its own page where you can learn how it works in more detail — and the same modules are shared across industry pages so you\'re never duplicating anything.',
+            'primary_btn'    => [
+                'text' => 'View All Modules',
+                'url'  => route('modules.index'),
+                'icon' => 'fa-layer-group'
+            ]
+        ];
+
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
+                'title'        => 'Project Management',
+                'icon'         => 'fa-diagram-project',
+                'description'  => 'Track every engagement from kick-off to close. Milestones, deliverables, budgets, and team assignments — all in one place.',
+                'url'          => route('modules.show', 'project-management'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Budget tracking', 'Milestones', 'Scope alerts']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
+                'title'        => 'Time Tracking & Billing',
+                'icon'         => 'fa-stopwatch',
+                'description'  => 'Fast, simple time entry linked to projects and clients. Approve timesheets and generate invoices in a few clicks — no re-keying.',
+                'url'          => route('modules.show', 'time-tracking'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Billable tracking', 'Rate cards', 'Approval flows']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
+                'title'        => 'Client Relationship Management',
+                'icon'         => 'fa-users-gear',
+                'description'  => 'Keep your full client history — contacts, engagements, notes, and communications — in one searchable place that the whole firm can access.',
+                'url'          => route('modules.show', 'crm'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Engagement history', 'Contact records', 'Pipeline']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Resource Planning',
+                'icon'         => 'fa-calendar-check',
+                'description'  => 'See who\'s available, who\'s at capacity, and where the gaps are — before you commit to a new engagement or miss a deadline.',
+                'url'          => route('modules.show', 'resource-planning'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Utilisation view', 'Capacity planning', 'Skills matching']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Finance & Accounting',
+                'icon'         => 'fa-calculator',
+                'description'  => 'GST-compliant invoicing, expense management, and real-time P&L by client, project, or service line. Syncs with Xero and MYOB.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['GST / BAS', 'Xero sync', 'P&L by project']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Procurement',
+                'icon'         => 'fa-file-invoice-dollar',
+                'description'  => 'Manage subcontractor engagements, supplier relationships, and reimbursable expenses — all tied back to the projects they belong to.',
+                'url'          => route('modules.show', 'procurement'),
+                'column_class' => 'col-10 col-md-8 col-lg-6',
+                'show_cta'     => true,
+                'features'     => ['Subcontractors', 'Expenses', 'Cost recovery']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
-            ],
-            [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
-            ],
-            /* New "Drop a line" Item */
-            [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Need something specific?',
+                'icon'         => 'fa-comments',
+                'description'  => 'Every firm is different. Tell us how your business runs and we\'ll figure out the right configuration together.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-12 col-lg-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Conversation'
             ]
         ];
         $industries = [
@@ -367,14 +368,20 @@
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
         subheading="Sound Familiar?"
-        heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> most professional services firms share"
+        heading="The <span class='text-accent fraunces section-accent fw-normal'>frustrations</span> most professional services firms share"
         description="Whether you're a consulting firm, accounting practice, engineering group, or marketing agency—these are the problems we hear most from principals and business owners across Australia."
         :points="$painPoints"
     />
     <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fix it!" 
+        heading="And how <span class='text-accent fraunces section-accent fw-normal'>Begin360</span> fix it!" 
         description="We implement an ERP built around how professional services firms actually run engagements — from proposal to final invoice. Here are the three things that make the biggest difference."
         :points="$profServicesSolutions"
+    />
+    <x-bento-grid 
+        :items="$modules" 
+        :bentoData="$modulesHeader" 
+        id="industry-sectors" 
+        class="pt-5" 
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>

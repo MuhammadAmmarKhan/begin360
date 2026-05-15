@@ -24,7 +24,7 @@
                     <div class="custom-pillar h-100 px-4 py-5 bg-body border border-secondary border-opacity-10 shadow-sm rounded-4">
                         
                         <!-- Geometric Icon Shape -->
-                        <div class="icon-shape mb-5 d-flex align-items-center justify-content-center">
+                        <div class="icon-shape rounded-3 mb-5 d-flex align-items-center justify-content-center">
                             <i class="fa-solid {{ $point['icon'] }} fa-2x text-accent"></i>
                         </div>
                         <div class="badge bg-accent text-black rounded-pill small fw-bold mb-3">PHASE_0{{ $loop->iteration }}</div>

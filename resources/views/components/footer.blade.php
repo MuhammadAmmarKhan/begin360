@@ -128,52 +128,23 @@
     ];
 
     $modules = [
-        ['name' => 'Compliance & Traceability','icon' => 'fa-clipboard-check','slug' => 'compliance'],
-        [
-            'name' => 'Contracts & Progress Claims', 
-            'icon' => 'fa-file-signature', 
-            'slug' => 'contracts'
-        ],
-        [
-            'name' => 'CRM', 
-            'icon' => 'fa-users-gear', 
-            'slug' => 'crm'
-        ],
-        [
-            'name' => 'Finance & Accounting', 
-            'icon' => 'fa-calculator', 
-            'slug' => 'finance'
-        ],
-        [
-            'name' => 'Inventory Management', 
-            'icon' => 'fa-boxes-stacked', 
-            'slug' => 'inventory'
-        ],
-        [
-            'name' => 'Job Management', 
-            'icon' => 'fa-list-check', 
-            'slug' => 'job-management'
-        ],
-        [
-            'name' => 'Order Management', 
-            'icon' => 'fa-cart-flatbed', 
-            'slug' => 'orders'
-        ],
-        [
-            'name' => 'Point of Sale', 
-            'icon' => 'fa-cash-register', 
-            'slug' => 'pos'
-        ],
-        [
-            'name' => 'Procurement', 
-            'icon' => 'fa-file-invoice-dollar', 
-            'slug' => 'procurement'
-        ],
-        [
-            'name' => 'Project Management', 
-            'icon' => 'fa-diagram-project', 
-            'slug' => 'project-management'
-        ],
+        ['name' => 'Compliance & Traceability', 'icon' => 'fa-clipboard-check', 'slug' => 'compliance'],
+        ['name' => 'Contracts & Progress Claims', 'icon' => 'fa-file-signature', 'slug' => 'contracts'],
+        ['name' => 'Customer Management', 'icon' => 'fa-users-gear', 'slug' => 'crm'],
+        ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
+        ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
+        ['name' => 'Job Management', 'icon' => 'fa-list-check', 'slug' => 'job-management'],
+        ['name' => 'Order Management', 'icon' => 'fa-cart-flatbed', 'slug' => 'orders'],
+        ['name' => 'Point of Sale', 'icon' => 'fa-cash-register', 'slug' => 'pos'],
+        ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
+        ['name' => 'Project Management', 'icon' => 'fa-diagram-project', 'slug' => 'project-management'],
+        ['name' => 'Quoting & Estimating', 'icon' => 'fa-file-lines', 'slug' => 'quoting-estimating'],
+        ['name' => 'Resource Planning', 'icon' => 'fa-calendar-check', 'slug' => 'resource-planning'],
+        ['name' => 'Scheduling & Dispatch', 'icon' => 'fa-clock-rotate-left', 'slug' => 'scheduling-dispatch'],
+        ['name' => 'Subcontractor Management', 'icon' => 'fa-user-group', 'slug' => 'subcontractor-management'],
+        ['name' => 'Time Tracking & Billing', 'icon' => 'fa-stopwatch', 'slug' => 'time-tracking'],
+        ['name' => 'Variation Management', 'icon' => 'fa-code-branch', 'slug' => 'variations'],
+        ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse-management'],
     ];
 
     $companyName = env('COMPANY_NAME','BEGIN360 PTY LTD');
@@ -185,7 +156,6 @@
 <x-ui.announcement-ticker />
 <x-ui.backtotop />
 <footer class="bg-body-tertiary text-body pt-5 pb-3 overflow-hidden">
-    <!-- Massive Background Text -->
     <div class="container-fluid px-0 select-none pointer-events-none" style="margin-bottom: -4rem; opacity: 0.05;">
         <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 22.7vw; line-height: 0.7; letter-spacing: -2vw;">
             {{ explode(' ', $companyName)[0] }}
@@ -193,7 +163,6 @@
     </div>
 
     <div class="container position-relative" style="z-index: 2;">
-        <!-- Top Section -->
         <div class="row g-5 align-items-end mb-5">
             <div class="col-lg-6">
                 <div class="d-flex align-items-center mb-4">
@@ -214,7 +183,7 @@
                      style="cursor: pointer;"
                      onmouseover="this.style.borderColor='var(--accent)'" 
                      onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    <h2 class="display-6 fw-semibold mb-4">Lets Schedule <br>A <span class="text-accent fraunces section-accent fw-normal">Call</span></h2>
+                    <h2 class="display-6 fw-semibold mb-0">Lets Schedule <br>A <span class="text-accent fraunces section-accent fw-normal">Call</span></h2>
                     <div class="bg-accent rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
                          style="width: 60px; height: 60px;">
                         <i class="fa-solid fa-arrow-up-right-from-square text-dark fs-4"></i>
@@ -226,43 +195,50 @@
 
         <hr class="border-secondary opacity-10 my-5">
 
-        <!-- Middle Section: Dynamic Arrays -->
         <div class="row g-4 mb-5">
-            <div class="col-6 col-md-3">
-                <h6 class="fw-black text-accent text-uppercase mb-4">Modules</h6>
-                <ul class="list-unstyled fw-normal  small lh-lg">
+            <div class="col-12 col-lg-7">
+                <h6 class="fw-black text-accent text-uppercase mb-4">Capabilities & Modules</h6>
+                <div class="row row-cols-2 row-cols-sm-2 g-2">
                     @foreach($modules as $module)
-                        <li>
-                            <a href="{{ url('modules/' . $module['slug']) }}" class="text-secondary text-decoration-none hover-white">
-                                {{ $module['name'] }}
-                            </a>
-                        </li>
+                        <div class="col">
+                            <ul class="list-unstyled fw-normal small lh-lg mb-0">
+                                <li>
+                                    <a href="{{ url('modules/' . $module['slug']) }}" class="text-secondary text-decoration-none hover-white">
+                                        {{ $module['name'] }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     @endforeach
-                </ul>
+                </div>
             </div>
-            <div class="col-6 col-md-3">
-                <h6 class="fw-black text-accent text-uppercase mb-4">Industries</h6>
-                <ul class="list-unstyled fw-normal small lh-lg">
-                    @foreach($industries as $industry)
-                        <li>
-                            <a href="{{ url('industries/' . $industry['slug']) }}" class="text-secondary text-decoration-none hover-white">
-                                {{ $industry['name'] }}
-                            </a>
-                        </li>
-                    @endforeach
-                </ul>
+
+            <div class="col-6 col-lg-2">
+                <div class="mb-4">
+                    <h6 class="fw-black text-accent text-uppercase mb-4">Industries</h6>
+                    <ul class="list-unstyled fw-normal small lh-lg">
+                        @foreach($industries as $industry)
+                            <li>
+                                <a href="{{ url('industries/' . $industry['slug']) }}" class="text-secondary text-decoration-none hover-white">
+                                    {{ $industry['name'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div>
+                    <h6 class="fw-black text-accent text-uppercase mb-3">Company</h6>
+                    <ul class="list-unstyled fw-normal small lh-lg">
+                        <li><a href="{{ route('about') }}" class="text-secondary text-decoration-none hover-white">About Us</a></li>
+                        <li><a href="{{ route('contact') }}" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-6 col-md-3">
-                <h6 class="fw-black text-accent text-uppercase mb-4">Company</h6>
-                <ul class="list-unstyled fw-normal small lh-lg">
-                    <li><a href="{{ route('about') }}" class="text-secondary text-decoration-none hover-white">About Us</a></li>
-                    <li><a href="{{ route('contact') }}" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="col-6 col-md-3">
-                <h6 class="fw-black text-accent text-uppercase mb-4">Contact Us</h6>
-                <div class="text-secondary fw-normal  small lh-lg">
-                    <p class="mb-2">
+
+            <div class="col-6 col-lg-3">
+                <h6 class="fw-black text-accent text-uppercase mb-4">Get in Touch</h6>
+                <div class="text-secondary fw-normal small lh-lg">
+                    <p class="mb-2 text-truncate">
                         <a href="mailto:{{ $email }}" class="text-decoration-none text-secondary hover-white">
                             <i class="fa-solid fa-envelope text-accent me-2"></i> {{ $email }}
                         </a>
@@ -281,9 +257,14 @@
             </div>
         </div>
 
-        <!-- Bottom Section -->
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10">
-            <p class="small text-secondary fw-normal mb-md-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10 gap-3">
+            <div class="text-center text-md-start">
+                <p class="small text-secondary fw-normal mb-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
+                <p class="x-small text-secondary opacity-50 mt-1 mb-0" style="font-size: 0.75rem;">
+                    Design and developed with <i class="fa-solid fa-heart text-danger mx-1"></i> by 
+                    <a href="https://smartservix.com.au" target="_blank" class="text-secondary text-decoration-none hover-accent fw-bold">Smart Servix</a>
+                </p>
+            </div>
             <div class="d-flex gap-4 small fw-normal">
                 <a href="{{ route('privacy') }}" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
                 <a href="{{ route('terms') }}" class="text-secondary text-decoration-none hover-white">Terms of Service</a>

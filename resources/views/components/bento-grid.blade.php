@@ -6,7 +6,7 @@
 <style>
     /* Directional glow effect */
     .bento-card:not(.is-featured) {
-        border: 1px solid rgba(0, 0, 0, 0.5) !important;
+        border: 1px solid rgba(121, 121, 121, 0.2) !important;
         transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
     }
 
@@ -32,7 +32,7 @@
     }
 
     .icon-container {
-        height: 80px;
+        height: 60px;
         display: flex;
         align-items: center;
     }
@@ -89,7 +89,7 @@
 
                 <div class="{{ $item['column_class'] ?? 'col-10 col-md-6 col-lg-4' }}">
                     <a href="{{ $item['url'] ?? '#' }}" 
-                       class="bento-card shadow-sm rounded-4 p-4 py-md-3 px-md-5 d-flex flex-column justify-content-between h-100 text-decoration-none position-relative overflow-hidden {{ $isFeatured ? 'bg-accent is-featured' : 'bg-body border' }}">
+                       class="bento-card shadow-sm rounded-4 p-4 py-md-3 px-md-3 d-flex flex-column justify-content-between h-100 text-decoration-none position-relative overflow-hidden {{ $isFeatured ? 'bg-accent is-featured' : 'bg-body border' }}">
                         
                         @if(!$isFeatured)
                             <div class="hover-bg-layer"></div>
@@ -107,6 +107,15 @@
                             <p class="mb-0 {{ $isFeatured ? 'text-black opacity-75' : 'text-secondary' }} line-height-relaxed">
                                 {{ $item['description'] }}
                             </p>
+                            <div class="mt-3 d-block">
+                                @if(isset($item['features']))
+                                    @foreach($item['features'] as $bentoFeatures)
+                                        <span class="d-inline-block mt-2 me-2 p-2 px-3 rounded-pill text-secondary bg-body-tertiary small">
+                                            <i class="fa fa-check text-accent me-2"></i>{!! $bentoFeatures !!}
+                                        </span>
+                                    @endforeach
+                                @endif
+                            </div>
                         </div>
 
                         <div class="pt-2 d-flex justify-content-between align-items-center position-relative z-2">

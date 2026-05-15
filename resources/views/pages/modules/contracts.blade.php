@@ -312,11 +312,11 @@
         
         $industries = [
             [
-                'title' => 'Food & Beverage',
-                'icon' => 'fa-utensils',
-                'description' => 'End-to-end lot traceability, FSANZ compliance, allergen management, supplier certificate storage, digital QA records, and mock recall capability — all built around how F&B businesses actually operate.',
-                'url' => route('industries.show', 'food-beverage'),
-                'column_class' => 'col-12', // Primary Featured Tile
+                 'title' => 'Construction',
+                'icon' => 'fa-helmet-safety',
+                'description' => 'Manage contracts from award to final account. Submit progress claims that are properly documented and SOPA-ready, track retention across all active projects, and keep a complete claim history for every engagement.',
+                'url' => route('industries.show', 'construction'),
+                'column_class' => 'col-12',
                 'show_cta' => true,
                 'cta_text' => 'Explore Blueprint'
             ]

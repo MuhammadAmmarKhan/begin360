@@ -58,82 +58,83 @@
             ]
         ];
 
+        $modulesHeader = [
+            'section_class'  => 'bg-body',
+            'badge'          => '— WHAT\'S INCLUDED —',
+            'heading_start'  => 'Everything your trade business needs,',
+            'dynamic_word'   => 'in one place',
+            'description'    => 'We configure the modules that make sense for how your business works. Each module links to its own page where you can learn more about how it works in practice.',
+            'primary_btn'    => [
+                'text' => 'View All Modules',
+                'url'  => route('modules.index'),
+                'icon' => 'fa-layer-group'
+            ]
+        ];
+
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
+                'title'        => 'Job Management',
+                'icon'         => 'fa-trowel-bricks',
+                'description'  => 'Create and track jobs from first enquiry through to sign-off. Job cards, site notes, photos, and signatures — all in one place.',
+                'url'          => route('modules.show', 'jobs'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Job cards', 'Site notes', 'Digital sign-off']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
+                'title'        => 'Quoting & Estimating',
+                'icon'         => 'fa-file-signature',
+                'description'  => 'Build accurate quotes faster using your standard rates, materials, and labour templates. Convert approved quotes to jobs in one click.',
+                'url'          => route('modules.show', 'quoting'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Rate templates', 'Quote to job', 'Approval tracking']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
+                'title'        => 'Scheduling & Dispatch',
+                'icon'         => 'fa-calendar-day',
+                'description'  => 'Schedule your team on a live calendar. Drag and drop to reschedule, send job details to the field instantly, and track who\'s where.',
+                'url'          => route('modules.show', 'scheduling'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Live calendar', 'Field notifications', 'GPS tracking']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Invoicing & Finance',
+                'icon'         => 'fa-file-invoice-dollar',
+                'description'  => 'Invoice directly from completed jobs, automate payment reminders, and track cash flow in real time. Integrates with Xero and MYOB.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Progress billing', 'Auto reminders', 'Xero sync']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Parts & Materials',
+                'icon'         => 'fa-boxes-stacked',
+                'description'  => 'Track materials across vans, job sites, and your warehouse. Assign parts to specific jobs and generate purchase orders when stock runs low.',
+                'url'          => route('modules.show', 'inventory'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Van stock', 'Job allocation', 'Auto reorder']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Procurement',
+                'icon'         => 'fa-truck-ramp-box',
+                'description'  => 'Manage supplier relationships, issue purchase orders, and track deliveries — all linked directly to the jobs that need the materials.',
+                'url'          => route('modules.show', 'procurement'),
+                'column_class' => 'col-10 col-md-8 col-lg-6',
+                'show_cta'     => true,
+                'features'     => ['Job-linked POs', 'Supplier pricing', 'Delivery tracking']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
-            ],
-            [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
-            ],
-            /* New "Drop a line" Item */
-            [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Need something specific?',
+                'icon'         => 'fa-comments',
+                'description'  => 'Every trade business is different. Tell us about your operation and we\'ll figure out the right setup together.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-12 col-lg-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Conversation'
             ]
         ];
         
@@ -549,14 +550,20 @@
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
         subheading="Sound Familiar?"
-        heading="The <i class='section-accent fraunces text-accent fw-light'>frustrations</i> every trade business knows"
+        heading="The <span class='text-accent fraunces section-accent fw-normal'>frustrations</span> every trade business knows"
         description="Whether you're an electrician, plumber, HVAC technician, or builder — these are the operational bottlenecks we hear most from trade businesses across Australia."
         :points="$painPoints"
     />
     <x-industry-solutions 
-        heading="And how <i class='fraunces section-accent text-accent fw-light'>Begin360</i> fixes it!" 
+        heading="And how <span class='text-accent fraunces section-accent fw-normal'>Begin360</span> fixes it!" 
         description="We implement an ERP built around how trade and field service businesses actually run — from quoting in the office to signing off on site. Here are the three things that make the biggest difference."
         :points="$tradeSolutions"
+    />
+    <x-bento-grid 
+        :items="$modules" 
+        :bentoData="$modulesHeader" 
+        id="industry-sectors" 
+        class="pt-5" 
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>

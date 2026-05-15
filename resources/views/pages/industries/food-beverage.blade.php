@@ -34,104 +34,104 @@
         ];
         $statsData = [
             [
-                'target' => 1,
-                'suffix' => '',
-                'title' => 'Centralized Source',
-                'description' => 'All contracts, claims, variations, and costs in a single system.',
+                'target' => 35,
+                'suffix' => '%',
+                'title' => 'Average reduction in food waste',
+                'description' => 'Significant waste reduction achieved following system implementation.',
                 'is_range' => false
             ],
             [
                 'target' => 100,
                 'suffix' => '%',
-                'title' => 'Accelerated Workflows',
-                'description' => 'Progress claims submitted and approved with less back-and-forth.',
+                'title' => 'FSANZ Traceability',
+                'description' => 'Full compliance and product traceability from day one of operation.',
                 'is_range' => false
             ],
             [
-                'target' => 3,
-                'target_end' => 5, // For ranges like 3-5
-                'suffix' => '',
-                'title' => 'Months Deployment',
-                'description' => 'Typical time to get your digital backbone fully up and running.',
+                'target' => 2,
+                'target_end' => 4,
+                'suffix' => ' mo',
+                'title' => 'Typical Deployment',
+                'description' => 'The average time to get your business fully up and running on the platform.',
                 'is_range' => true
+            ]
+        ];
+        $modulesHeader = [
+            'section_class'  => 'bg-body',
+            'badge'          => '— WHAT\'S INCLUDED —',
+            'heading_start'  => 'Everything your F&B business needs,',
+            'dynamic_word'   => 'in one place',
+            'description'    => 'We configure the modules that make sense for your business. Everything works together from day one, and each module has its own dedicated page where you can learn more about how it works.',
+            'primary_btn'    => [
+                'text' => 'View All Modules',
+                'url'  => route('modules.index'),
+                'icon' => 'fa-layer-group'
             ]
         ];
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
+                'title'        => 'Inventory Management',
+                'icon'         => 'fa-boxes-stacked',
+                'description'  => 'Real-time stock levels, expiry tracking, low-stock alerts, and FEFO rotation—across one or multiple locations.',
+                'url'          => route('modules.show', 'inventory'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Expiry tracking', 'FEFO', 'Multi-site']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
+                'title'        => 'Procurement',
+                'icon'         => 'fa-file-invoice-dollar',
+                'description'  => 'Create purchase orders, track supplier lead times, manage supplier documents—all linked directly to your inventory.',
+                'url'          => route('modules.show', 'procurement'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Auto reorder', 'Supplier certs', 'Lead times']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
+                'title'        => 'Order Management',
+                'icon'         => 'fa-cart-flatbed',
+                'description'  => 'Handle wholesale, retail, foodservice, and online orders in one place. No more jumping between inboxes and spreadsheets.',
+                'url'          => route('modules.show', 'orders'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Wholesale', 'DTC', 'Pricing tiers']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Compliance & Traceability',
+                'icon'         => 'fa-check-double',
+                'description'  => 'Trace any product or ingredient forward and back in seconds. FSANZ audit-ready without extra work from your team.',
+                'url'          => route('modules.show', 'compliance'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['FSANZ', 'Recall ready', 'HACCP']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Finance & Accounting',
+                'icon'         => 'fa-calculator',
+                'description'  => 'GST-compliant invoicing, landed cost tracking, and clear financial reports. Know how the business is performing in real time.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['GST', 'Landed costs', 'Margin reports']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Warehouse Management',
+                'icon'         => 'fa-warehouse',
+                'description'  => 'Optimise storage across ambient, chilled, and frozen zones. Automate pick-pack-dispatch with barcode scanning and zone routing.',
+                'url'          => route('modules.show', 'warehouse'),
+                'column_class' => 'col-10 col-md-8 col-lg-6',
+                'show_cta'     => true,
+                'features'     => ['Cold chain', 'Barcode scan', 'Zone routing']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
-            ],
-            [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
-            ],
-            /* New "Drop a line" Item */
-            [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Need Something Specific?',
+                'icon'         => 'fa-comments',
+                'description'  => 'We work with businesses that have unique requirements too. Tell us what you need and we\'ll figure it out together.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-12 col-lg-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Conversation'
             ]
         ];
         $industries = [
@@ -246,12 +246,36 @@
             ]
         ];
         $painPoints = [
-            ['icon' => 'fa-calculator', 'title' => 'I don\'t actually know my real margins.', 'content' => 'When ingredient costs change, it takes hours of spreadsheet work to figure out what it does to your pricing-and most of the time it just doesn\'t get done.'],
-            ['icon' => 'fa-boxes-stacked', 'title' => 'We\'re always running out of something.', 'content' => 'You find out you\'re low on stock when a customer orders something you can\'t fulfil. By then it\'s already a problem and someone is unhappy.'],
-            ['icon' => 'fa-calendar-xmark', 'title' => 'Things go out of date before we use them.', 'content' => 'Without proper tracking, you\'re not always using the oldest stock first. That means waste—and waste is money walking out the door..'],
-            ['icon' => 'fa-magnifying-glass-arrow-right', 'title' => 'A recall would take us days to sort out.', 'content' => 'If you had to trace a specific batch right now, how long would that take? Most businesses don\'t want to answer that.'],
-            ['icon' => 'fa-network-wired', 'title' => 'Orders come in from everywhere and it\'s chaos.', 'content' => 'Wholesale, cafés, online—managing orders across different channels means things fall through the cracks nd staff spend too much time on admin..'],
-            ['icon' => 'fa-file-signature', 'title' => 'Compliance paperwork is eating our time.', 'content' => 'Food safety records and allergen declarations—the admin never ends and you\'re never fully confident everything is in order if someone audited you today.']
+            [
+                'icon'    => 'fa-calculator', 
+                'title'   => '"I don\'t actually know my real margins."', 
+                'content' => 'When ingredient costs change, it takes hours of spreadsheet work to figure out what it does to your pricing—and most of the time it just doesn\'t get done.'
+            ],
+            [
+                'icon'    => 'fa-boxes-stacked', 
+                'title'   => '"We\'re always running out of something."', 
+                'content' => 'You find out you\'re low on stock when a customer orders something you can\'t fulfil. By then it\'s already a problem and someone is unhappy.'
+            ],
+            [
+                'icon'    => 'fa-calendar-xmark', 
+                'title'   => '"Things go out of date before we use them."', 
+                'content' => 'Without proper tracking, you\'re not always using the oldest stock first. That means waste—and waste is money walking out the door.'
+            ],
+            [
+                'icon'    => 'fa-magnifying-glass-arrow-right', 
+                'title'   => '"A recall would take us days to sort out."', 
+                'content' => 'If you had to trace a specific batch right now—which customers got it, what ingredients were in it—how long would that take? Most businesses don\'t want to answer that.'
+            ],
+            [
+                'icon'    => 'fa-network-wired', 
+                'title'   => '"Orders come in from everywhere and it\'s chaos."', 
+                'content' => 'Wholesale, cafés, online, markets—managing orders across different channels means things fall through the cracks and staff spend too much time on admin.'
+            ],
+            [
+                'icon'    => 'fa-file-signature', 
+                'title'   => '"Compliance paperwork is eating our time."', 
+                'content' => 'Food safety records, allergen declarations, supplier certificates—the admin never ends, and you\'re never fully confident everything is in order if someone audited you today.'
+            ]
         ];
         $fbSolutions = [
         [
@@ -526,6 +550,12 @@
         heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
         description="We implement an ERP system built around how your food business actually works. Here are the three things that make the biggest difference."
         :points="$fbSolutions"
+    />
+    <x-bento-grid 
+        :items="$modules" 
+        :bentoData="$modulesHeader" 
+        id="industry-sectors" 
+        class="pt-5" 
     />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>

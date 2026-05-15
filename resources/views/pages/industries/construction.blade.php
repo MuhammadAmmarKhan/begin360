@@ -56,82 +56,83 @@
                 'is_range' => true
             ]
         ];
+        $modulesHeader = [
+            'section_class'  => 'bg-body',
+            'badge'          => '— WHAT\'S INCLUDED —',
+            'heading_start'  => 'Everything your construction business needs,',
+            'dynamic_word'   => 'in one place',
+            'description'    => 'We configure the modules that make sense for how your business operates — whether you\'re a residential builder, commercial contractor, or specialist subcontractor. Each module links to its own page where you can learn more.',
+            'primary_btn'    => [
+                'text' => 'View All Modules',
+                'url'  => route('modules.index'),
+                'icon' => 'fa-layer-group'
+            ]
+        ];
+
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
+                'title'        => 'Project Management',
+                'icon'         => 'fa-diagram-project',
+                'description'  => 'Manage every project from contract award to practical completion. Budgets, programmes, milestones, and cost codes all in one place.',
+                'url'          => route('modules.show', 'projects'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Cost codes', 'Milestones', 'Programme tracking']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
+                'title'        => 'Contracts & Progress Claims',
+                'icon'         => 'fa-file-signature',
+                'description'  => 'Build and submit progress claims from your contract schedule. Track retentions, approved amounts, and outstanding payments — and stay SOPA-ready.',
+                'url'          => route('modules.show', 'contracts'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Progress claims', 'Retention', 'SOPA']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
+                'title'        => 'Variation Management',
+                'icon'         => 'fa-code-compare',
+                'description'  => 'Log variations the moment they\'re instructed. Track approval status, cost impact, and programme effect — so nothing falls off the end of the job unbilled.',
+                'url'          => route('modules.show', 'variations'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'show_cta'     => true,
+                'features'     => ['Variation register', 'Client approval', 'Cost impact']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Procurement',
+                'icon'         => 'fa-truck-ramp-box',
+                'description'  => 'Issue purchase orders and subcontract orders tied to specific projects and cost codes. Track deliveries, approvals, and supplier invoices all in one place.',
+                'url'          => route('modules.show', 'procurement'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Project-linked POs', 'Subcontracts', '3-way matching']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Subcontractor Management',
+                'icon'         => 'fa-hard-hat',
+                'description'  => 'Maintain a register of subcontractors with insurance, licence, and SWMS tracking. Get automatic alerts before anything expires.',
+                'url'          => route('modules.show', 'subcontractors'),
+                'column_class' => 'col-10 col-md-4 col-lg-3',
+                'show_cta'     => true,
+                'features'     => ['Insurance tracking', 'Licence expiry', 'SWMS register']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Finance & Accounting',
+                'icon'         => 'fa-calculator',
+                'description'  => 'Job costing, subcontractor payments, retention management, and GST-compliant reporting — all connected to your projects and integrated with Xero or MYOB.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-8 col-lg-6',
+                'show_cta'     => true,
+                'features'     => ['Job costing', 'Retention', 'Xero sync']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
-            ],
-            [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
-            ],
-            /* New "Drop a line" Item */
-            [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Need something specific?',
+                'icon'         => 'fa-comments',
+                'description'  => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-12 col-lg-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Conversation'
             ]
         ];
         $industries = [
@@ -446,16 +447,22 @@
     <x-about-hero :heroData="$heroData"/>    
     <x-stats :statsData="$statsData"/>
     <x-industry-pain-points 
-    subheading="Sound Familiar?"
-    heading="The <span class='section-accent fraunces text-accent fw-light'>problems</span> every construction business owner knows"
-    description="Whether you're a residential builder, commercial contractor, or specialist subcontractor—these are the financial and operational problems we hear most from construction businesses across Australia."
-    :points="$painPoints"
-/>
+        subheading="Sound Familiar?"
+        heading="The <span class='section-accent fraunces text-accent fw-light'>problems</span> every construction business owner knows"
+        description="Whether you're a residential builder, commercial contractor, or specialist subcontractor—these are the financial and operational problems we hear most from construction businesses across Australia."
+        :points="$painPoints"
+    />
     <x-industry-solutions 
-    heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
-    description="We implement an ERP built around how construction businesses actually run projects — from contract award through to final account. Here are the three things that make the biggest difference."
-    :points="$constructionSolutions"
-/>
+        heading="And how <span class='fraunces section-accent text-accent fw-light '>Begin360</span> fix it!" 
+        description="We implement an ERP built around how construction businesses actually run projects — from contract award through to final account. Here are the three things that make the biggest difference."
+        :points="$constructionSolutions"
+    />
+    <x-bento-grid 
+        :items="$modules" 
+        :bentoData="$modulesHeader" 
+        id="industry-sectors" 
+        class="pt-5" 
+    />
     <x-process-flow :processData="$processData" />
     <x-platform-selection :ecosystemContent="$ecosystemContent"/>
     <x-testimonials :testimonialData="$testimonialData"/>

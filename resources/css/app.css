@@ -809,13 +809,13 @@ body{
         height: 70px;
         background-color: rgba(86, 217, 100, 0.05); /* Green accent, low opacity */
         border: 2px solid rgba(86, 217, 100, 0.1);
-        transform: rotate(45deg); /* Forms the creative diamond shape */
+        /* transform: rotate(45deg); Forms the creative diamond shape */
         position: relative;
     }
 
     /* Keep the actual icon straight */
     .icon-shape .fa-solid {
-        transform: rotate(-45deg);
+        /* transform: rotate(-45deg); */
     }
 
     /* 4. Architectural Offset grid (Creative backdrop, no image) */
