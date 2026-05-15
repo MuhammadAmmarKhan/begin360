@@ -813,11 +813,6 @@ body{
         position: relative;
     }
 
-    /* Keep the actual icon straight */
-    .icon-shape .fa-solid {
-        /* transform: rotate(-45deg); */
-    }
-
     /* 4. Architectural Offset grid (Creative backdrop, no image) */
     
 

@@ -166,7 +166,7 @@
         <div class="row g-5 align-items-end mb-5">
             <div class="col-lg-6">
                 <div class="d-flex align-items-center mb-4">
-                    <img src="{{ asset('assets/images/logo-light.png') }}" alt="Logo" width="250"/>
+                    <img id="footer-logo" src="{{ asset('assets/images/logo-light.png') }}" alt="Logo" width="250"/>
                 </div>
                 <p class="text-secondary fw-normal small w-75">
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.

@@ -71,6 +71,8 @@ function initNavigation() {
 
 function initThemeToggle() {
     const themeBtn = document.getElementById('themeToggle');
+    const headerLogo = document.getElementById('header-logo');
+    const footerLogo = document.getElementById('footer-logo');
     const html = document.documentElement;
 
     // 1. Function to get preferred theme
@@ -81,9 +83,23 @@ function initThemeToggle() {
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     };
 
+    // Helper to update logo assets
+    const updateLogos = (theme) => {
+        const assetPath = '/public/assets/images/'; // Adjust this path to match your Laravel asset directory
+        
+        if (headerLogo) {
+            headerLogo.src = `${assetPath}symbol-${theme}.png`;
+        }
+        
+        if (footerLogo) {
+            footerLogo.src = `${assetPath}logo-${theme}.png`;
+        }
+    };
+
     // 3. Initialize Theme
     const activeTheme = getStoredTheme() || getSystemTheme();
     html.setAttribute('data-bs-theme', activeTheme);
+    updateLogos(activeTheme);
 
     // 4. Toggle Logic
     if (themeBtn) {
@@ -93,10 +109,13 @@ function initThemeToggle() {
             
             html.setAttribute('data-bs-theme', newTheme);
             
-            // Save to LocalStorage (Standard Practice)
+            // Update Logos
+            updateLogos(newTheme);
+            
+            // Save to LocalStorage
             localStorage.setItem('theme', newTheme);
             
-            // Save to Cookie (For Server-Side awareness / Odoo sync)
+            // Save to Cookie
             document.cookie = `theme=${newTheme}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
         });
     }
@@ -106,6 +125,7 @@ function initThemeToggle() {
         if (!getStoredTheme()) {
             const systemTheme = e.matches ? 'dark' : 'light';
             html.setAttribute('data-bs-theme', systemTheme);
+            updateLogos(systemTheme);
         }
     });
 }

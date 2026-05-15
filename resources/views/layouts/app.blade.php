@@ -36,8 +36,8 @@
     @stack('styles')
 </head>
 <body class="w-100 overflow-x-hidden">
-    <div class="cursor-dot"></div>
-    <div class="cursor-glow"></div>
+    <div class="cursor-dot d-none d-md-flex"></div>
+    <div class="cursor-glow d-none d-md-flex"></div>
 
     {{-- <x-loader /> --}}
     <div id="main-body">

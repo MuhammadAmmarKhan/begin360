@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm" id="mainNav">
     <div class="container-fluid px-lg-5">        
         <a class="navbar-brand" href="{{ url('/') }}">
-            <img src="{{ asset('assets/images/symbol-light.png') }}" alt="Begin360 Symbol" style="max-width:32px;" class="brand-symbol">
+            <img id="header-logo" src="{{ asset('assets/images/symbol-light.png') }}" alt="Begin360 Symbol" style="max-width:32px;" class="brand-symbol">
         </a>
         <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

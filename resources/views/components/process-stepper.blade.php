@@ -218,7 +218,7 @@
         </div>
 
         {{-- Bullets --}}
-        <div class="step-pagination">
+        <div class="step-pagination d-none d-md-flex">
             @foreach($steps as $index => $step)
                 <button class="pag-bullet {{ $index === 0 ? 'active' : '' }}" 
                         data-index="{{ $index }}" 
