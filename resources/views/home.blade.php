@@ -545,7 +545,7 @@
                             From Scattered systems to <span class="text-accent fraunces section-accent fw-normal">complete control.</span>
                         </h1>
                         
-                        <p class="fs-6 text-secondary mb-5 gs-reveal w-100 lh-base fw-light">
+                        <p class="fs-5 text-body mb-5 gs-reveal w-100 lh-base fw-normal">
                             We help growing businesses unify their operations, automate workflows, and gain real-time visibility - all in one place.
                         </p>
                         <div class="d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-3 gs-reveal">
@@ -663,7 +663,7 @@
                     — THE HIDDEN PROBLEM —
                 </span>
                 <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">What's actually slowing your business <span class="text-accent fraunces section-accent fw-normal">down?</span></h2>
-                <p class="lead text-body mx-auto" style="max-width: 700px;">
+                <p class="lead fs-5 fw-normal text-body mx-auto" style="max-width: 700px;">
                     Most businesses struggle not because of a lack of effort, but because of disconnected systems and manual processes.
                 </p>
             </div>
@@ -832,7 +832,7 @@
                     <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter text-break">
                         Ready to bring your business onto <span class="text-accent fraunces section-accent fw-normal">one system?</span>
                     </h2>
-                    <p class="fw-normal fs-6 text-secondary mb-4 mb-lg-5 px-md-4 px-lg-0">
+                    <p class="fw-normal fs-5 text-body mb-4 mb-lg-5 px-md-4 px-lg-0">
                         In 30 minutes, we'll understand your business, map your processes, and show how a modern ERP can bring everything together.
                     </p>
                 </div>
@@ -846,17 +846,17 @@
 
                 <div class="row g-2 g-sm-3 justify-content-center justify-content-lg-start mx-0">
                     <div class="col-auto ps-0">
-                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.95rem;">
                             <i class="fa-solid fa-circle-check text-accent me-1 me-sm-2"></i> No Pressure
                         </div>
                     </div>
                     <div class="col-auto px-2 px-sm-3 border-start border-light-subtle">
-                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.95rem;">
                             <i class="fa-regular fa-clock text-accent me-1 me-sm-2"></i> 30 Minutes
                         </div>
                     </div>
                     <div class="col-auto px-2 px-sm-3 border-start border-light-subtle pe-0">
-                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.95rem;">
                             <i class="fa-solid fa-wand-magic-sparkles text-accent me-1 me-sm-2"></i> Tailored
                         </div>
                     </div>

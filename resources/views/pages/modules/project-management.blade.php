@@ -278,80 +278,167 @@
         ];
         $modules = [
             [
-                'title' => 'Inventory Management',
-                'icon' => 'fa-boxes-stacked',
-                'description' => 'Sovereign control over your entire supply chain with real-time architectural visibility.',
-                'url' => route('modules.show', 'inventory-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-6',
-                'show_cta' => true
+                'title'        => 'Compliance & Traceability',
+                'icon'         => 'fa-clipboard-check',
+                'description'  => 'Rigid regulatory adherence and high-fidelity product tracking across the entire supply chain lifecycle.',
+                'url'          => route('modules.show', 'compliance'),
+                'column_class' => 'col-10 col-md-8 col-xl-8',
+                'show_cta'     => true,
+                'features'     => ['Recall Readiness', 'Audit Trails', 'Certificate Management']
             ],
             [
-                'title' => 'Procurement',
-                'icon' => 'fa-file-invoice-dollar',
-                'description' => 'Automated sourcing and high-fidelity vendor synchronization.',
-                'url' => route('modules.show', 'procurement'),
-                'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'title'        => 'Contracts & Progress Claims',
+                'icon'         => 'fa-file-signature',
+                'description'  => 'Streamline contract administration and progress claims while staying SOPA-ready and tracking retentions.',
+                'url'          => route('modules.show', 'contracts'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['SOPA Compliance', 'Retention Tracking', 'Automated Claims']
             ],
             [
-                'title' => 'Order Management',
-                'icon' => 'fa-cart-flatbed',
-                'description' => 'Seamless omnichannel orchestration for complex transaction flows.',
-                'url' => route('modules.show', 'order-management'),
-                'column_class' => 'col-10 col-md-4 col-lg-3',
-                'show_cta' => true
+                'title'        => 'Customer Management',
+                'icon'         => 'fa-users-gear',
+                'description'  => 'Unified customer intelligence to foster deep engagement and long-term ecosystem loyalty.',
+                'url'          => route('modules.show', 'crm'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['360° Interaction History', 'Pipeline Management', 'Loyalty Engines']
             ],
             [
-                'title' => 'Finance & Accounting',
-                'icon' => 'fa-calculator',
-                'description' => 'Integrated fiscal infrastructure with mathematical precision.',
-                'url' => route('modules.show', 'finance-accounting'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Finance & Accounting',
+                'icon'         => 'fa-calculator',
+                'description'  => 'Integrated fiscal infrastructure providing mathematical precision for enterprise-grade reporting and GST compliance.',
+                'url'          => route('modules.show', 'finance'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['Xero/MYOB Sync', 'Project-level P&L', 'Automated Invoicing']
             ],
             [
-                'title' => 'Freight & Fulfillment',
-                'icon' => 'fa-truck-fast',
-                'description' => 'Logic-driven logistics to engineer your global delivery footprint.',
-                'url' => route('modules.show', 'freight-fulfillment'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Inventory Management',
+                'icon'         => 'fa-boxes-stacked',
+                'description'  => 'Sovereign control over your entire supply chain with real-time architectural visibility across all locations.',
+                'url'          => route('modules.show', 'inventory'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['Multi-location Sync', 'Batch & Serial Tracking', 'Auto-Replenishment']
             ],
             [
-                'title' => 'Demand Planning',
-                'icon' => 'fa-chart-line',
-                'description' => 'Predictive modeling and AI-driven insights for resilient scaling.',
-                'url' => route('modules.show', 'demand-planning'),
-                'featured' => false,
-                'column_class' => 'col-10 col-md-12 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Job Management',
+                'icon'         => 'fa-list-check',
+                'description'  => 'End-to-end field oversight from initial enquiry through to digital sign-off and site-note documentation.',
+                'url'          => route('modules.show', 'job-management'),
+                'column_class' => 'col-10 col-md-8 col-xl-6',
+                'show_cta'     => true,
+                'features'     => ['Job Cards', 'Digital Sign-off', 'Photo Attachments']
             ],
             [
-                'title' => 'Warehouse Management',
-                'icon' => 'fa-warehouse',
-                'description' => 'Optimizing spatial efficiency through advanced WMS architecture.',
-                'url' => route('modules.show', 'warehouse-management'),
-                'column_class' => 'col-10 col-md-8 col-lg-8',
-                'show_cta' => true
+                'title'        => 'Order Management',
+                'icon'         => 'fa-cart-flatbed',
+                'description'  => 'Seamless omnichannel orchestration for complex transaction flows across retail, wholesale, and digital channels.',
+                'url'          => route('modules.show', 'orders'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Omnichannel Sync', 'Fulfilment Routing', 'Returns Management']
             ],
             [
-                'title' => 'Manufacturing',
-                'icon' => 'fa-industry',
-                'description' => 'Digital twins and MRP logic for precision production environments.',
-                'url' => route('modules.show', 'manufacturing'),
-                'column_class' => 'col-10 col-md-4 col-lg-4',
-                'show_cta' => true
+                'title'        => 'Point of Sale',
+                'icon'         => 'fa-cash-register',
+                'description'  => 'A modern checkout experience that feeds directly into your inventory and accounting infrastructure.',
+                'url'          => route('modules.show', 'pos'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Offline Mode', 'Integrated Payments', 'Gift Cards']
             ],
-            /* New "Drop a line" Item */
             [
-                'title' => 'Need Something Specific?',
-                'icon' => 'fa-microchip',
-                'description' => 'Every construction business is different. Tell us about your operation and we\'ll figure out the right setup together.',
-                'url' => url('/contact'),
-                'column_class' => 'col-10 col-md-12 col-lg-12', // Spans full width at bottom
-                'show_cta' => true,
-                'featured' => true,
-                'cta_text' => 'Start a Conversation'
+                'title'        => 'Procurement',
+                'icon'         => 'fa-file-invoice-dollar',
+                'description'  => 'Automated sourcing and high-fidelity vendor synchronization for precision-engineered acquisition flows.',
+                'url'          => route('modules.show', 'procurement'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['Supplier Portals', '3-Way Matching', 'Purchase Order Automation']
+            ],
+            [
+                'title'        => 'Project Management',
+                'icon'         => 'fa-diagram-project',
+                'description'  => 'Manage complex project lifecycles from contract award to practical completion with integrated cost-coding.',
+                'url'          => route('modules.show', 'project-management'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['Milestone Tracking', 'Resource Allocation', 'Budget vs Actuals']
+            ],
+            [
+                'title'        => 'Quoting & Estimating',
+                'icon'         => 'fa-file-lines',
+                'description'  => 'Rapidly generate accurate estimates using standard rate templates and material cost-logic.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-4',
+                'show_cta'     => true,
+                'features'     => ['Rate Templates', 'Quote-to-Job conversion', 'Version Control']
+            ],
+            [
+                'title'        => 'Resource Planning',
+                'icon'         => 'fa-calendar-check',
+                'description'  => 'Analyze utilization and capacity to optimize team performance and avoid engagement bottlenecks.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Utilisation Views', 'Skill Matching', 'Capacity Forecasting']
+            ],
+            [
+                'title'        => 'Scheduling & Dispatch',
+                'icon'         => 'fa-clock-rotate-left',
+                'description'  => 'Live resource coordination to ensure the right team is at the right site at the right time.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Drag-and-Drop Calendar', 'Field Notifications', 'GPS Routing']
+            ],
+            [
+                'title'        => 'Subcontractor Management',
+                'icon'         => 'fa-user-group',
+                'description'  => 'Maintain a rigid register of subcontractors with automated insurance, licence, and SWMS tracking.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Compliance Alerts', 'SWMS Register', 'Insurance Tracking']
+            ],
+            [
+                'title'        => 'Time Tracking & Billing',
+                'icon'         => 'fa-stopwatch',
+                'description'  => 'Capture every billable minute with precision and link time directly to project cost codes.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-3',
+                'show_cta'     => true,
+                'features'     => ['Mobile Timesheets', 'GPS Geofencing', 'Payroll Integration']
+            ],
+            [
+                'title'        => 'Variation Management',
+                'icon'         => 'fa-code-branch',
+                'description'  => 'Capture and approve project variations in real-time to prevent unbilled scope-creep.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-6',
+                'show_cta'     => true,
+                'features'     => ['Approval Workflows', 'Cost Impact Analysis', 'Variation Register']
+            ],
+            [
+                'title'        => 'Warehouse Management',
+                'icon'         => 'fa-warehouse',
+                'description'  => 'Optimizing spatial efficiency and labor throughput through advanced logic-driven WMS architecture.',
+                'url'          => route('modules.index'),
+                'column_class' => 'col-10 col-md-8 col-xl-6',
+                'show_cta'     => true,
+                'features'     => ['Bin Management', 'Pick/Pack/Ship', 'Digital Manifests']
+            ],
+            [
+                'title'        => 'Custom Architecture?',
+                'icon'         => 'fa-microchip',
+                'description'  => 'Seeking a specialized operational framework? We engineer bespoke solutions for complex enterprise visions.',
+                'url'          => url('/contact'),
+                'column_class' => 'col-10 col-md-8 col-xl-12',
+                'show_cta'     => true,
+                'featured'     => true,
+                'cta_text'     => 'Start a Consultation'
             ]
         ];
 

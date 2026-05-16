@@ -39,7 +39,7 @@
                     <span class="small text-uppercase fw-bold tracking-widest mb-4 opacity-50 ls-2 d-block">
                         Solution Blueprint
                     </span>
-                    <h3 class="fw-normal mb-4 ls-tight">
+                    <h3 class="fw-semibold mb-4 ls-tight">
                         Unified Ecosystems for the Modern <span class="text-accent">Enterprise</span>
                     </h3>
                     <p class="small opacity-75 mb-5 lh-base">

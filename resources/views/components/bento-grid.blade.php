@@ -9,21 +9,6 @@
         border: 1px solid rgba(121, 121, 121, 0.2) !important;
         transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
     }
-
-    .hover-bg-layer {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.4s ease;
-        background: radial-gradient(
-            600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
-            rgba(var(--bs-accent-rgb), 0.15),
-            transparent 40%
-        );
-    }
-
     .bento-card:hover .hover-bg-layer { opacity: 1; }
 
     .bento-card:hover {
@@ -42,7 +27,7 @@
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
 
-<section {{ $attributes->class(['py-5 bg-body overflow-hidden',$bentoData['section_class'] ?? '']) }}>
+<section {{ $attributes->class(['py-5 bg-body overflow-hidden', $bentoData['section_class'] ?? '']) }}>
     <div class="container">
         
         {{-- Dynamic Header Section: Only shows if bentoData is provided --}}
@@ -63,7 +48,7 @@
                     @endif
                     
                     @if(isset($bentoData['description']))
-                        <p class="text-secondary fw-normal small mb-4">
+                        <p class="text-body fw-normal fs-5 mb-4">
                             {!! $bentoData['description'] !!}
                         </p>
                     @endif
@@ -80,8 +65,8 @@
             </div>
         @endif
 
-        {{-- Bento Grid --}}
-        <div class="row g-4 flex-nowrap overflow-auto hide-scrollbar pb-4 flex-md-wrap overflow-md-visible">
+        {{-- Bento Grid: Shifted wrap overrides from md to lg to allow horizontal scrolling on tablets --}}
+        <div class="row g-4 flex-nowrap overflow-auto hide-scrollbar pb-4 flex-xl-wrap overflow-xl-visible">
             @foreach($items as $item)
                 @php
                     $isFeatured = $item['featured'] ?? false;
@@ -104,7 +89,7 @@
                                 {{ $item['title'] }}
                             </h3>
                             
-                            <p class="mb-0 {{ $isFeatured ? 'text-black opacity-75' : 'text-secondary' }} line-height-relaxed">
+                            <p class="mb-0 {{ $isFeatured ? 'text-black opacity-75' : 'text-body' }} fs-5 fw-normal line-height-relaxed">
                                 {{ $item['description'] }}
                             </p>
                             <div class="mt-3 d-block">
@@ -131,17 +116,4 @@
             @endforeach
         </div>
     </div>
-</section>
-
-<script>
-    // JS for the directional glow effect
-    document.querySelectorAll('.bento-card').forEach(card => {
-        card.onmousemove = e => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-        };
-    });
-</script>
+</section>  

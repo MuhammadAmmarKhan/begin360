@@ -42,7 +42,7 @@
                         </span>
                     </h1>
                     
-                    <p class="mb-5 text-secondary fw-normal">
+                    <p class="mb-5 text-body fw-400 fs-5">
                         {!! $heroData['description'] !!}
                     </p>
 

@@ -83,7 +83,7 @@
             <div class="problem-intro">
                 <span class="text-uppercase fw-bold text-accent mb-2 d-block tracking-widest small">{{ $sectionData['sidebar']['problem_subtitle'] }}</span>
                 <h2 class="fs-1 fw-semibold text-body mb-4 lh-1">{{ $sectionData['sidebar']['problem_title'] }}</h2>
-                <p class="text-secondary fs-6 mb-4 lh-base">{{ $sectionData['sidebar']['problem_desc'] }}</p>
+                <p class="text-body fs-5 mb-4 lh-base">{{ $sectionData['sidebar']['problem_desc'] }}</p>
                 <a href="{{ $sectionData['sidebar']['cta_link'] }}" class="btn btn-accent mt-5 rounded-pill px-5 py-3 fw-bold text-black text-decoration-none">
                     {{ $sectionData['sidebar']['cta_text'] }} <i class="fa fa-arrow-right ms-2"></i>
                 </a>
@@ -92,7 +92,7 @@
             <div class="transformation-intro position-absolute" style="opacity: 0; visibility: hidden;">
                 <span class="text-uppercase fw-bold text-accent mb-2 d-block tracking-widest small">{{ $sectionData['sidebar']['solution_subtitle'] }}</span>
                 <h2 class="fs-1 fw-semibold text-body mb-4 lh-1">{{ $sectionData['sidebar']['solution_title'] }}</h2>
-                <p class="text-secondary fs-6 mb-4 lh-base">{{ $sectionData['sidebar']['solution_desc'] }}</p>
+                <p class="text-body fs-5 mb-4 lh-base">{{ $sectionData['sidebar']['solution_desc'] }}</p>
                 <div class="badge bg-accent text-black p-2 px-3 rounded-pill">
                     <i class="fa-solid fa-bolt me-2"></i> Efficiency Optimized
                 </div>
@@ -118,7 +118,7 @@
 
                         <div class="mt-auto w-100">
                             <h3 class="fs-4 fw-semibold text-uppercase mb-2">{{ $card['title'] }}</h3>
-                            <p class="text-secondary mb-0">{{ $card['desc'] }}</p>
+                            <p class="text-body fs-5 fw-normal mb-0">{{ $card['desc'] }}</p>
                         </div>
                         
                     </div>

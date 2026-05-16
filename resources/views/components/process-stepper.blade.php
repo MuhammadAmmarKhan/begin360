@@ -183,7 +183,7 @@
             {{ $subheading }}
         </span>
         <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">{!! $heading !!}</h2>
-        <p class="text-secondary mx-auto small mb-0" style="max-width: 600px;">{{ $description }}</p>
+        <p class="text-body fw-normal mx-auto lead mb-0" style="max-width: 600px;">{{ $description }}</p>
     </div>
 
     {{-- Visual Zone (Dead Center) --}}

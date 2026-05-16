@@ -115,11 +115,7 @@
         line-height: 1.4;
     }
     /* 1. Large, Bold Typography */
-    .partner-name {
-        letter-spacing: -3px;
-        line-height: 0.9;
-        /* font-size: clamp(3rem, 8vw, 5.5rem); Scalable large font */
-    }
+    
 
     .tracking-widest {
         letter-spacing: 0.4em;
@@ -198,14 +194,14 @@
                 'heading' => 'From Architectural Failure to Operational Flow',
                 'cta' => ['text' => 'Our Genesis', 'url' => route('industries.index')],
                 'content' => '
-                    <h4 class="lead fw-bold text-body mb-4">The Pervasive Operational Friction.</h4>
-                    <p class="mb-4 text-secondary fs-6">For years, we watched the global business landscape struggle under the weight of legacy ERP systems—rigid structures that forced visionaries to bend their operations to fit the software’s limitations. We saw pioneers stalled by outdated logic and teams slowed by complexity.</p>
+                    <h4 class="h4 fw-bold text-body mb-4">The Pervasive Operational Friction.</h4>
+                    <p class="mb-4 text-body fs-5">For years, we watched the global business landscape struggle under the weight of legacy ERP systems—rigid structures that forced visionaries to bend their operations to fit the software’s limitations. We saw pioneers stalled by outdated logic and teams slowed by complexity.</p>
                     
-                    <h4 class="lead fw-bold text-body mb-4">The Architectural Epiphany.</h4>
-                    <p class="mb-4 text-secondary fs-6">These weren’t industry-specific problems; they were fundamental architectural failures. Software had become a bottleneck instead of an accelerator. We realized that the most innovative companies of tomorrow required a new foundation, not another patch on an old system.</p>
+                    <h4 class="h4 fw-bold text-body mb-4">The Architectural Epiphany.</h4>
+                    <p class="mb-4 text-body fs-5">These weren’t industry-specific problems; they were fundamental architectural failures. Software had become a bottleneck instead of an accelerator. We realized that the most innovative companies of tomorrow required a new foundation, not another patch on an old system.</p>
                     
-                    <h4 class="lead fw-bold text-body mb-4">The Return to First Principles.</h4>
-                    <p class="text-secondary fs-6">We stripped away the legacy bloat to reveal a simpler truth: <strong>software should follow the natural flow of operations.</strong> Begin360 was built to provide that foundation—reimagining enterprise resource planning as a blueprint for speed, agility, and precision.</p>'
+                    <h4 class="h4 fw-bold text-body mb-4">The Return to First Principles.</h4>
+                    <p class="text-body fs-5">We stripped away the legacy bloat to reveal a simpler truth: <strong>software should follow the natural flow of operations.</strong> Begin360 was built to provide that foundation—reimagining enterprise resource planning as a blueprint for speed, agility, and precision.</p>'
             ],
             [
                 'id' => 'vision',
@@ -215,16 +211,16 @@
                 'cta' => ['text' => 'Our Roadmap', 'url' => route('modules.index')],
                 'content' => '
                     <div class="mb-5">
-                        <h4 class="lead fw-bold text-body mb-4">Uncompromising Velocity.</h4>
-                        <p class="text-secondary fs-6">We envision a world where enterprise systems are the primary catalysts for expansion. We architect environments where organizations operate with absolute process clarity, ensuring that technical speed never sacrifices operational integrity.</p>
+                        <h4 class="h4 fw-bold text-body mb-4">Uncompromising Velocity.</h4>
+                        <p class="text-body fs-5">We envision a world where enterprise systems are the primary catalysts for expansion. We architect environments where organizations operate with absolute process clarity, ensuring that technical speed never sacrifices operational integrity.</p>
                     </div>
                     <div class="mb-5">
-                        <h4 class="lead fw-bold text-body mb-4">Scalability by Design.</h4>
-                        <p class="text-secondary fs-6">Our vision is a future where ERPs are genuine tools for scaling, not sources of frustration. We see a landscape where technology decisions are made strategically, implemented correctly, and evolved with purpose to support the next generation of global leaders.</p>
+                        <h4 class="h4 fw-bold text-body mb-4">Scalability by Design.</h4>
+                        <p class="text-body fs-5">Our vision is a future where ERPs are genuine tools for scaling, not sources of frustration. We see a landscape where technology decisions are made strategically, implemented correctly, and evolved with purpose to support the next generation of global leaders.</p>
                     </div>
                     <div>
-                        <h4 class="lead fw-bold text-body mb-4">Clarity through Strategic Alliance.</h4>
-                        <p class="text-secondary fs-6">Begin360 exists to bridge the gap between complex data and strategic action. We transform one enterprise at a time, turning fragmented infrastructure into a cohesive, competitive advantage through a shared vision of mastery.</p>
+                        <h4 class="h4 fw-bold text-body mb-4">Clarity through Strategic Alliance.</h4>
+                        <p class="text-body fs-5">Begin360 exists to bridge the gap between complex data and strategic action. We transform one enterprise at a time, turning fragmented infrastructure into a cohesive, competitive advantage through a shared vision of mastery.</p>
                     </div>'
             ],
             [
@@ -234,27 +230,27 @@
                 'heading' => 'Execution with Surgical Precision',
                 'cta' => ['text' => 'Partner With Us', 'url' => route('contact')],
                 'content' => '
-                    <p class="fs-6 fw-normal text-secondary mb-5">To deliver transformative ERP environments through a methodology of absolute integrity. We are guided by five core principles of execution:</p>
+                    <p class="fs-5 fw-normal text-body mb-5">To deliver transformative ERP environments through a methodology of absolute integrity. We are guided by five core principles of execution:</p>
                     <ul class="list-unstyled custom-mission-list">
                         <li class="mb-4">
                             <span class="d-block h5 text-body fw-bold mb-1">Unwavering Client Centricity.</span>
-                            <span class="text-secondary fs-6">We conduct deep-tier needs analysis to ensure every architectural recommendation is rooted in your operational reality.</span>
+                            <span class="text-body fs-6">We conduct deep-tier needs analysis to ensure every architectural recommendation is rooted in your operational reality.</span>
                         </li>
                         <li class="mb-4">
                             <span class="d-block h5 text-body fw-bold mb-1">Intellectual Honesty.</span>
-                            <span class="text-secondary fs-6">We provide technical transparency at every stage, designing frameworks that prioritize long-term efficiency over short-term ease.</span>
+                            <span class="text-body fs-6">We provide technical transparency at every stage, designing frameworks that prioritize long-term efficiency over short-term ease.</span>
                         </li>
                         <li class="mb-4">
                             <span class="d-block h5 text-body fw-bold mb-1">Radical Ownership.</span>
-                            <span class="text-secondary fs-6">We take extreme accountability for the implementation process, delivering complex projects with surgical precision.</span>
+                            <span class="text-body fs-6">We take extreme accountability for the implementation process, delivering complex projects with surgical precision.</span>
                         </li>
                         <li class="mb-4">
                             <span class="d-block h5 text-body fw-bold mb-1">Operational Momentum.</span>
-                            <span class="text-secondary fs-6">We recognize that in high-stakes environments, time is the only finite resource. We execute with relentless urgency and precision.</span>
+                            <span class="text-body fs-6">We recognize that in high-stakes environments, time is the only finite resource. We execute with relentless urgency and precision.</span>
                         </li>
                         <li class="mb-0">
                             <span class="d-block h5 text-body fw-bold mb-1">Continuous Baseline Elevation.</span>
-                            <span class="text-secondary fs-6">We provide scalable support that evolves in lockstep with the shifting demands of the global markets we serve.</span>
+                            <span class="text-body fs-6">We provide scalable support that evolves in lockstep with the shifting demands of the global markets we serve.</span>
                         </li>
                     </ul>'
             ]
@@ -323,7 +319,7 @@
                         </h2>                    
                         <div class="narrative-content">
                             <h5 class="text-accent fw-semibold text-uppercase tracking-widest mb-3 d-block">{{ $section['sub_heading']}}</h3>
-                            <h3 class="fw-semibold mb-4 display-6" style="letter-spacing:-0.2rem;">{{ $section['heading']}}</h3>
+                            <h3 class="fw-semibold mb-4 display-6">{{ $section['heading']}}</h3>
                             {!!$section['content'] !!}                            
                         </div>
                         <div class="d-flex flex-column flex-lg-row align-items-center justify-content-start gap-3 gs-reveal mt-5">
@@ -357,14 +353,14 @@
                         </div>
 
                         <div class="narrative-content pe-md-5">
-                            <p class="text-body mb-5 fs-6 leading-relaxed">
+                            <p class="text-body mb-5 fs-5 leading-relaxed">
                                 {!! $partner['description'] !!}
                             </p>
                             
                             <!-- Strategic Experience Section -->
                             <div class="experience-foot mt-5 p-4 bg-white bg-opacity-5 border-start border-accent border-4 rounded-4">
                                 <p class="small text-uppercase text-accent fw-semibold tracking-widest mb-2">Strategic Value</p>
-                                <p class="text-secondary mb-0 fw-light fst-italic">
+                                <p class="text-body mb-0 fw-light fst-italic">
                                     "{{ $partner['experience_value'] }}"
                                 </p>
                             </div>
@@ -401,14 +397,14 @@
                                 Local <span class="text-accent fraunces section-accent fw-normal">Expertise</span>
 
                             </h2>
-                            <p class="h5 text-accent fw-bold mb-2">The Australian Advantage</p>
+                            <p class="h5 text-accent fs-4 fw-bold mb-2">The Australian Advantage</p>
                             
                             <!-- Condensed Narrative -->
                             <div class="w-100">
                                 <p class="lead fw-normal text-white mb-2">
                                     Architecture built for the Australian operational landscape.
                                 </p>
-                                <p class="text-secondary fs-6 mb-5" style="max-width: 800px;">
+                                <p class="text-secondary fs-5 mb-5" style="max-width: 800px;">
                                     We bridge the gap between global standards and local reality. By navigating the specificities of Australian compliance—from GST and FBT to regional operational rhythms—we architect natively compliant systems that act as a strategic local asset, not a foreign imposition.
                                 </p>
                                 

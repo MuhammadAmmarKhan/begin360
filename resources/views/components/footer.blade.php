@@ -32,7 +32,7 @@
 
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label text-body fw-normal small text-uppercase">First Name *</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">First Name *</label>
                                 <input type="text" name="first_name" 
                                     class="form-control corporate-input @error('first_name') is-invalid @enderror" 
                                     value="{{ old('first_name') }}" required>
@@ -42,7 +42,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label class="form-label text-body fw-normal small text-uppercase">Last Name *</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">Last Name *</label>
                                 <input type="text" name="last_name" 
                                     class="form-control corporate-input @error('last_name') is-invalid @enderror" 
                                     value="{{ old('last_name') }}" required>
@@ -52,7 +52,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label class="form-label text-body fw-normal small text-uppercase">Company Name *</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">Company Name *</label>
                                 <input type="text" name="company" 
                                     class="form-control corporate-input @error('company') is-invalid @enderror" 
                                     value="{{ old('company') }}" required>
@@ -62,7 +62,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label class="form-label text-body fw-normal small text-uppercase">Email Address *</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">Email Address *</label>
                                 <input type="email" name="email" 
                                     class="form-control corporate-input @error('email') is-invalid @enderror" 
                                     value="{{ old('email') }}" required>
@@ -72,7 +72,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label class="form-label text-body fw-normal small text-uppercase">Service Interest</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">Service Interest</label>
                                 <select name="service" class="form-select corporate-input @error('service') is-invalid @enderror">
                                     <option selected disabled value="">Select a service...</option>
                                     @foreach(['CRM Consulting', 'Workflow Automation', 'Custom API Development', 'Revenue Operations'] as $option)
@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="col-12">
-                                <label class="form-label text-body fw-normal small text-uppercase">Additional Notes</label>
+                                <label class="form-label text-body fw-semibold small text-uppercase">Additional Notes</label>
                                 <textarea name="notes" class="form-control corporate-input @error('notes') is-invalid @enderror" rows="3">{{ old('notes') }}</textarea>
                                 @error('notes')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -95,7 +95,7 @@
                             <div class="col-12 mt-4">
                                 <div class="form-check">
                                     <input class="form-check-input @error('agree') is-invalid @enderror" type="checkbox" name="agree" id="agree" required>
-                                    <label class="form-check-label text-body fw-normal" for="agree" style="font-size: 0.75rem;">
+                                    <label class="form-check-label text-body fw-semibold" for="agree" style="font-size: 1rem;">
                                         I agree to receive communications regarding my project inquiry.
                                     </label>
                                     @error('agree')
@@ -168,7 +168,7 @@
                 <div class="d-flex align-items-center mb-4">
                     <img id="footer-logo" src="{{ asset('assets/images/logo-light.png') }}" alt="Logo" width="250"/>
                 </div>
-                <p class="text-secondary fw-normal small w-75">
+                <p class="text-secondary fw-normal lead w-75">
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.
                 </p>
                 <div class="d-flex gap-3 mt-4">
@@ -201,7 +201,7 @@
                 <div class="row row-cols-2 row-cols-sm-2 g-2">
                     @foreach($modules as $module)
                         <div class="col">
-                            <ul class="list-unstyled fw-normal small lh-lg mb-0">
+                            <ul class="list-unstyled fw-normal lh-lg mb-0">
                                 <li>
                                     <a href="{{ url('modules/' . $module['slug']) }}" class="text-secondary text-decoration-none hover-white">
                                         {{ $module['name'] }}
@@ -216,7 +216,7 @@
             <div class="col-6 col-lg-2">
                 <div class="mb-4">
                     <h6 class="fw-black text-accent text-uppercase mb-4">Industries</h6>
-                    <ul class="list-unstyled fw-normal small lh-lg">
+                    <ul class="list-unstyled fw-normal lh-lg">
                         @foreach($industries as $industry)
                             <li>
                                 <a href="{{ url('industries/' . $industry['slug']) }}" class="text-secondary text-decoration-none hover-white">
@@ -228,7 +228,7 @@
                 </div>
                 <div>
                     <h6 class="fw-black text-accent text-uppercase mb-3">Company</h6>
-                    <ul class="list-unstyled fw-normal small lh-lg">
+                    <ul class="list-unstyled fw-normal lh-lg">
                         <li><a href="{{ route('about') }}" class="text-secondary text-decoration-none hover-white">About Us</a></li>
                         <li><a href="{{ route('contact') }}" class="text-secondary text-decoration-none hover-white">Contact Us</a></li>
                     </ul>
@@ -237,7 +237,7 @@
 
             <div class="col-6 col-lg-3">
                 <h6 class="fw-black text-accent text-uppercase mb-4">Get in Touch</h6>
-                <div class="text-secondary fw-normal small lh-lg">
+                <div class="text-secondary fw-normal lh-lg">
                     <p class="mb-2 text-truncate">
                         <a href="mailto:{{ $email }}" class="text-decoration-none text-secondary hover-white">
                             <i class="fa-solid fa-envelope text-accent me-2"></i> {{ $email }}
@@ -259,13 +259,13 @@
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10 gap-3">
             <div class="text-center text-md-start">
-                <p class="small text-secondary fw-normal mb-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
-                <p class="x-small text-secondary opacity-50 mt-1 mb-0" style="font-size: 0.75rem;">
+                <p class=" text-secondary fw-normal mb-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
+                <p class="small text-body mt-1 mb-0" style="font-size: 0.75rem;">
                     Design and developed with <i class="fa-solid fa-heart text-danger mx-1"></i> by 
-                    <a href="https://smartservix.com.au" target="_blank" class="text-secondary text-decoration-none hover-accent fw-bold">Smart Servix</a>
+                    <a href="https://smartservix.com.au" target="_blank" class="text-body text-decoration-none hover-accent fw-bold">Smart Servix</a>
                 </p>
             </div>
-            <div class="d-flex gap-4 small fw-normal">
+            <div class="d-flex gap-4 fw-normal">
                 <a href="{{ route('privacy') }}" class="text-secondary text-decoration-none hover-white">Privacy Policy</a>
                 <a href="{{ route('terms') }}" class="text-secondary text-decoration-none hover-white">Terms of Service</a>
             </div>
