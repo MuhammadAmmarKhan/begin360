@@ -107,7 +107,7 @@
                     <div class="problem-card shadow-sm border rounded-4 p-5 d-flex flex-column align-items-center text-center text-lg-start bg-body-tertiary">
         
                         <div class="w-100 text-start">
-                            <span class="card-num badge rounded-pill bg-accent-subtle text-accent px-3 py-2 fw-bold">
+                            <span class="card-num badge rounded-pill bg-accent-subtle text-accent px-3 py-2 fs-5 fw-bold">
                                 {{ $card['num'] }}
                             </span>
                         </div>

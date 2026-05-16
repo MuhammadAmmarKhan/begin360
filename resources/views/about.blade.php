@@ -173,7 +173,7 @@
             'description' => "Traditional enterprise systems were architected for a static era—defined by rigid silos and cumbersome constraints. At Begin360, we recognize that the pioneers of the next industrial evolution have moved beyond these legacy frameworks. We don't simply offer an upgrade; we provide a fundamental reimagining of digital infrastructure. Our approach engineers your environment from the ground up to mirror the fluid reality of your operations, ensuring your technology finally adapts to your business, and not the other way around.",
             'primary_btn' => [
                 'text' => 'See how it works',
-                'url' => '#',
+                'url' => '#theBegin360Architecture',
                 'icon' => 'fa-circle-play'
             ],
             'secondary_btn' => [
@@ -431,7 +431,7 @@
         secondaryLink="/solutions"
     /> -->
     <!-- Why Choose Us Section - highly creative, no image layout -->
-    <section class="py-5 bg-body-tertiary text-body overflow-hidden">
+    <section class="py-5 bg-body-tertiary text-body overflow-hidden" id="theBegin360Architecture">
     <div class="container py-lg-5 position-relative">
         <div class="row">
             <div class="col-lg-12 mb-5">

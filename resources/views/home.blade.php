@@ -549,12 +549,12 @@
                             We help growing businesses unify their operations, automate workflows, and gain real-time visibility - all in one place.
                         </p>
                         <div class="d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-3 gs-reveal">
-                            <button class="btn btn-accent rounded-pill px-5 py-3 fw-black  shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
+                            <a href="#operational-bottleneck-trigger" class="btn btn-accent rounded-pill px-5 py-3 fw-black text-decoration-none shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
                                 <i class="fa-solid fa-circle-play me-2"></i> See how it works
-                            </button>
-                            <button class="btn btn-outline-secondary rounded-pill px-5 py-3 fw-black d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
+                            </a>
+                            <a href="{{route('contact')}}" class="btn btn-outline-secondary rounded-pill px-5 text-decoration-none py-3 fw-black d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
                                 <i class="fa fa-calendar-check me-2"></i> Book a demo
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
