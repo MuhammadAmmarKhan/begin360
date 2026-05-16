@@ -238,7 +238,7 @@
                     'Capture site notes, photos, and signatures digitally'
                 ],
                 'svg' => '
-                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                     <rect width="480" height="360" fill="#f7faf7"></rect>
                     <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                     <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Job Schedule — Today, 8 May</text>
@@ -317,7 +317,7 @@
                     'Identify which technicians are most profitable'
                 ],
                 'svg' => '
-                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                     <rect width="480" height="360" fill="#f7faf7"></rect>
                     <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                     <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Job Costing — #J2841 Panel Upgrade</text>
@@ -386,7 +386,7 @@
                     'Live cash flow view of what is coming in'
                 ],
                 'svg' => '
-                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                     <rect width="480" height="360" fill="#f7faf7"></rect>
                     <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                     <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Invoicing &amp; Cash Flow</text>

@@ -76,7 +76,7 @@
     }
 </style>
 @endpush
-<section id="operational-bottleneck-trigger" class="position-relative d-none d-lg-block">
+<section id="operational-bottleneck-trigger" class="position-relative d-none d-xl-block">
     <div id="master-horizontal-wrapper" class="overflow-hidden vh-100-lg sticky-top-lg">
         
         <aside class="fixed-sidebar-container col-lg-3 vh-100 d-none d-lg-flex align-items-center px-5 bg-body-tertiary bg-opacity-75 border-end position-absolute top-0 start-0" style="backdrop-filter:blur(15px);z-index: 1000;">

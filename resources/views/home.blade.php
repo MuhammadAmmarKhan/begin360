@@ -209,7 +209,7 @@
     .transformation-frame {
         position: relative;
         min-height: 300px;
-        aspect-ratio: 16 / 9;
+        /* aspect-ratio: 16 / 9; */
     }
 
     .transition-img {
@@ -253,7 +253,7 @@
     /* --- Horizontal Scroll Logic --- */
     @media (max-width: 767.98px) {
         .transformation-frame {
-            aspect-ratio: 4 / 3;
+            /* aspect-ratio: 4 / 3; */
         }
 
         .problem-cards-wrapper {
@@ -529,9 +529,9 @@
             ]
         ];
     @endphp
-    <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body ">
+    <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body">
         <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="container position-relative bg-body bg-opacity-75 border border-accent py-5 mb-5 z-2 rounded-5">
+        <div class="container position-relative bg-body bg-opacity-75 border py-5 mb-5 z-2 rounded-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 col-lg-5 order-1 order-md-0 text-start">
                     <div class="hero-content">
@@ -558,7 +558,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 position-relative min-vh-50 d-flex align-items-center justify-content-center" id="erpAether">
+                <div class="col-lg-6 position-relative min-vh-50 d-none d-lg-flex align-items-center justify-content-center" id="erpAether">
     
                     <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
                         
@@ -767,113 +767,105 @@
             id="industry-sectors" 
             class="pt-5" 
         />
-    <section class="py-5 bg-body-tertiary">
-        <div class="container py-lg-5">
-            <div class="row g-5 align-items-center">
-                <!-- Right Side: The Trendy Dashboard Mockup -->
-                <div class="col-lg-7">
-                    <div class="position-relative">
-                        <!-- Subtle Glow Backdrop -->
-                        <div class="position-absolute top-50 start-50 translate-middle bg-accent opacity-10 rounded-circle blur-3xl" style="width: 400px; height: 400px; filter: blur(80px);"></div>
-                        
-                        <!-- Dashboard Frame -->
-                        <div class="card border-0 shadow-2xl bg-body rounded-4 overflow-hidden position-relative">
-                            <div class="row g-0">
-                                <!-- Sidebar Mini -->
-                                <div class="col-auto bg-black border-end border-light-subtle d-none d-sm-flex flex-column p-3 gap-4">
-                                    <div class="text-accent mb-2 px-1"><img src="assets/images/symbol-light.png" alt="Begin360" class="nav-logo-img" style="max-width:20px;"></div>
-                                    <i class="fa-solid fa-house-chimney text-white small"></i>
-                                    <i class="fa-solid fa-box text-white small"></i>
-                                    <i class="fa-solid fa-users text-white small"></i>
-                                    <i class="fa-solid fa-chart-pie text-accent small"></i>
-                                    <div class="mt-auto"><i class="fa-solid fa-gear text-white small"></i></div>
+    <section class="py-5 bg-body-tertiary overflow-hidden">
+    <div class="container py-lg-5">
+        <div class="row g-4 g-lg-5 align-items-center">
+            
+            <div class="col-lg-7 order-lg-2">
+                <div class="position-relative p-1">
+                    <div class="position-absolute top-50 start-50 translate-middle bg-accent opacity-10 rounded-circle" style="width: 100%; max-width: 400px; height: 100%; max-height: 400px; filter: blur(80px); z-index: 1;"></div>
+                    
+                    <div class="card border-0 shadow-2xl bg-body rounded-4 overflow-hidden position-relative" style="z-index: 2;">
+                        <div class="row g-0 flex-nowrap">
+                            <div class="col-auto bg-black border-end border-light-subtle d-none d-sm-flex flex-column p-3 gap-4">
+                                <div class="text-accent mb-2 px-1">
+                                    <img src="assets/images/symbol-light.png" alt="Begin360" class="nav-logo-img" style="max-width:20px;">
                                 </div>
-                                
-                                <!-- Dashboard Content -->
-                                <div class="col p-4 p-md-5 bg-body">
-                                    <!-- Top Stats -->
-                                    <div class="row g-3 mb-4">
-                                        <div class="col-6">
-                                            <div class="bg-body p-3 rounded-4 shadow-sm border border-light-subtle">
-                                                <span class="text-muted x-small fw-bold text-uppercase">Sales (MTD)</span>
-                                                <h4 class="fw-black mb-1 text-body">$32,680</h4>
-                                                <span class="text-accent small fw-bold"><i class="fa-solid fa-arrow-up me-1"></i>18%</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="bg-body p-3 rounded-4 shadow-sm border border-light-subtle">
-                                                <span class="text-muted x-small fw-bold text-uppercase">Orders</span>
-                                                <h4 class="fw-black mb-1 text-body">142</h4>
-                                                <span class="text-accent small fw-bold"><i class="fa-solid fa-arrow-up me-1"></i>12%</span>
-                                            </div>
+                                <i class="fa-solid fa-house-chimney text-white small"></i>
+                                <i class="fa-solid fa-box text-white small"></i>
+                                <i class="fa-solid fa-users text-white small"></i>
+                                <i class="fa-solid fa-chart-pie text-accent small"></i>
+                                <div class="mt-auto"><i class="fa-solid fa-gear text-white small"></i></div>
+                            </div>
+                            
+                            <div class="col p-3 p-sm-4 p-md-5 bg-body min-w-0">
+                                <div class="row g-2 g-sm-3 mb-4">
+                                    <div class="col-6">
+                                        <div class="bg-body p-2 p-sm-3 rounded-4 shadow-sm border border-light-subtle">
+                                            <span class="text-muted x-small fw-bold text-uppercase d-block text-truncate">Sales (MTD)</span>
+                                            <h4 class="fw-black mb-1 text-body text-truncate small-mobile-fs">$32,680</h4>
+                                            <span class="text-accent small fw-bold"><i class="fa-solid fa-arrow-up me-1"></i>18%</span>
                                         </div>
                                     </div>
+                                    <div class="col-6">
+                                        <div class="bg-body p-2 p-sm-3 rounded-4 shadow-sm border border-light-subtle">
+                                            <span class="text-muted x-small fw-bold text-uppercase d-block text-truncate">Orders</span>
+                                            <h4 class="fw-black mb-1 text-body text-truncate small-mobile-fs">142</h4>
+                                            <span class="text-accent small fw-bold"><i class="fa-solid fa-arrow-up me-1"></i>12%</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <!-- Chart Mockup Area -->
-                                    <div class="bg-body p-4 rounded-4 shadow-sm border border-light-subtle">
-                                        <div class="d-flex justify-content-between align-items-center mb-4">
-                                            <h6 class="fw-black text-uppercase m-0 small">Cash Flow</h6>
-                                            <span class="badge bg-light text-dark border rounded-pill px-3">This Month</span>
-                                        </div>
-                                        <div style="height: 150px; background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.1) 0%, transparent 100%);" class="rounded-3 position-relative overflow-hidden">
-                                            <!-- SVG Wave Line -->
-                                            <svg class="position-absolute bottom-0 w-100" viewBox="0 0 400 100" preserveAspectRatio="none">
-                                                <path d="M0,80 C50,70 80,40 120,50 C160,60 200,20 250,30 C300,40 350,10 400,20 L400,100 L0,100 Z" fill="rgba(var(--accent-rgb), 0.2)"></path>
-                                                <path d="M0,80 C50,70 80,40 120,50 C160,60 200,20 250,30 C300,40 350,10 400,20" fill="none" stroke="currentColor" class="text-accent" stroke-width="3"></path>
-                                            </svg>
-                                        </div>
+                                <div class="bg-body p-3 p-sm-4 rounded-4 shadow-sm border border-light-subtle">
+                                    <div class="d-flex justify-content-between align-items-center mb-4 gap-2">
+                                        <h6 class="fw-black text-uppercase m-0 small text-truncate">Cash Flow</h6>
+                                        <span class="badge bg-light text-dark border rounded-pill px-2 px-sm-3 text-truncate">This Month</span>
+                                    </div>
+                                    <div style="height: 150px; background: linear-gradient(180deg, rgba(var(--accent-rgb), 0.1) 0%, transparent 100%);" class="rounded-3 position-relative overflow-hidden">
+                                        <svg class="position-absolute bottom-0 w-100" viewBox="0 0 400 100" preserveAspectRatio="none">
+                                            <path d="M0,80 C50,70 80,40 120,50 C160,60 200,20 250,30 C300,40 350,10 400,20 L400,100 L0,100 Z" fill="rgba(var(--accent-rgb), 0.2)"></path>
+                                            <path d="M0,80 C50,70 80,40 120,50 C160,60 200,20 250,30 C300,40 350,10 400,20" fill="none" stroke="currentColor" class="text-accent" stroke-width="3"></path>
+                                        </svg>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Left Side: Content -->
-                <div class="col-lg-5 text-center text-md-start">
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-3">
-                            <span class="text-accent fw-bold px-2 small tracking-widest text-uppercase">— Let's Get Started —</span>
-                        </div>
-                        <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
-                            Ready to bring your business onto <span class="text-accent fraunces section-accent fw-normal">one system?</span>
-                        </h2>
-                        <p class="fw-normal fs-6 text-secondary mb-5">
-                            In 30 minutes, we'll understand your business, map your processes, and show how a modern ERP can bring everything together.
-                        </p>
-                    </div>
-
-                    <!-- Action Button -->
-                    <div class="mb-5">
-                        <a href="#contact-form" class="btn btn-accent rounded-pill px-5 py-3 fw-bold text-uppercase tracking-wide text-black shadow-sm d-inline-flex align-items-center">
-                            <i class="fa-regular fa-calendar-check me-3 fs-4"></i>
-                            Book a 30-min walkthrough
-                        </a>
-                    </div>
-
-                    <!-- Trust Indicators -->
-                    <div class="row g-3 justify-content-center justify-content-md-start">
-                        <div class="col-auto">
-                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
-                                <i class="fa-solid fa-circle-check text-accent me-2"></i> No Pressure
-                            </div>
-                        </div>
-                        <div class="col-auto px-3 border-start border-light-subtle">
-                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
-                                <i class="fa-regular fa-clock text-accent me-2"></i> 30 Minutes
-                            </div>
-                        </div>
-                        <div class="col-auto px-3 border-start border-light-subtle">
-                            <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase">
-                                <i class="fa-solid fa-wand-magic-sparkles text-accent me-2"></i> Tailored
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
+            
+            <div class="col-lg-5 order-lg-1 text-center text-lg-start">
+                <div class="mb-4">
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start mb-3">
+                        <span class="text-accent fw-bold px-2 small tracking-widest text-uppercase">— Let's Get Started —</span>
+                    </div>
+                    <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter text-break">
+                        Ready to bring your business onto <span class="text-accent fraunces section-accent fw-normal">one system?</span>
+                    </h2>
+                    <p class="fw-normal fs-6 text-secondary mb-4 mb-lg-5 px-md-4 px-lg-0">
+                        In 30 minutes, we'll understand your business, map your processes, and show how a modern ERP can bring everything together.
+                    </p>
+                </div>
+
+                <div class="mb-4 mb-lg-5">
+                    <a href="#contact-form" class="btn btn-accent rounded-pill px-4 px-sm-5 py-3 fw-bold text-uppercase tracking-wide text-black shadow-sm d-inline-flex align-items-center max-w-100 text-wrap text-start">
+                        <i class="fa-regular fa-calendar-check me-2 me-sm-3 fs-4 flex-shrink-0"></i>
+                        <span>Book a 30-min walkthrough</span>
+                    </a>
+                </div>
+
+                <div class="row g-2 g-sm-3 justify-content-center justify-content-lg-start mx-0">
+                    <div class="col-auto ps-0">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                            <i class="fa-solid fa-circle-check text-accent me-1 me-sm-2"></i> No Pressure
+                        </div>
+                    </div>
+                    <div class="col-auto px-2 px-sm-3 border-start border-light-subtle">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                            <i class="fa-regular fa-clock text-accent me-1 me-sm-2"></i> 30 Minutes
+                        </div>
+                    </div>
+                    <div class="col-auto px-2 px-sm-3 border-start border-light-subtle pe-0">
+                        <div class="d-flex align-items-center text-secondary small fw-semibold text-uppercase" style="font-size: 0.75rem;">
+                            <i class="fa-solid fa-wand-magic-sparkles text-accent me-1 me-sm-2"></i> Tailored
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
     <x-custom-faqs title="Still Have<br>Questions?" :faqs="$faqs" />
 @endsection
 @push('scripts')

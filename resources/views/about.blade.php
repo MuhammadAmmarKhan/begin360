@@ -436,39 +436,39 @@
     /> -->
     <!-- Why Choose Us Section - highly creative, no image layout -->
     <section class="py-5 bg-body-tertiary text-body overflow-hidden">
-        <div class="container py-lg-5 position-relative">
-            <div class="row">
-                <div class="col-lg-12 mb-5">
-                    <div class="pe-lg-5">
-                        <span class="text-accent text-uppercase small fw-bold tracking-widest d-block mb-3">
-                            — The Begin360 Difference —
-                        </span>
-                        <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
-                            The Architecture <br> of <span class="text-accent fraunces section-accent fw-normal">Excellence</span>
-                        </h2>
-                    </div>
+    <div class="container py-lg-5 position-relative">
+        <div class="row">
+            <div class="col-lg-12 mb-5">
+                <div class="pe-lg-5">
+                    <span class="text-accent text-uppercase small fw-bold tracking-widest d-block mb-3">
+                        — The Begin360 Difference —
+                    </span>
+                    <h2 class="display-6 fw-semibold text-body mb-4 tracking-tighter">
+                        The Architecture <br> of <span class="text-accent fraunces section-accent fw-normal">Excellence</span>
+                    </h2>
                 </div>
             </div>
-            <div class="row g-4">
-                @foreach($erpConsultantPoints as $key => $point)
-                    <div class="col-lg-3 pillar-item" style="--delay: {{ $key }}">
-                        <div class="custom-pillar h-100 p-5 bg-body-tertiary border border-secondary border-opacity-10 shadow-sm rounded-5">
-                            <!-- Geometric Icon Shape -->
-                            <div class="icon-shape mb-5 d-flex align-items-center justify-content-center">
-                                <i class="fa-solid {{ $point['icon'] }} fa-2x text-accent"></i>
-                            </div>
-                            <h4 class="h6 fw-semibold text-body mb-3 tracking-wide text-uppercase">
-                                {{ $point['title'] }}
-                            </h4>
-                            <p class="text-secondary fw-normal mb-0 fs-6">
-                                {{ $point['text'] }}
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
         </div>
-    </section>
+        
+        <div class="row g-4 flex-nowrap overflow-x-auto pb-3 scrollbar-none snap-x" style="-webkit-overflow-scrolling: touch;">
+            @foreach($erpConsultantPoints as $key => $point)
+                <div class="col-11 col-sm-6 col-md-5 col-lg-3 pillar-item flex-shrink-0 snap-center" style="--delay: {{ $key }}">
+                    <div class="custom-pillar h-100 p-4 p-sm-5 bg-body border border-secondary border-opacity-10 shadow-sm rounded-5">
+                        <div class="icon-shape mb-4 mb-sm-5 d-flex align-items-center justify-content-center">
+                            <i class="fa-solid {{ $point['icon'] }} fa-2x text-accent"></i>
+                        </div>
+                        <h4 class="h6 fw-semibold text-body mb-3 tracking-wide text-uppercase">
+                            {{ $point['title'] }}
+                        </h4>
+                        <p class="text-secondary fw-normal mb-0 fs-6">
+                            {{ $point['text'] }}
+                        </p>
+                    </div>
+                </div>
+            @endforeach
+        </div>
+    </div>
+</section>
 @endsection
 @push('scripts')
 

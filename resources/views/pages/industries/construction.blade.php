@@ -233,7 +233,7 @@
                     'Early warning flags when a cost category is tracking over budget',
                     'Forecasted final cost so you know where the project will land before it gets there'
                 ],
-                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                             <rect width="480" height="360" fill="#f7faf7"></rect>
                             <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                             <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Project Cost Report — Kingsford Apartments</text>
@@ -276,7 +276,7 @@
                     'Retention tracking — know exactly what\'s held and when it\'s due',
                     'SOPA-ready documentation so you\'re protected if a payment dispute arises'
                 ],
-                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                             <rect width="480" height="360" fill="#f7faf7"></rect>
                             <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                             <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Progress Claim #6 — Kingsford Apartments</text>
@@ -316,7 +316,7 @@
                     'SWMS and induction records stored per site and per worker',
                     'Subcontractor claim and payment scheduling tied to your own progress claims'
                 ],
-                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+                'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                             <rect width="480" height="360" fill="#f7faf7"></rect>
                             <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                             <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Subcontractor Compliance Register</text>

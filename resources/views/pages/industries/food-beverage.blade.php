@@ -283,7 +283,7 @@
             'title' => 'See your real costs and margins at any time',
             'content' => 'When you know exactly what each product costs to make—and that number updates automatically when ingredient prices change—you can price with confidence.',
             'list' => ['Live Batch Costing', 'Automatic Margin Updates', 'Profitability Views', 'Allergen Tracking'],
-            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                         <rect width="480" height="360" fill="#f7faf7"></rect>
                         <!-- Dashboard card bg -->
                         <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
@@ -331,7 +331,7 @@
             'title' => 'Always know what you have and when it expires',
             'content' => 'Good inventory management means tracking expiry dates, rotating stock correctly (FEFO), and getting alerts before you run out.',
             'list' => ['Expiry Tracking', 'Low Stock Alerts', 'Batch Traceability', 'Multi-location Support'],
-            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                     <rect width="480" height="360" fill="#f7faf7"></rect>
                     <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                     <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Inventory Overview</text>
@@ -401,7 +401,7 @@
             'title' => 'Food safety compliance that runs in the background',
             'content' => 'The system handles the paperwork so your team can focus on the food. Every transaction is recorded and every batch is traceable.',
             'list' => ['FSANZ Ready', 'Digital Checklists', 'Supplier Certificates', 'Lot Traceability'],
-            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" style="padding:24px;">
+            'svg' => '<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" >
                     <rect width="480" height="360" fill="#f7faf7"></rect>
                     <rect x="20" y="20" width="440" height="320" rx="12" fill="white" stroke="#e8e8e4" stroke-width="1"></rect>
                     <text x="40" y="52" font-family="DM Sans,sans-serif" font-size="13" font-weight="600" fill="#111110">Batch Traceability — Lot #FB2406-018</text>

@@ -72,7 +72,7 @@
     </div>
 
     {{-- Scroll Indicator --}}
-    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 100;">
+    <div class="position-absolute bottom-0 start-50 translate-middle-x pb-4 text-center d-none d-md-flex flex-column align-items-center gap-2" style="z-index: 100;">
         <div class="mouse-icon border border-2 border-body rounded-pill d-flex align-items-start justify-content-center" style="width: 25px; height: 45px; padding-top: 5px;">
             <div class="scroll-dot bg-secondary rounded-circle animate-scroll"></div>
         </div>

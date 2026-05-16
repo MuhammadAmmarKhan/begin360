@@ -23,55 +23,61 @@
     'points' => []
 ])
 
-<section class="py-5 bg-body js-diagnostic-section">
-    <div class="container">
-        <div class="row g-5">
+<section {{ $attributes->merge(['class' => 'py-5 bg-body js-diagnostic-section']) }}>
+    <div class="container py-2 py-lg-4">
+        <div class="row g-4 g-lg-5">
+            
             <div class="col-lg-4">
-                <div class="sticky-top" style="top: 100px;">
+                <div class="sticky-top" style="top: 100px; z-index: 10;">
                     <div class="d-flex align-items-center mb-3">
-                        <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2 border border-danger-subtle">
+                        <span class="badge rounded-pill bg-danger-subtle text-danger px-3 py-2 border border-danger-subtle small">
                             <i class="fa-solid fa-triangle-exclamation me-2"></i> System Friction Detected
                         </span>
                     </div>
                     <p class="text-uppercase fw-bold text-accent tracking-widest mb-2 small">{!! $subheading !!}</p>
-                    <h2 class="display-6 fw-semibold mb-4">{!! $heading !!}</h2>
-                    <p class="lead text-secondary mb-5 pe-lg-5">{!! $description !!}</p>
+                    <h2 class="display-6 fw-semibold mb-3 mb-lg-4 text-break">{!! $heading !!}</h2>
+                    <p class="lead text-secondary mb-4 mb-lg-5 pe-lg-3 text-break">{!! $description !!}</p>
                     
-                    <div class="mt-5 d-none d-lg-block">
+                    <div class="mt-4 mt-lg-5 d-none d-lg-block">
                         <div class="w-100 bg-light-subtle position-relative" style="height: 2px;">
                             <div class="bg-accent position-absolute top-0 start-0 h-100 js-scan-progress" style="width: 0%;"></div>
                         </div>
-                        <p class="font-monospace small text-muted mt-2 uppercase tracking-tighter">Analyzing Operational Voids...</p>
+                        <p class="font-monospace small text-muted mt-2 text-uppercase tracking-tighter">Analyzing Operational Voids...</p>
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-7 offset-lg-1">
-                <div class="position-relative ps-lg-5 border-start-lg">
+                <div class="position-relative ps-3 ps-sm-4 ps-lg-5 border-start-0 border-start-lg border-secondary border-opacity-20 overflow-hidden">
+                    
                     @foreach($points as $point)
-                        <div class="diagnostic-node mb-5 pb-5 position-relative js-node">
-                            <div class="node-bullet bg-body border border-accent rounded-circle position-absolute d-none d-lg-block" 
-                                 style="left: -58px; top: 0; width: 15px; height: 15px; z-index: 2;"></div>
+                        <div class="diagnostic-node mb-4 mb-lg-5 pb-4 pb-lg-5 position-relative js-node">
+                            <div class="node-bullet bg-body border border-accent rounded-circle position-absolute" 
+                                 style="z-index: 2; 
+                                        left: -22px; top: 6px; width: 11px; height: 11px;
+                                        @media (min-width: 992px) { left: -56px; top: 6px; width: 15px; height: 15px; }"></div>
                             
                             <div class="node-content transition-all">
-                                <div class="d-flex align-items-center mb-3">
-                                    <i class="fa-solid {{ $point['icon'] }} text-accent fs-4 me-3 opacity-75"></i>
-                                    <span class="font-monospace small text-accent fw-bold uppercase">Incident_0{{ $loop->iteration }}</span>
+                                <div class="d-flex align-items-center mb-2 mb-lg-3">
+                                    <i class="fa-solid {{ $point['icon'] }} text-accent fs-5 fs-lg-4 me-3 opacity-75 flex-shrink-0"></i>
+                                    <span class="font-monospace small text-accent fw-bold text-uppercase">Incident_0{{ $loop->iteration }}</span>
                                 </div>
                                 
-                                <h4 class="h4 fw-800 mb-3 text-body">
+                                <h4 class="h5 h4-lg fw-800 mb-3 text-body text-break">
                                     {!! $point['title'] !!}
                                 </h4>
-                                <div class="p-4 bg-body-tertiary border-start border-accent border-3 rounded-end-4 shadow-sm">
-                                    <p class="text-secondary mb-0 lh-base">
+                                <div class="p-3 p-sm-4 bg-body-tertiary border-start border-accent border-3 rounded-end-4 shadow-sm">
+                                    <p class="text-secondary mb-0 lh-base text-break" style="font-size: 0.95rem;">
                                         {{ $point['content'] }}
                                     </p>
                                 </div>
                             </div>
                         </div>
                     @endforeach
+                    
                 </div>
             </div>
+            
         </div>
     </div>
 </section>

@@ -35,7 +35,7 @@
     @stack('head')
     @stack('styles')
 </head>
-<body class="w-100 overflow-x-hidden">
+<body class="">
     <div class="cursor-dot d-none d-md-flex"></div>
     <div class="cursor-glow d-none d-md-flex"></div>
 
