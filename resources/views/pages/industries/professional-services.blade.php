@@ -37,14 +37,14 @@
                 'target' => 15,
                 'suffix' => '%',
                 'title' => 'Revenue Capture',
-                'description' => 'Average increase in billable hours captured after implementing automated time tracking.',
+                'description' => 'Average increase in billable hours captured after implementing time tracking',
                 'is_range' => false
             ],
             [
                 'target' => 1,
                 'suffix' => ' view',
                 'title' => 'Single Source of Truth',
-                'description' => 'A single dashboard showing live project health, staff utilisation, and WIP cash flow.',
+                'description' => 'A single dashboard showing project health, utilisation, and cash flow',
                 'is_range' => false
             ],
             [
@@ -52,7 +52,7 @@
                 'target_end' => 3,
                 'suffix' => ' mo',
                 'title' => 'Rapid Deployment',
-                'description' => 'Typical timeframe to transition your firm into a fully integrated digital operations cloud.',
+                'description' => 'Typical time to get fully up and running.',
                 'is_range' => true
             ]
         ];

@@ -16,10 +16,12 @@
                                 <span class="count-up" data-target="{{ $stat['target'] }}" data-suffix="{{ $stat['suffix'] }}">80</span>
                             @endif
                         </h2>
-                        <p class="text-uppercase fw-bold tracking-widest small mb-3 mt-2">
+                        @if($stat['title'])
+                        <!-- <p class="text-uppercase fw-bold tracking-widest small mb-3 mt-2">
                             {{ $stat['title'] }}
-                        </p>
-                        <p class="text-secondary px-lg-4 mb-0">
+                        </p> -->
+                        @endif
+                        <p class="text-body fs-5 fw-normal px-lg-4 mb-0">
                             {{ $stat['description'] }}
                         </p>
                     </div>

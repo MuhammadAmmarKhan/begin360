@@ -37,14 +37,14 @@
                 'target' => 35,
                 'suffix' => '%',
                 'title' => 'Average reduction in food waste',
-                'description' => 'Significant waste reduction achieved following system implementation.',
+                'description' => 'Average reduction in food waste after implementation',
                 'is_range' => false
             ],
             [
                 'target' => 100,
                 'suffix' => '%',
                 'title' => 'FSANZ Traceability',
-                'description' => 'Full compliance and product traceability from day one of operation.',
+                'description' => 'FSANZ traceability from day one',
                 'is_range' => false
             ],
             [
@@ -52,7 +52,7 @@
                 'target_end' => 4,
                 'suffix' => ' mo',
                 'title' => 'Typical Deployment',
-                'description' => 'The average time to get your business fully up and running on the platform.',
+                'description' => 'Typical time to get fully up and running',
                 'is_range' => true
             ]
         ];

@@ -52,7 +52,7 @@
                 'target_end' => 5,
                 'suffix' => ' mo',
                 'title' => 'Rapid Deployment',
-                'description' => 'Typical time to get your digital backbone fully up and running.',
+                'description' => 'Typical time to get fully up and running',
                 'is_range' => true
             ]
         ];

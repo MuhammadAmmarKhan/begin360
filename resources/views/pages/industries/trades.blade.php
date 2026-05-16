@@ -38,14 +38,14 @@
                 'target' => 40,
                 'suffix' => '%',
                 'title' => 'Admin Reduction',
-                'description' => 'Average reduction in time spent on manual admin, quoting, and invoicing after implementation.',
+                'description' => 'Reduction in time spent on admin, quoting, and invoicing after implementation',
                 'is_range' => false
             ],
             [
                 'target' => 11,
                 'suffix' => ' days',
                 'title' => 'Faster Payments',
-                'description' => 'Average reduction in the "Time to Pay" cycle for invoices and progress claims.',
+                'description' => 'Average reduction in time to get paid after switching to digital invoicing.',
                 'is_range' => false
             ],
             [
@@ -53,7 +53,7 @@
                 'target_end' => 3,
                 'suffix' => ' mo',
                 'title' => 'Rapid Deployment',
-                'description' => 'Typical timeframe to get your field and office operations fully integrated and running live.',
+                'description' => 'Typical time to get fully up and running',
                 'is_range' => true
             ]
         ];
