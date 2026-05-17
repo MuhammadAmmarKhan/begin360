@@ -529,6 +529,7 @@
             ]
         ];
     @endphp
+    
     <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body">
         <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
         <div class="container position-relative bg-body bg-opacity-75 border py-5 mt-lg-5 mt-xxl-0 mb-5 z-2 rounded-5">
@@ -560,7 +561,7 @@
                 </div>
                 <div class="col-lg-6 position-relative min-vh-50 d-none d-lg-flex align-items-center justify-content-center" id="erpAether">
     
-                    <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
+                    <!-- <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
                         
                         <div class="asset-wrapper asset-lg floating-1" style="top: 0%; left: 35%;">
                             <img src="{{ asset('assets/images/inventory.png') }}" alt="Inventory" class="img-fluid glass-asset">
@@ -644,7 +645,9 @@
                             <img src="{{ asset('assets/images/clarity-email.png') }}" alt="Email Sync" class="img-fluid network-asset">
                         </div>
 
-                    </div>
+                    </div> -->
+                <x-chaos-to-clarity logoText="Begin" interval="1600" class="rounded-4" />
+
                 </div>
             </div>
         </div>
