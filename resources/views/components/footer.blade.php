@@ -138,7 +138,7 @@
         ['name' => 'Point of Sale', 'icon' => 'fa-cash-register', 'slug' => 'pos'],
         ['name' => 'Procurement', 'icon' => 'fa-file-invoice-dollar', 'slug' => 'procurement'],
         ['name' => 'Project Management', 'icon' => 'fa-diagram-project', 'slug' => 'project-management'],
-        ['name' => 'Quoting & Estimating', 'icon' => 'fa-file-lines', 'slug' => 'quoting-estimating'],
+        ['name' => 'Quoting & Estimating', 'icon' => 'fa-file-lines', 'slug' => 'quoting-and-estimating'],
         ['name' => 'Resource Planning', 'icon' => 'fa-calendar-check', 'slug' => 'resource-planning'],
         ['name' => 'Scheduling & Dispatch', 'icon' => 'fa-clock-rotate-left', 'slug' => 'scheduling-dispatch'],
         ['name' => 'Subcontractor Management', 'icon' => 'fa-user-group', 'slug' => 'subcontractor-management'],

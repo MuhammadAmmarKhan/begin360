@@ -74,7 +74,7 @@
                 'title'        => 'Project Management',
                 'icon'         => 'fa-diagram-project',
                 'description'  => 'Manage every project from contract award to practical completion. Budgets, programmes, milestones, and cost codes all in one place.',
-                'url'          => route('modules.show', 'projects'),
+                'url'          => route('modules.show', 'project-management'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
                 'show_cta'     => true,
                 'features'     => ['Cost codes', 'Milestones', 'Programme tracking']
@@ -110,7 +110,7 @@
                 'title'        => 'Subcontractor Management',
                 'icon'         => 'fa-hard-hat',
                 'description'  => 'Maintain a register of subcontractors with insurance, licence, and SWMS tracking. Get automatic alerts before anything expires.',
-                'url'          => route('modules.show', 'subcontractors'),
+                'url'          => route('modules.show', 'subcontractor-management'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
                 'show_cta'     => true,
                 'features'     => ['Insurance tracking', 'Licence expiry', 'SWMS register']

@@ -44,7 +44,7 @@
     /* 1. Header Zone - Floats at the top */
     .section-header-zone {
         position: absolute;
-        top: 10vh;
+        top: 5vh;
         left: 50%;
         transform:translate(-50%);
         width: 100%;

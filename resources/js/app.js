@@ -67,6 +67,30 @@ function initNavigation() {
             });
         });
     }
+
+    const mainNav = document.querySelector("#mainNav");
+
+        // Create an animation timeline that handles the translate movement
+        const navAnimation = gsap.from(mainNav, { 
+            yPercent: -100,
+            paused: true,
+            duration: 0.3,
+            ease: "power2.out"
+        }).progress(1); // Start with the navigation visible in its normal position
+
+        ScrollTrigger.create({
+            start: "top top",
+            end: "max",
+            onUpdate: (self) => {
+                // self.direction === 1 means scrolling DOWN -> Hide Navbar
+                // self.direction === -1 means scrolling UP -> Show Navbar
+                if (self.direction === 1) {
+                    navAnimation.reverse();
+                } else {
+                    navAnimation.play();
+                }
+            }
+        });
 }
 
 function initThemeToggle() {

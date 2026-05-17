@@ -531,7 +531,7 @@
     @endphp
     <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body">
         <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="container position-relative bg-body bg-opacity-75 border py-5 mb-5 z-2 rounded-5">
+        <div class="container position-relative bg-body bg-opacity-75 border py-5 mt-lg-5 mt-xxl-0 mb-5 z-2 rounded-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 col-lg-5 order-1 order-md-0 text-start">
                     <div class="hero-content">
@@ -648,7 +648,7 @@
                 </div>
             </div>
         </div>
-        <div class="position-absolute mt-5 bottom-0 start-50 translate-middle-x pb-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 100;">
+        <div class="position-absolute mt-5 bottom-0 start-50 translate-middle-x pb-2 pb-xxl-4 text-center d-flex flex-column align-items-center gap-2" style="z-index: 3">
             <div class="mouse-icon border border-2 border-body rounded-pill d-flex align-items-start justify-content-center" style="width: 25px; height: 45px; padding-top: 5px;">
                 <div class="scroll-dot bg-secondary rounded-circle" style="width: 5px; height: 8px;"></div>
             </div>
@@ -656,7 +656,7 @@
         </div>
     </section>
     <x-bottleneck-component :sectionData="$sectionData"/>
-    <section class="py-5 bg-body-tertiary overflow-hidden d-block d-md-none">
+    <section class="py-5 bg-body-tertiary overflow-hidden d-block d-lg-none">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
@@ -699,7 +699,7 @@
             </div>
         </div>
     </section>
-    <section class="transformation-section py-5 bg-body d-block d-md-none">
+    <section class="transformation-section py-5 bg-body d-block d-lg-none">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">

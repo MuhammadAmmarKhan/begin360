@@ -118,7 +118,7 @@
                 'title'        => 'Warehouse Management',
                 'icon'         => 'fa-warehouse',
                 'description'  => 'Optimise storage across ambient, chilled, and frozen zones. Automate pick-pack-dispatch with barcode scanning and zone routing.',
-                'url'          => route('modules.show', 'warehouse'),
+                'url'          => route('modules.show', 'warehouse-management'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
                 'show_cta'     => true,
                 'features'     => ['Cold chain', 'Barcode scan', 'Zone routing']

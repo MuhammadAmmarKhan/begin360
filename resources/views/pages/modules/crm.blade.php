@@ -186,8 +186,7 @@
                 'btn_text' => 'Get Started',
                 'url'      => route('contact')
             ]
-        ];
-        
+        ];        
         $supplierModule = [
             'intro' => [
                 'badge_text' => '— SALES PIPELINE —',
@@ -240,7 +239,6 @@
                 'One-click conversion from a won opportunity into a live job, project, or order'
             ]
         ];
-
         $modulesHeader = [
             'section_class' => 'bg-body',
             'badge'          => '— Other Modules —',
@@ -418,7 +416,6 @@
                 'cta_text'     => 'Start a Consultation'
             ]
         ];
-
         $industryHeader = [
             'section_class' => 'bg-body-tertiary',
             'badge'          => '— Sectors We Transform —',
@@ -430,8 +427,7 @@
                 'url'  => route('industries.index'),
                 'icon' => 'fa-layer-group'
             ]
-        ];
-        
+        ];        
         $industries = [
             [
                 'title' => 'Retail',
@@ -465,29 +461,24 @@
                 'column_class' => 'col-12 col-md-6 col-lg-7',
                 'show_cta' => true
             ]
-        ];
-
-        
+        ];        
     @endphp
     <x-about-hero :heroData="$heroData"/>
     <x-traceability :data="$complianceModule" class="py-5" />   
-@php
-    
-@endphp
-<x-module-feature-timeline :data="$architectureData" />
-<x-module-supplier-compliance :data="$supplierModule" />
-    <x-bento-grid 
-        :items="$industries" 
-        :bentoData="$industryHeader" 
-        id="industry-sectors" 
-        class="pt-5" 
-    />
-    <x-bento-grid 
-        :items="$modules" 
-        :bentoData="$modulesHeader" 
-        id="industry-sectors" 
-        class="pt-5" 
-    />
+    <x-module-feature-timeline :data="$architectureData" />
+    <x-module-supplier-compliance :data="$supplierModule" />
+        <x-bento-grid 
+            :items="$industries" 
+            :bentoData="$industryHeader" 
+            id="industry-sectors" 
+            class="pt-5" 
+        />
+        <x-bento-grid 
+            :items="$modules" 
+            :bentoData="$modulesHeader" 
+            id="industry-sectors" 
+            class="pt-5" 
+        />
 @endsection
 @push('scripts')
     

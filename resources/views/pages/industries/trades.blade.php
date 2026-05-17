@@ -76,7 +76,7 @@
                 'title'        => 'Job Management',
                 'icon'         => 'fa-trowel-bricks',
                 'description'  => 'Create and track jobs from first enquiry through to sign-off. Job cards, site notes, photos, and signatures — all in one place.',
-                'url'          => route('modules.show', 'jobs'),
+                'url'          => route('modules.show', 'job-management'),
                 'column_class' => 'col-10 col-md-8 col-lg-6',
                 'show_cta'     => true,
                 'features'     => ['Job cards', 'Site notes', 'Digital sign-off']
@@ -85,7 +85,7 @@
                 'title'        => 'Quoting & Estimating',
                 'icon'         => 'fa-file-signature',
                 'description'  => 'Build accurate quotes faster using your standard rates, materials, and labour templates. Convert approved quotes to jobs in one click.',
-                'url'          => route('modules.show', 'quoting'),
+                'url'          => route('modules.show', 'quoting-and-estimating'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
                 'show_cta'     => true,
                 'features'     => ['Rate templates', 'Quote to job', 'Approval tracking']
@@ -94,7 +94,7 @@
                 'title'        => 'Scheduling & Dispatch',
                 'icon'         => 'fa-calendar-day',
                 'description'  => 'Schedule your team on a live calendar. Drag and drop to reschedule, send job details to the field instantly, and track who\'s where.',
-                'url'          => route('modules.show', 'scheduling'),
+                'url'          => route('modules.show', 'scheduling-dispatch'),
                 'column_class' => 'col-10 col-md-4 col-lg-3',
                 'show_cta'     => true,
                 'features'     => ['Live calendar', 'Field notifications', 'GPS tracking']

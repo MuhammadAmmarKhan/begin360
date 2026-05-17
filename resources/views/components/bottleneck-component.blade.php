@@ -27,7 +27,7 @@
         }
 
         .problem-card {
-            width: 500px;
+            width: 350px;
             min-height: 550px;
         }
 
@@ -79,7 +79,7 @@
 <section id="operational-bottleneck-trigger" class="position-relative d-none d-xl-block">
     <div id="master-horizontal-wrapper" class="overflow-hidden vh-100-lg sticky-top-lg">
         
-        <aside class="fixed-sidebar-container col-lg-3 vh-100 d-none d-lg-flex align-items-center px-5 bg-body-tertiary bg-opacity-75 border-end position-absolute top-0 start-0" style="backdrop-filter:blur(15px);z-index: 1000;">
+        <aside class="fixed-sidebar-container col-lg-3 vh-100 d-none d-lg-flex align-items-center px-xl-3 px-xxl-5 bg-body-tertiary bg-opacity-75 border-end position-absolute top-0 start-0" style="backdrop-filter:blur(15px);z-index: 1000;">
             <div class="problem-intro">
                 <span class="text-uppercase fw-bold text-accent mb-2 d-block tracking-widest small">{{ $sectionData['sidebar']['problem_subtitle'] }}</span>
                 <h2 class="fs-1 fw-semibold text-body mb-4 lh-1">{{ $sectionData['sidebar']['problem_title'] }}</h2>
@@ -104,7 +104,7 @@
             <div id="problems-section" class="flex-shrink-0 d-flex align-items-center py-5 py-lg-0">
                 <div class="problem-cards-container d-flex flex-column flex-lg-row gap-4 gap-lg-5 px-4 px-lg-5">
                     @foreach($sectionData['cards'] as $card)
-                    <div class="problem-card shadow-sm border rounded-4 p-5 d-flex flex-column align-items-center text-center text-lg-start bg-body-tertiary">
+                    <div class="problem-card shadow-sm border rounded-4 p-xl-3 p-xxl-5 d-flex flex-column align-items-center text-center text-lg-start bg-body-tertiary">
         
                         <div class="w-100 text-start">
                             <span class="card-num badge rounded-pill bg-accent-subtle text-accent px-3 py-2 fs-5 fw-bold">
