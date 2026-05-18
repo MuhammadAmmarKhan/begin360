@@ -286,7 +286,7 @@
     }
     
     .problem-icon-container {
-        height: 400px;
+        height: 240px;
     }
 
 </style>
@@ -560,6 +560,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 position-relative min-vh-50 d-none d-lg-flex align-items-center justify-content-center" id="erpAether">
+                    <img src="{{asset('assets/images/hero-section.png')}}" class="img-fluid" alt=""/>
     
                     <!-- <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
                         
@@ -646,7 +647,7 @@
                         </div>
 
                     </div> -->
-                <x-chaos-to-clarity logoText="Begin" interval="1600" class="rounded-4" />
+                <!-- <x-chaos-to-clarity logoText="Begin" interval="1600" class="rounded-4" /> -->
 
                 </div>
             </div>
@@ -675,8 +676,8 @@
                 <div class="row flex-nowrap flex-md-wrap g-4">
                     @foreach($bottlenecks as $index => $item)
                         <div class="col-10 col-md-3">
-                            <div class="card h-100 border-light-subtle shadow-sm p-4 rounded-4">
-                                <div class="mb-4">
+                            <div class="card h-lg-100 border-light-subtle shadow-sm p-4 rounded-4">
+                                <div class="mb-lg-4">
                                     <span class="badge rounded-pill bg-accent text-black px-3">
                                         {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                                     </span>

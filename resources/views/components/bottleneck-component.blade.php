@@ -27,7 +27,7 @@
         }
 
         .problem-card {
-            width: 350px;
+            width: 380px;
             min-height: 550px;
         }
 
@@ -113,7 +113,7 @@
                         </div>
 
                         <div class="card-icon-area my-auto py-4">
-                            <img src="{{ $card['img'] }}" class="img-fluid" alt="{{ $card['title'] }}" style="max-height: 300px;">
+                            <img src="{{ $card['img'] }}" class="img-fluid" alt="{{ $card['title'] }}" style="max-height: 270px;">
                         </div>
 
                         <div class="mt-auto w-100">
@@ -153,7 +153,7 @@
                                         @endforeach
                                     </div>
 
-                                    <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid {{ $state === 'after' ? 'shadow-lg rounded-4 border' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
+                                    <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid shadow-lg rounded-5 {{ $state === 'after' ? '' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
                                 </div>
                             </div>
                         </div>

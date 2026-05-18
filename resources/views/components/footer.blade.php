@@ -128,8 +128,6 @@
     ];
 
     $modules = [
-        ['name' => 'Compliance & Traceability', 'icon' => 'fa-clipboard-check', 'slug' => 'compliance'],
-        ['name' => 'Contracts & Progress Claims', 'icon' => 'fa-file-signature', 'slug' => 'contracts'],
         ['name' => 'Customer Management', 'icon' => 'fa-users-gear', 'slug' => 'crm'],
         ['name' => 'Finance & Accounting', 'icon' => 'fa-calculator', 'slug' => 'finance'],
         ['name' => 'Inventory Management', 'icon' => 'fa-boxes-stacked', 'slug' => 'inventory'],
@@ -141,10 +139,12 @@
         ['name' => 'Quoting & Estimating', 'icon' => 'fa-file-lines', 'slug' => 'quoting-and-estimating'],
         ['name' => 'Resource Planning', 'icon' => 'fa-calendar-check', 'slug' => 'resource-planning'],
         ['name' => 'Scheduling & Dispatch', 'icon' => 'fa-clock-rotate-left', 'slug' => 'scheduling-dispatch'],
-        ['name' => 'Subcontractor Management', 'icon' => 'fa-user-group', 'slug' => 'subcontractor-management'],
         ['name' => 'Time Tracking & Billing', 'icon' => 'fa-stopwatch', 'slug' => 'time-tracking'],
         ['name' => 'Variation Management', 'icon' => 'fa-code-branch', 'slug' => 'variations'],
         ['name' => 'Warehouse Management', 'icon' => 'fa-warehouse', 'slug' => 'warehouse-management'],
+        ['name' => 'Subcontractor', 'icon' => 'fa-user-group', 'slug' => 'subcontractor-management'],
+        ['name' => 'Contracts & Progress', 'icon' => 'fa-file-signature', 'slug' => 'contracts'],
+        ['name' => 'Compliance', 'icon' => 'fa-clipboard-check', 'slug' => 'compliance'],
     ];
 
     $companyName = env('COMPANY_NAME','BEGIN360 PTY LTD');
@@ -248,9 +248,9 @@
                             <i class="fa-solid fa-phone text-accent me-2"></i> {{ $phone }}
                         </a>
                     </p>
-                    <p class="mb-0">
+                    <p class="mb-0">    
                         <a href="https://abr.business.gov.au/ABN/View?abn={{ str_replace(' ', '', $abn) }}" target="_blank" class="text-decoration-none text-secondary hover-white">
-                            <i class="fa-solid fa-file-invoice text-accent me-2"></i> ABN {{ $abn }}
+                            <span class="text-accent fw-bold small font-monospace me-2">ABN</span> {{ str_replace(' ','',trim($abn)) }}
                         </a>
                     </p>
                 </div>

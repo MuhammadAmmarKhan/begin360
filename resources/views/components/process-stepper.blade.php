@@ -200,12 +200,12 @@
         <div id="horizontal-track">
             @foreach($steps as $index => $step)
                 <div class="step-slide p-1">
-                    <div class="content-card-inner bg-body rounded-4 px-5 py-3">
+                    <div class="content-card-inner bg-body rounded-4 px-5 py-3" style="height:200px;">
                         <h3 class="badge bg-accent fw-semibold text-uppercase text-black rounded-pill mb-1 small">0{{ $index + 1 }}. {{ $step['title'] }}</h3>
                         <h2 class="fs-6 text-body mb-2 small d-none d-lg-block">{{ $step['subtitle'] }}</h2>
                         <p class="small text-secondary fw-normal">{{$step['description']}}</p>
                         
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="d-none d-md-flex flex-wrap justify-content-center gap-2">
                             @foreach($step['bullets'] as $bullet)
                                 <span class="small fw-semibold text-body px-3 py-1 rounded-pill bg-body-tertiary bg-opacity-5 border border-white border-opacity-10" style="font-size: 0.75rem;">
                                     <i class="fa-solid fa-check text-accent me-2"></i> {{ $bullet }}
