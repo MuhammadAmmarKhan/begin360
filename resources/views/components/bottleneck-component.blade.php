@@ -153,7 +153,7 @@
                                         @endforeach
                                     </div>
 
-                                    <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid shadow-lg rounded-5 {{ $state === 'after' ? '' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
+                                    <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid {{ $state === 'after' ? '' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
                                 </div>
                             </div>
                         </div>

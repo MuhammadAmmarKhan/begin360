@@ -45,7 +45,7 @@
             <x-header />
         </header>
 
-        <main class="overflow-x-hidden">
+        <main>
             @yield('content')
         </main>
 
