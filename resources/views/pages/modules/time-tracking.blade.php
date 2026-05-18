@@ -425,7 +425,7 @@
                 'title'        => 'Quoting & Estimating',
                 'icon'         => 'fa-file-lines',
                 'description'  => 'Rapidly generate accurate estimates using standard rate templates and material cost-logic.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'quoting-and-estimating'),
                 'column_class' => 'col-10 col-md-8 col-xl-4',
                 'show_cta'     => true,
                 'features'     => ['Rate Templates', 'Quote-to-Job conversion', 'Version Control']
@@ -434,7 +434,7 @@
                 'title'        => 'Resource Planning',
                 'icon'         => 'fa-calendar-check',
                 'description'  => 'Analyze utilization and capacity to optimize team performance and avoid engagement bottlenecks.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'resource-planning'),
                 'column_class' => 'col-10 col-md-8 col-xl-3',
                 'show_cta'     => true,
                 'features'     => ['Utilisation Views', 'Skill Matching', 'Capacity Forecasting']
@@ -443,7 +443,7 @@
                 'title'        => 'Scheduling & Dispatch',
                 'icon'         => 'fa-clock-rotate-left',
                 'description'  => 'Live resource coordination to ensure the right team is at the right site at the right time.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'scheduling-dispatch'),
                 'column_class' => 'col-10 col-md-8 col-xl-3',
                 'show_cta'     => true,
                 'features'     => ['Drag-and-Drop Calendar', 'Field Notifications', 'GPS Routing']
@@ -452,7 +452,7 @@
                 'title'        => 'Subcontractor Management',
                 'icon'         => 'fa-user-group',
                 'description'  => 'Maintain a rigid register of subcontractors with automated insurance, licence, and SWMS tracking.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'subcontractor-management'),
                 'column_class' => 'col-10 col-md-8 col-xl-3',
                 'show_cta'     => true,
                 'features'     => ['Compliance Alerts', 'SWMS Register', 'Insurance Tracking']
@@ -461,7 +461,7 @@
                 'title'        => 'Time Tracking & Billing',
                 'icon'         => 'fa-stopwatch',
                 'description'  => 'Capture every billable minute with precision and link time directly to project cost codes.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'time-tracking'),
                 'column_class' => 'col-10 col-md-8 col-xl-3',
                 'show_cta'     => true,
                 'features'     => ['Mobile Timesheets', 'GPS Geofencing', 'Payroll Integration']
@@ -470,7 +470,7 @@
                 'title'        => 'Variation Management',
                 'icon'         => 'fa-code-branch',
                 'description'  => 'Capture and approve project variations in real-time to prevent unbilled scope-creep.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'variations'),
                 'column_class' => 'col-10 col-md-8 col-xl-6',
                 'show_cta'     => true,
                 'features'     => ['Approval Workflows', 'Cost Impact Analysis', 'Variation Register']
@@ -479,7 +479,7 @@
                 'title'        => 'Warehouse Management',
                 'icon'         => 'fa-warehouse',
                 'description'  => 'Optimizing spatial efficiency and labor throughput through advanced logic-driven WMS architecture.',
-                'url'          => route('modules.index'),
+                'url'          => route('modules.show', 'warehouse-management'),
                 'column_class' => 'col-10 col-md-8 col-xl-6',
                 'show_cta'     => true,
                 'features'     => ['Bin Management', 'Pick/Pack/Ship', 'Digital Manifests']
@@ -494,7 +494,7 @@
                 'featured'     => true,
                 'cta_text'     => 'Start a Consultation'
             ]
-        ];            
+        ];           
     @endphp
     <x-about-hero :heroData="$heroData"/>
     <x-traceability :data="$complianceModule" class="py-5" />   
