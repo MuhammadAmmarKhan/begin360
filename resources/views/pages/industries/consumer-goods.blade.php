@@ -321,7 +321,7 @@
             ],
             [
                 'question' => 'How is the success of an engagement measured?',
-                'answer' => 'WE DEFINE SPECIFIC KEY PERFORMANCE INDICATORS (KPIS) AT THE ONSET, FOCUSING ON OPERATIONAL EFFICIENCY, COST REDUCTION, AND REVENUE GROWTH METRICS TO TRACK TANGIBLE ROI.'
+                'answer' => 'We define specific key performance indicators (KPIs) at the onset, focusing on operational efficiency, cost reduction, and revenue growth metrics to track tangible ROI.'
             ],
             [
                 'question' => 'What is your pricing structure?',
