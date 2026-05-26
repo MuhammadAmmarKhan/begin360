@@ -535,9 +535,9 @@
         <div class="container position-relative bg-body bg-opacity-75 border py-5 mt-lg-5 mt-xxl-0 mb-5 z-2 rounded-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 col-lg-5 order-1 order-md-0 text-start">
-                    <div class="hero-content">
+                    <div class="hero-content p-5 p-lg-0">
                         <div class="overflow-hidden mb-2">
-                            <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
+                            <span class="d-none d-lg-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
                                 — Smarter Operations, Better Decisions —
                             </span>
                         </div>
@@ -559,7 +559,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 position-relative min-vh-50 d-none d-lg-flex align-items-center justify-content-center" id="erpAether">
+                <div class="col-lg-6 position-relative min-vh-50 order-0 order-md-1 my-4 my-md-0 d-flex  align-items-center justify-content-center" id="erpAether">
                     <img src="{{asset('assets/images/hero.gif')}}" class="rounded-5 img-fluid" alt=""/>
     
                     <!-- <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
@@ -675,7 +675,7 @@
             <div class="problem-cards-wrapper px-2 px-md-0">
                 <div class="row flex-nowrap flex-md-wrap g-4">
                     @foreach($bottlenecks as $index => $item)
-                        <div class="col-10 col-md-3">
+                        <div class="col-10 col-md-6">
                             <div class="card h-lg-100 border-light-subtle shadow-sm p-4 rounded-4">
                                 <div class="mb-lg-4">
                                     <span class="badge rounded-pill bg-accent text-black px-3">
