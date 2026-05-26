@@ -37,7 +37,7 @@
                     @foreach($faqs as $index => $faq)
                         <div class="accordion-item mb-3 border-0 rounded-4 overflow-hidden shadow-sm">
                             <h2 class="accordion-header">
-                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }} fw-semibold fs-4 py-4 px-4 text-break" 
+                                <button class="accordion-button {{ $loop->first ? '' : 'collapsed' }} fw-semibold fs-5 py-4 px-4 text-break" 
                                         type="button" 
                                         data-bs-toggle="collapse" 
                                         data-bs-target="#faq-{{ $index }}">
@@ -47,7 +47,7 @@
                             <div id="faq-{{ $index }}" 
                                  class="accordion-collapse collapse {{ $loop->first ? 'show' : '' }}" 
                                  data-bs-parent="#faqAccordion">
-                                <div class="accordion-body fw-normal fs-5 pb-4 px-4 pt-0 text-break">
+                                <div class="accordion-body fw-normal fs-6 pb-4 px-4 pt-0 text-break">
                                     {{ $faq['answer'] }}
                                 </div>
                             </div>

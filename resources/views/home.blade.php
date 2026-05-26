@@ -297,22 +297,22 @@
             [
                 'title' => 'Disconnected Systems',
                 'desc' => 'Your sales, inventory, finance, and other teams use different tools that don\'t talk to each other.',
-                'image' => 'hp1.png'
+                'image' => '01.gif'
             ],
             [
                 'title' => 'Manual Work Everywhere',
                 'desc' => 'Teams spend hours on repetitive data entry, switching between tools and fixing errors.',
-                'image' => 'hp2.png'
+                'image' => '02.gif'
             ],
             [
                 'title' => 'No Real-Time Visibility',
                 'desc' => 'Important data is always delayed. You only see the problems after they\'ve already impacted results.',
-                'image' => 'hp3.png'
+                'image' => '3.gif'
             ],
             [
                 'title' => 'Higher Costs, Lower Margins',
                 'desc' => 'Inefficiencies, errors, and delays lead to higher costs and missed opportunities.',
-                'image' => 'hp4.png'
+                'image' => '4.gif'
             ],
         ];
         $industryHeader = [
@@ -484,32 +484,32 @@
                     'num' => '01',
                     'title' => 'Disconnected Systems',
                     'desc' => 'Your sales, inventory, finance, and other teams use different tools that don\'t talk to each other.',
-                    'img' => 'assets/images/hp1.png'
+                    'img' => 'assets/images/01.gif'
                 ],
                 [
                     'num' => '02',
                     'title' => 'Manual Work Everywhere',
                     'desc' => 'Teams spend hours on repetitive data entry, switching between tools and fixing errors.',
-                    'img' => 'assets/images/hp2.png'
+                    'img' => 'assets/images/02.gif'
                 ],
                 [
                     'num' => '03',
                     'title' => 'No Real-Time Visibility',
                     'desc' => 'Important data is always delayed. You only see the problems after they\'ve already impacted results.',
-                    'img' => 'assets/images/hp3.png'
+                    'img' => 'assets/images/3.gif'
                 ],
                 [
                     'num' => '04',
                     'title' => 'Higher Costs, Lower Margins',
                     'desc' => 'Inefficiencies, errors, and delays lead to higher costs and missed opportunities.',
-                    'img' => 'assets/images/hp4.png'
+                    'img' => 'assets/images/4.gif'
                 ]
             ],
             'transformation' => [
                 'before' => [
                     'badge' => 'THE STATUS QUO',
                     'title' => 'Fragmented. Fragile. <span class="text-danger">Expensive.</span>',
-                    'img' => 'assets/images/disconnected.png',
+                    'img' => 'assets/images/disconnected.gif',
                     'stats' => [
                         ['val' => 'High', 'label' => 'Human Error'],
                         ['val' => 'Delayed', 'label' => 'Information'],
@@ -519,7 +519,7 @@
                 'after' => [
                     'badge' => 'THE ODOO ADVANTAGE',
                     'title' => 'Unified. Scalable. <span class="text-accent">Optimized.</span>',
-                    'img' => 'assets/images/clarity.png',
+                    'img' => 'assets/images/clarity.gif',
                     'stats' => [
                         ['val' => '100%', 'label' => 'Data Accuracy'],
                         ['val' => 'Real-Time', 'label' => 'Reporting'],
@@ -560,7 +560,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 position-relative min-vh-50 d-none d-lg-flex align-items-center justify-content-center" id="erpAether">
-                    <img src="{{asset('assets/images/hero-section.png')}}" class="img-fluid" alt=""/>
+                    <img src="{{asset('assets/images/hero.gif')}}" class="rounded-5 img-fluid" alt=""/>
     
                     <!-- <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
                         
@@ -721,11 +721,11 @@
                 <div class="col-12 col-lg-10 position-relative">
                     
                     <div class="transformation-frame rounded-4 overflow-hidden">
-                        <img src="{{ asset('assets/images/disconnected.png') }}" 
+                        <img src="{{ asset('assets/images/disconnected.gif') }}" 
                             class="img-fluid w-100 transition-img chaos-state" 
                             alt="Disconnected manual systems chaos">
                         
-                        <img src="{{ asset('assets/images/clarity.png') }}" 
+                        <img src="{{ asset('assets/images/clarity.gif') }}" 
                             class="img-fluid w-100 transition-img clarity-state" 
                             alt="Unified business clarity system">
                     </div>

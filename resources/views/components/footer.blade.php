@@ -157,7 +157,7 @@
 <x-ui.backtotop />
 <footer class="bg-body-tertiary text-body pt-5 pb-3 overflow-hidden">
     <div class="container-fluid px-0 select-none pointer-events-none" style="margin-bottom: -4rem; opacity: 0.05;">
-        <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 22.7vw; line-height: 0.7; letter-spacing: -2vw;">
+        <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 25.1vw; line-height: 0.7; letter-spacing: -2vw;">
             {{ explode(' ', $companyName)[0] }}
         </h2>
     </div>

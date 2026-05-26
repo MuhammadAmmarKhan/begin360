@@ -152,8 +152,9 @@
                                             @if(!$loop->last) <div class="border-start mx-2"></div> @endif
                                         @endforeach
                                     </div>
-
-                                    <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid {{ $state === 'after' ? '' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
+                                    <div class="bg-light p-2 rounded-3 mx-auto shadow-lg" style="max-width:900px;">
+                                        <img src="{{ $sectionData['transformation'][$state]['img'] }}" class="img-fluid rounded-2  {{ $state === 'after' ? '' : '' }}" alt="Visual" style="max-height: 400px; object-fit: contain;">
+                                    </div>
                                 </div>
                             </div>
                         </div>
