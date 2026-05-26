@@ -232,9 +232,6 @@
         55%, 100% { opacity: 1; z-index: 2; }
     }
 
-    .chaos-state { animation: chaosToClarity 8s infinite alternate; }
-    .clarity-state { animation: clarityToChaos 8s infinite alternate; }
-
     .transition-labels {
         position: relative;
         height: 60px;
@@ -244,11 +241,11 @@
         position: absolute;
         width: 100%;
         left: 0;
-        transition: opacity 1.5s ease-in-out;
+        transition: opacity 1s ease-in-out;
     }
 
-    .label-before { animation: chaosToClarity 8s infinite alternate; }
-    .label-after { animation: clarityToChaos 8s infinite alternate; }
+    .label-before { animation: chaosToClarity 6s infinite alternate; }
+    .label-after { animation: clarityToChaos 6s infinite alternate; }
 
     /* --- Horizontal Scroll Logic --- */
     @media (max-width: 767.98px) {
@@ -532,10 +529,10 @@
     
     <section id="hero" class="py-5 position-relative min-vh-100 d-flex align-items-center overflow-hidden bg-body">
         <canvas id="about-canvas" class="position-absolute top-0 start-0 w-100 h-100"></canvas>
-        <div class="container position-relative bg-body bg-opacity-75 border py-5 mt-lg-5 mt-xxl-0 mb-5 z-2 rounded-5">
+        <div class="container position-relative bg-body bg-opacity-75 border pb-5 mt-xxl-0 mb-5 z-2 rounded-5">
             <div class="row align-items-center justify-content-center">
                 <div class="col-md-12 col-lg-5 order-1 order-md-0 text-start">
-                    <div class="hero-content p-5 p-lg-0">
+                    <div class="hero-content">
                         <div class="overflow-hidden mb-2">
                             <span class="d-none d-lg-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
                                 — Smarter Operations, Better Decisions —
@@ -546,11 +543,11 @@
                             From Scattered systems to <span class="text-accent fraunces section-accent fw-normal">complete control.</span>
                         </h1>
                         
-                        <p class="fs-5 text-body mb-5 gs-reveal w-100 lh-base fw-normal">
+                        <p class="fs-5 text-body mb-3 gs-reveal w-100 lh-base fw-normal">
                             We help growing businesses unify their operations, automate workflows, and gain real-time visibility - all in one place.
                         </p>
                         <div class="d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-3 gs-reveal">
-                            <a href="#operational-bottleneck-trigger" class="btn btn-accent rounded-pill px-5 py-3 fw-black text-decoration-none shadow-sm d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
+                            <a href="#operational-bottleneck-trigger" class="btn btn-accent rounded-pill px-5 py-3 fw-black text-decoration-none shadow-sm d-none d-md-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
                                 <i class="fa-solid fa-circle-play me-2"></i> See how it works
                             </a>
                             <a href="{{route('contact')}}" class="btn btn-outline-secondary rounded-pill px-5 text-decoration-none py-3 fw-black d-inline-flex align-items-center justify-content-center w-100 w-sm-auto">
@@ -559,96 +556,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 position-relative min-vh-50 order-0 order-md-1 my-4 my-md-0 d-flex  align-items-center justify-content-center" id="erpAether">
+                <div class="col-lg-6 position-relative min-vh-50 order-0 order-md-1 d-flex  align-items-center justify-content-center" id="erpAether">
                     <img src="{{asset('assets/images/hero.gif')}}" class="rounded-5 img-fluid" alt=""/>
-    
-                    <!-- <div class="floating-assets-container w-100 position-relative active-state" id="clutteredScatter" style="height: 600px;">
-                        
-                        <div class="asset-wrapper asset-lg floating-1" style="top: 0%; left: 35%;">
-                            <img src="{{ asset('assets/images/inventory.png') }}" alt="Inventory" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-lg floating-2" style="top: 25%; left: 0%;">
-                            <img src="{{ asset('assets/images/order.png') }}" alt="Order" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-lg floating-3" style="top: 35%; right: 0%;">
-                            <img src="{{ asset('assets/images/finance.png') }}" alt="Finance Update" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-lg floating-1" style="bottom: 0%; left: 25%;">
-                            <img src="{{ asset('assets/images/expenses.png') }}" alt="Expenses" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-sm floating-2" style="top: 10%; left: 5%;">
-                            <img src="{{ asset('assets/images/email-icon.png') }}" alt="Email" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-sm floating-3" style="top: 15%; right: 10%;">
-                            <img src="{{ asset('assets/images/boxes-icon.png') }}" alt="Packaging" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-sm floating-1" style="bottom: 15%; left: 10%;">
-                            <img src="{{ asset('assets/images/sync-icon.png') }}" alt="Sync" class="img-fluid glass-asset">
-                        </div>
-
-                        <div class="asset-wrapper asset-sm floating-2" style="bottom: 10%; right: 15%;">
-                            <img src="{{ asset('assets/images/user-icon.png') }}" alt="User Stats" class="img-fluid glass-asset">
-                        </div>
-
-                    </div>
-
-                    <div class="network-assets-container w-100 h-100 position-absolute d-none" id="structuredNetwork">
-                        <div class="connector-container position-absolute w-100 h-100" style="top: 0; left: 0; z-index: 1;">
-                            <svg viewBox="0 0 1000 500" preserveAspectRatio="none" class="w-100 h-100">
-                                <path class="path-bg" d="
-                                    M 150 170 V 230 
-                                    M 500 170 V 230 
-                                    M 850 170 V 230 
-                                    M 150 230 H 850
-                                    M 300 290 V 230 
-                                    M 700 290 V 230" 
-                                    stroke="rgba(255,255,255,0.05)" stroke-width="2" fill="none" />
-                                
-                                <path class="path-active" id="syncPath" d="
-                                    M 150 170 V 230 
-                                    M 500 170 V 230 
-                                    M 850 170 V 230 
-                                    M 150 230 H 850
-                                    M 300 290 V 230 
-                                    M 700 290 V 230" 
-                                    stroke="var(--accent)" stroke-width="2" fill="none" stroke-linecap="round" />
-
-                                <circle cx="150" cy="170" r="10" class="connector-dot dot-pulse" />
-                                <circle cx="500" cy="170" r="10" class="connector-dot dot-pulse" />
-                                <circle cx="850" cy="170" r="10" class="connector-dot dot-pulse" />
-                                <circle cx="300" cy="290" r="10" class="connector-dot dot-pulse" />
-                                <circle cx="700" cy="290" r="10" class="connector-dot dot-pulse" />
-                            </svg>
-                        </div>
-                    <div class="network-connector-pulse"></div> <div class="endpoint-wrapper endpoint-lg" id="endpointInventory" style="top: 10%; left: 0%;">
-                            <img src="{{ asset('assets/images/clarity-inventory.png') }}" alt="Inventory Sync" class="img-fluid network-asset">
-                        </div>
-
-                        <div class="endpoint-wrapper endpoint-lg" id="endpointOrder" style="top: 10%; left: 39%;">
-                            <img src="{{ asset('assets/images/clarity-order.png') }}" alt="Order Sync" class="img-fluid network-asset">
-                        </div>
-
-                        <div class="endpoint-wrapper endpoint-lg" id="endpointFinance" style="top: 10%; right: 0%;">
-                            <img src="{{ asset('assets/images/clarity-finances.png') }}" alt="Finance Sync" class="img-fluid network-asset">
-                        </div>
-
-                        <div class="endpoint-wrapper endpoint-lg" id="endpointSpreadsheet" style="bottom: 10%; left: 20%;">
-                            <img src="{{ asset('assets/images/clarity-spreadsheet.png') }}" alt="Spreadsheet Sync" class="img-fluid network-asset">
-                        </div>
-
-                        <div class="endpoint-wrapper endpoint-lg" id="endpointEmail" style="bottom: 10%; right: 20%;">
-                            <img src="{{ asset('assets/images/clarity-email.png') }}" alt="Email Sync" class="img-fluid network-asset">
-                        </div>
-
-                    </div> -->
-                <!-- <x-chaos-to-clarity logoText="Begin" interval="1600" class="rounded-4" /> -->
-
                 </div>
             </div>
         </div>
@@ -703,7 +612,7 @@
             </div>
         </div>
     </section>
-    <section class="transformation-section py-5 bg-body d-block d-lg-none">
+    <section class="py-5 bg-body d-block d-lg-none">
         <div class="container">
             <div class="text-center mb-5">
                 <span class="d-block text-uppercase fw-semibold ls-2 text-accent gs-reveal" style="font-size: 0.85rem; letter-spacing: 0.2em;">
@@ -720,17 +629,14 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-10 position-relative">
                     
-                    <div class="transformation-frame rounded-4 overflow-hidden">
-                        <img src="{{ asset('assets/images/disconnected.gif') }}" 
-                            class="img-fluid w-100 transition-img chaos-state" 
-                            alt="Disconnected manual systems chaos">
+                    <div class="bg-light rounded-3 pt-3">
                         
-                        <img src="{{ asset('assets/images/clarity.gif') }}" 
-                            class="img-fluid w-100 transition-img clarity-state" 
+                        <img src="{{ asset('assets/images/clarity-m.gif') }}" 
+                            class="img-fluid w-100" 
                             alt="Unified business clarity system">
                     </div>
 
-                    <div class="text-center mt-4 transition-labels">
+                    <!-- <div class="text-center mt-4 transition-labels">
                         <div class="label-before">
                             <span class="text-danger fw-bold small text-uppercase">✕ Before</span>
                             <h3 class="h4 fw-bold mt-1">Disconnected. Manual. Unreliable.</h3>
@@ -739,14 +645,14 @@
                             <span class="text-accent fw-bold small text-uppercase">✓ After</span>
                             <h3 class="h4 fw-bold mt-1">Connected. Automated. High-Fidelity.</h3>
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
 
             <div class="row justify-content-center mt-5">
                 <div class="col-lg-9">
-                    <div class="bg-body-tertiary p-4 rounded-pill shadow-sm d-flex align-items-center justify-content-center text-center">
+                    <div class="bg-body-tertiary p-2 rounded-3 shadow-sm d-flex align-items-center justify-content-center text-center">
                         <div class="me-3 d-none d-md-block">
                             <i class="fa-light fa-lightbulb-on text-accent fs-4"></i>
                         </div>
