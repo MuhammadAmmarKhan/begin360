@@ -36,11 +36,11 @@
     @stack('head')
     @stack('styles')
 </head>
-<body class="">
+<body class="" style="overflow-x:hidden">
     <div class="cursor-dot d-none d-md-flex"></div>
     <div class="cursor-glow d-none d-md-flex"></div>
 
-    {{-- <x-loader /> --}}
+    <x-loader />
     <div id="main-body">
         <header>
             <x-header />
