@@ -8,14 +8,14 @@
             </div>
             <div class="col-lg-7">
                 <div class="card h-100 border-0 rounded-5 p-4 p-md-5 d-flex flex-column bg-body-tertiary" >
-                    
+
                     <h2 class="display-6 fw-semibold mb-4">
                         Lets Get <br/><span class="text-accent fraunces section-accent fw-normal">Connected</span>
                     </h2>
 
                     <form action="{{ route('contact.submit') }}" method="POST" class="corporate-form" novalidate>
                         @csrf
-                        
+
                         @if(session('success'))
                             <div class="alert alert-success border-0 rounded-4 mb-4 shadow-sm d-flex align-items-center">
                                 <i class="fa fa-check-circle me-2"></i>
@@ -33,8 +33,8 @@
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <label class="form-label text-body fw-semibold small text-uppercase">First Name *</label>
-                                <input type="text" name="first_name" 
-                                    class="form-control corporate-input @error('first_name') is-invalid @enderror" 
+                                <input type="text" name="first_name"
+                                    class="form-control corporate-input @error('first_name') is-invalid @enderror"
                                     value="{{ old('first_name') }}" required>
                                 @error('first_name')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -43,8 +43,8 @@
 
                             <div class="col-md-6">
                                 <label class="form-label text-body fw-semibold small text-uppercase">Last Name *</label>
-                                <input type="text" name="last_name" 
-                                    class="form-control corporate-input @error('last_name') is-invalid @enderror" 
+                                <input type="text" name="last_name"
+                                    class="form-control corporate-input @error('last_name') is-invalid @enderror"
                                     value="{{ old('last_name') }}" required>
                                 @error('last_name')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -53,8 +53,8 @@
 
                             <div class="col-12">
                                 <label class="form-label text-body fw-semibold small text-uppercase">Company Name *</label>
-                                <input type="text" name="company" 
-                                    class="form-control corporate-input @error('company') is-invalid @enderror" 
+                                <input type="text" name="company"
+                                    class="form-control corporate-input @error('company') is-invalid @enderror"
                                     value="{{ old('company') }}" required>
                                 @error('company')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -63,8 +63,8 @@
 
                             <div class="col-12">
                                 <label class="form-label text-body fw-semibold small text-uppercase">Email Address *</label>
-                                <input type="email" name="email" 
-                                    class="form-control corporate-input @error('email') is-invalid @enderror" 
+                                <input type="email" name="email"
+                                    class="form-control corporate-input @error('email') is-invalid @enderror"
                                     value="{{ old('email') }}" required>
                                 @error('email')
                                     <div class="invalid-feedback">{{ $message }}</div>
@@ -91,7 +91,7 @@
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
                             <div class="col-12 mt-4">
                                 <div class="form-check">
                                     <input class="form-check-input @error('agree') is-invalid @enderror" type="checkbox" name="agree" id="agree" required>
@@ -149,8 +149,8 @@
 
     $companyName = env('COMPANY_NAME','BEGIN360 PTY LTD');
     $email = env('COMPANY_EMAIL','info@begin360.com.au');
-    $phone = env('COMPANY_PHONE','(02) 1234 5678');
-    $abn = env('COMPANY_ABN','00 000 000 000');
+    $phone = env('COMPANY_PHONE','(04) 24 576 532');
+    $abn = env('COMPANY_ABN','96 687 885 963');
 @endphp
 
 <x-ui.announcement-ticker />
@@ -158,7 +158,7 @@
 <footer class="bg-body-tertiary text-body pt-5 pb-3 overflow-hidden">
     <div class="container-fluid px-0 select-none pointer-events-none" style="margin-bottom: -4rem; opacity: 0.05;">
         <h2 class="display-1 fw-black text-uppercase text-nowrap m-0" style="font-size: 25.1vw; line-height: 0.7; letter-spacing: -2vw;">
-            {{ explode(' ', $companyName)[0] }}
+            {{ explode(' ', config('company.name'))[0] }}
         </h2>
     </div>
 
@@ -172,23 +172,23 @@
                     We help businesses implement ERP systems, unify operations, and gain real-time visibility across every part of their business.
                 </p>
                 <div class="d-flex gap-3 mt-4">
-                    <a href="{{env('SOCIAL_LI')}}" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="{{env('SOCIAL_FB')}}" class="text-white opacity-50 hover-opacity-100 fs-5"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="{{ config('company.social.linkedin') }}" class="text-accent opacity-50 hover-opacity-100 fs-5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="{{ config('company.social.facebook') }}" class="text-accent opacity-50 hover-opacity-100 fs-5" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
                 </div>
             </div>
-            
+
             <div class="col-lg-6">
-                <a class="text-decoration-none" href="tel:{{env('COMPANY_PHONE')}}">
-                <div class="bg-black text-white rounded-4 p-5 d-flex justify-content-between align-items-center transition-all border border-secondary border-opacity-25" 
-                     style="cursor: pointer;"
-                     onmouseover="this.style.borderColor='var(--accent)'" 
-                     onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
-                    <h2 class="display-6 fw-semibold mb-0">Lets Schedule <br>A <span class="text-accent fraunces section-accent fw-normal">Call</span></h2>
-                    <div class="bg-accent rounded-circle d-flex align-items-center justify-content-center flex-shrink-0" 
-                         style="width: 60px; height: 60px;">
-                        <i class="fa-solid fa-arrow-up-right-from-square text-dark fs-4"></i>
+                <a class="text-decoration-none" href="tel:{{ preg_replace('/[^0-9+]/', '', config('company.phone')) }}">
+                    <div class="bg-black text-white rounded-4 p-5 d-flex justify-content-between align-items-center transition-all border border-secondary border-opacity-25"
+                         style="cursor: pointer;"
+                         onmouseover="this.style.borderColor='var(--accent)'"
+                         onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+                        <h2 class="display-6 fw-semibold mb-0">Lets Schedule <br>A <span class="text-accent fraunces section-accent fw-normal">Call</span></h2>
+                        <div class="bg-accent rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                             style="width: 60px; height: 60px;">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-dark fs-4"></i>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
         </div>
@@ -239,18 +239,18 @@
                 <h6 class="fw-black text-accent text-uppercase mb-4">Get in Touch</h6>
                 <div class="text-secondary fw-normal lh-lg">
                     <p class="mb-2 text-truncate">
-                        <a href="mailto:{{ $email }}" class="text-decoration-none text-secondary hover-white">
-                            <i class="fa-solid fa-envelope text-accent me-2"></i> {{ $email }}
+                        <a href="mailto:{{ config('company.email') }}" class="text-decoration-none text-secondary hover-white">
+                            <i class="fa-solid fa-envelope text-accent me-2"></i> {{ config('company.email') }}
                         </a>
                     </p>
                     <p class="mb-2">
-                        <a href="tel:{{ preg_replace('/[^0-9+]/', '', $phone) }}" class="text-decoration-none text-secondary hover-white">
-                            <i class="fa-solid fa-phone text-accent me-2"></i> {{ $phone }}
+                        <a href="tel:{{ preg_replace('/[^0-9+]/', '', config('company.phone')) }}" class="text-decoration-none text-secondary hover-white">
+                            <i class="fa-solid fa-phone text-accent me-2"></i> {{ config('company.phone') }}
                         </a>
                     </p>
-                    <p class="mb-0">    
-                        <a href="https://abr.business.gov.au/ABN/View?abn={{ str_replace(' ', '', $abn) }}" target="_blank" class="text-decoration-none text-secondary hover-white">
-                            <span class="text-accent fw-bold small font-monospace me-2">ABN</span> {{ str_replace(' ','',trim($abn)) }}
+                    <p class="mb-0">
+                        <a href="https://abr.business.gov.au/ABN/View?abn={{ str_replace(' ', '', config('company.abn')) }}" target="_blank" rel="noopener noreferrer" class="text-decoration-none text-secondary hover-white">
+                            <span class="text-accent fw-bold small font-monospace me-2">ABN</span> {{ config('company.abn') }}
                         </a>
                     </p>
                 </div>
@@ -259,10 +259,10 @@
 
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-secondary border-opacity-10 gap-3">
             <div class="text-center text-md-start">
-                <p class=" text-secondary fw-normal mb-0">© {{ now()->year }} <b>{{ $companyName }}</b>. ALL RIGHTS RESERVED.</p>
+                <p class=" text-secondary fw-normal mb-0">© {{ now()->year }} <b>{{ config('company.name') }}</b>. ALL RIGHTS RESERVED.</p>
                 <p class="small text-body mt-1 mb-0" style="font-size: 0.75rem;">
-                    Design and developed with <i class="fa-solid fa-heart text-danger mx-1"></i> by 
-                    <a href="https://smartservix.com.au" target="_blank" class="text-body text-decoration-none hover-accent fw-bold">Smart Servix</a>
+                    Design and developed with <i class="fa-solid fa-heart text-danger mx-1"></i> by
+                    <a href="https://smartservix.com.au" target="_blank" rel="noopener noreferrer" class="text-body text-decoration-none hover-accent fw-bold">Smart Servix</a>
                 </p>
             </div>
             <div class="d-flex gap-4 fw-normal">
